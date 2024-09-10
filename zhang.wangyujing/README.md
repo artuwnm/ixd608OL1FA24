@@ -1,3 +1,3 @@
 # Wangyujing Zhang
 
-- https://wangyujing.com
+- https://zhangwangyujing.com
