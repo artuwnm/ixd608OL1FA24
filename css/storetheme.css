@@ -1,0 +1,8 @@
+
+:root {
+	--color-offwhite:#ffe6e6;
+}
+
+body {
+	background-color: var(--color-offwhite);
+}

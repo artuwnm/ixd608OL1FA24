@@ -1,0 +1,161 @@
+
+/* css reset */
+
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+:root {
+	--color-neutral-light:#eee;
+	--color-neutral-medium:#999;
+	--color-neutral-dark:#555;
+
+	--color-black:#000;
+	--color-white:#fff;
+
+	--header-height:3rem;
+	--spacing:1rem;
+
+	--font-serif: GEORGIA, "Times New Roman", serif;
+	--font-sans: Helvetica, Arial, sans-serif;
+}
+
+	body {
+		margin: 0;
+		font-size: 100%;
+		font-family: var(--font-sans);
+		padding-bottom: 10em;
+
+	}
+
+h1{
+	font-family: var(--font-serif);
+	color: var(--color-neutral-light);
+}
+
+
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: var(--font-serif);
+	color: var(--color-neutral-dark);
+}
+
+a{
+	color: inherit;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+a:hover {
+	text-decoration: underline;
+}
+
+
+
+	/* LAYOUT CLASSES */
+.container {
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+.display-flex { display: flex; }
+.display-inline-flex { display: inline-flex; }
+.display-block { display: block; }
+.display-inline-block { display: inline-block; }
+
+.flex-stretch { flex:1 1 auto; }
+.flex-none { flex: none; }
+
+.flex-align-center { align-items: center; }
+.flex-justify-center { justify-content: center;}
+
+
+
+	/* COMPONMENT CLASS*/
+
+.nav ul{
+	list-style-type: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+
+.navbar {
+	background-color: var(--color-neutral-dark);
+	color: var(--color-white);
+	line-height: var(--header-height);
+}
+
+	.navbar h1 {
+		font-size: 1.5em;
+		margin: 0;
+		font-family: var(--font-sans);
+	}
+
+	.navbar a {
+		font-size: 1.2em;
+		padding: 0 0.5em;
+	}
+
+/* card */
+
+.card {
+    background-color: var(--color-white);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.card.soft {
+	border-radius:0.5em ;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card.hard {
+	border-radius: 0.2em;
+	border: 2px solid var(--color-neutral-medium);
+}
+
+.card.medium {
+	background-color:var(--color-neutral-medium);
+}
+
+.card.dark {
+	background-color: var(--color-neutral-dark);
+	color: var(--color-neutral-light);
+}
+
+.card.flat {
+	padding: 0;
+
+}
+
+
+
+.view-window {
+	height: 40vh;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.article p {
+    font-family: var(--font-serif);
+    font-size: 1.2em; 
+    line-height: 1.5;
+    text-align: center; 
+    margin-bottom: 1.5em;
+    color: var(--color-neutral-dark);
+}
