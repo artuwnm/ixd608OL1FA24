@@ -1,0 +1,17 @@
+
+:root {
+	--color-offwhite: #f4f4f4;
+
+	--color-main-light:#E9F3F6;
+	--color-main-medium:#C6DDDF;
+	--color-main-dark:#9CB5BA;
+}
+
+body {
+	background-color: var(--color-offwhite);
+}
+
+.nav-stretch li {
+	flex: 1 1 auto;
+	text-align: center;
+}

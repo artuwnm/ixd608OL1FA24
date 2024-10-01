@@ -101,6 +101,8 @@ a:hover {
 }
 
 .nav-stretch ul,
+.nav-pills ul,
+.nav-crumbs ul,
 .nav-flex ul {
 	display: flex;
 }
@@ -109,6 +111,13 @@ a:hover {
 	flex: 1 1 auto;
 	text-align: center;
 }
+
+.nav-pills a{
+	border-radius: 2em;
+	padding: .3m 1m;
+}
+
+.nav-crumbs
 
 .navbar {
 	background-color: var(--color-neutral-medium);
