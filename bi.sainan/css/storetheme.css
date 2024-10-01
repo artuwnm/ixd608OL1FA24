@@ -19,9 +19,31 @@ body {
 	background-color: var(--color-offwhite);
 }
 
-.nav-stretch li {
-	flex: 1 1 auto;
-	text-align: center;
+.nav-table ul {
+	list-style-type: none;
+	margin-top: 0;
+	margin-left: 1em;
+	margin-block: 0;
+	padding-left: 0;
+}
+.nav-table li {
+	list-style-type: square;
+	margin-top: 0;
+	margin-block: 0;
+	padding-left: 0;
+}
+.nav-table a{
+	display: block;
+	padding: .5em .5em;
+}
+.nav-table a:hover{
+	background-color: var(--color-button-medium);
+	color: var(--color-white);
+	text-decoration: none;
+}
+.nav-table .active a {
+	background-color: var(--color-button-light);
+	color: inherit;
 }
 
 .figure.product {
