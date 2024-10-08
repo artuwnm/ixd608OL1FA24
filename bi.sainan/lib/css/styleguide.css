@@ -3,16 +3,16 @@
 }
 
 :root {
-	--color-neutral-light:#eee;
-	--color-neutral-medium:#999;
-	--color-neutral-dark:#555;
+	--color-neutral-light: #eee;
+	--color-neutral-medium: #999;
+	--color-neutral-dark: #555;
 
-	--color-black:#555;
-	--color-white:#fff;
+	--color-black: #555;
+	--color-white: #fff;
 	--color-offwhite: #f4f4f4;
 
-	--header-height:3rem;
-	--spacing:1rem;
+	--header-height: 4rem;
+	--spacing: 1rem;
 
 	--font-serif: Georgia, "Times New Roman", serif;
 	--font-sans: Helvetica, Arial, sans-serif;
@@ -100,7 +100,7 @@ a:hover {
 	line-height: var(--header-height);
 }
 .navbar h1 {
-	font-size: 3em;
+	font-size: 4em;
 	margin: ;
 	font-family: var(--font-sans-header);
 	text-decoration: none;
@@ -155,7 +155,7 @@ a:hover {
 
 .nav-pills a{
 	border-radius: 2em;
-	padding: .3m 1m;
+	padding: .3em 1em;
 }
 
 .nav-crumbs a {
