@@ -100,9 +100,10 @@ a:hover {
 	line-height: var(--header-height);
 }
 .navbar h1 {
-	font-size: 2em;
+	font-size: 3em;
 	margin: ;
 	font-family: var(--font-sans-header);
+	text-decoration: none;
 }
 .navbar a {
 	padding: 0 .5em;
@@ -214,7 +215,7 @@ a:hover {
 }
 .card.hard {
 	border-radius: 0em;
-	border:2px solid var(--color-neutral-medium);
+	border:1px solid var(--color-neutral-dark);
 }
 .card.dark {
 	background-color: var(--color-neutral-dark);
@@ -234,7 +235,8 @@ a:hover {
 /* View Window */
 
 .view-window {
-	height: 50vh;
+	width: 800px;
+	height: 20vh;
 	position: relative;
 	overflow: hidden;
 	background-size: cover;
