@@ -10,7 +10,7 @@
 
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-   <style> 
+   <!-- <style> 
    @font-face {
      font-family: Bauhaus;
      src: url('font/BauhausRegular.ttf');
@@ -19,12 +19,13 @@
      font-family: Neutra Text;
      src: url('font/Neutraface Text Book.otf');
    }
-   h1 h2 {
+   h1, h2 {
      font-family: Bauhaus;
-   body h3 {
+   }
+   body, h3 {
      font-family: Neutra Text;
    }
-   </style>
+   </style> -->
 
 </head>
 
@@ -61,9 +62,9 @@
             <ul>
                <li><a href="#inputs">Inputs</a></li>
                <li><a href="#buttons">Buttons</a></li>
+               <li><a href="#hotdog">Hotdog</a></li>
+               <li><a href="#select">Select</a></li>   
             </ul>
-            <li><a href="#hotdog">Hotdog</a></li>
-            <li><a href="#select">Select</a></li>
             <li><a href="#checkboxes">Check Boxes</a></li>
             <li><a href="#viewwindow">View Window</a></li>
             <li><a href="#gridsystem">Grid System</a></li>
@@ -383,9 +384,9 @@ const makeTable = (classes='') => {
     <div class="container" id="forms">
         <h2>Forms</h2>
 
-        <h3>Inputs</h3>
+        <h3 id="inputs">Inputs</h3>
 
-        <div class="card soft" id="inputs">
+        <div class="card soft">
             <h3>Default Inputs</h3>
             <form>
                 <input type="text"><br>
@@ -418,6 +419,7 @@ const makeTable = (classes='') => {
                 <input type="search" placeholder="Search" class="form-input">
             </form>
 
+
             <h3>Form Control</h3>
             <form>
                 <div class="form-control">
@@ -449,6 +451,7 @@ const makeTable = (classes='') => {
             </form>
         </div>
 
+
         <h3 id="buttons">Buttons</h3>
 
         <div class="card soft">
@@ -470,41 +473,46 @@ const makeTable = (classes='') => {
         </div>
 
 
-<!-- Hotdog -->
-
-        <h2 id="hotdog">Hotdog</h2>
+        <h3 id="hotdog">Hotdog</h3>
 
         <div class="card soft">
+
             <div class="form-control">
                 <form>
                     <input type="search" class="hotdog" placeholder="Search">
                 </form>
             </div>
+
             <div class="form-control">
-                <form class="card dark hotdog">
+                <form>
                     <input type="search" class="hotdog dark" placeholder="Search">
                 </form>
             </div>
+
             <div class="form-control">
-                <form>
+                <form class="card dark">
                     <input type="search" class="hotdog light" placeholder="Search">
                 </form>
             </div>
+
             <div class="form-control">
                 <form class="hotdog">
                     <span>&equiv;</span>
                     <input type="search" class="hotdog" placeholder="Search">
                 </form>
             </div>
+
             <div class="form-control">
                 <form class="hotdog">
                     <input type="search" class="hotdog" placeholder="Search">
                     <span>&equiv;</span>
                 </form>
             </div>
+
         </div>
 
-        <h2 id="select">Select</h2>
+
+        <h3 id="select">Select</h3>
         <div class="card soft">
             <div class="form-select">
                 <select>
@@ -527,7 +535,6 @@ const makeTable = (classes='') => {
                     </div>
                 </div>
             </div>
-            <label for="input-1">Label</label>
         </div>
 
 
@@ -536,6 +543,7 @@ const makeTable = (classes='') => {
         <h2 id="checkboxes">Check Boxes</h2>
 
         <div class="card soft"> 
+            <h3>Basic Checkbox</h3>
             <label>Label <input type="checkbox" id="input-1"></label>
             <label for="input-1">Label</label>
 
@@ -555,7 +563,7 @@ const makeTable = (classes='') => {
                     <label for="toggle-2" class="form-label">Display Warning?</label>
                 </div>
                 <div class="flex-none">
-                    <div class="toggle" style="font-size:2em;">
+                    <div class="toggle" style="font-size:1.5em;">
                         <input type="checkbox" id="toggle-2" class="hidden">
                         <label for="toggle-2"></label>              
                     </div>
