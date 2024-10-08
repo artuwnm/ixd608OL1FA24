@@ -46,13 +46,25 @@
 					<li><a href="#navigations">Navigation</a></li>
 					<li><a href="#gridsystem">Grid System</a></li>
 					<li><a href="#flexsystem">Flex system</a></li>
+					<li><a href="#tables">Tables</a></li>
+					<li><a href="#figures">Figures</a></li>
+					<li><a href="#forms">Forms</a></li>
+					<ul>
+						<li><a href="#inputs">Inputs</a></li>
+						<li><a href="#labels">Labels</a></li>
+						<li><a href="#controls">Controls</a></li>
+						<li><a href="#buttons">Buttons</a></li>
+					</ul>
+					<li><a href="#hotdogs">Hotdogs</a></li>
+					<li><a href="#select">Select</a></li>
+					<li><a href="#checkboxes">Check Boxes</a></li>
 				</ul>
 			</nav>
 		</div>
 	</div>
 
-	<div class="container" id="typography">
-		<h2>Typography</h2>
+	<div class="container">
+		<h2  id="typography">Typography</h2>
 
 		<div class="card soft" id="headings">
 			<h3>Headings</h3>
@@ -76,7 +88,7 @@
 
 
 	<div class="container">
-		<h2>Cards</h2>
+		<h2  id="cards">Cards</h2>
 
 		<div class="grid gap">
 			<div class="col-xs-12 col-md-4">
@@ -94,17 +106,20 @@
 			<div class="col-xs-12 col-md-4">
 				<div class="card medium">Card Medium</div>
 			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card light outline">Card Light</div>
+			</div>
 				
 		</div>
 	</div>
 
 	<div class="container">
-		<h2>View Window</h2>
+		<h2  id="viewwindow">View Window</h2>
 	</div>
 	<div class="view-window contain no-repeat" style="background-image: url('../img/WhaleShelf.jpg')"></div>
 
-	<div class="container" id="navigations">
-		<h2>Navigations</h2>
+	<div class="container">
+		<h2  id="navigations">Navigations</h2>
 
 		<!--create a nav structure for us according to the classes we use, and adds an active state-->
 		<script>
@@ -177,11 +192,11 @@
 	</div>
 
 	<div class="container">
-		<h2>Grid System</h2>
+		<h2 id="gridsystem">Grid System</h2>
 	</div>
 
 	<div class="container">
-		<h2>Flex System</h2>	
+		<h2 id="flexsystem">Flex System</h2>	
 	</div>
 
 
@@ -212,7 +227,7 @@
 	</script>
 
 	<div class="container">
-		<h2>Tables</h2>
+		<h2 id="tables">Tables</h2>
 
 		<div class="card soft">
 			<h3>Basic Table</h3>
@@ -331,42 +346,241 @@
 			<h3>Product Overlay</h3>
 
 		<div class="grid gap">
-				<div class="col-xs-12 col-md-4">
-					<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">		
-						<figcaption>
-						 	<div class="caption-body">
-						 		<div> Product Name</div>
-						 		<div>$3.99</div>
-						 	</div>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-xs-12 col-md-4">
-					<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">		
-						<figcaption>
-							<div class="caption-body">
-							 	<div> Product Name</div>
-							 							 	<div>$3.99</div>
-							 </div> 
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-xs-12 col-md-4">
-					<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">		
-						<figcaption>
-							<div class="caption-body">
-							 	<div> Product Name</div>
-							 							 	<div>$3.99</div>
-							 </div> 
-						</figcaption>
-					</figure>
-				</div>
+			<div class="col-xs-12 col-md-4">
+				<figure class="figure product-overlay">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">		
+					<figcaption>
+						 <div class="caption-body">
+						 	<div> Product Name</div>
+						 	<div>$3.99</div>
+						 </div>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<figure class="figure product-overlay">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">		
+					<figcaption>
+						<div class="caption-body">
+							 <div> Product Name</div>
+							 <div>$3.99</div>
+						 </div> 
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<figure class="figure product-overlay">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">		
+					<figcaption>
+						<div class="caption-body">
+							 <div> Product Name</div>
+							 <div>$3.99</div>
+						</div> 
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+
+		<div class="container">
+			<h2 id="forms">Forms</h2>
+
+			<h3 id="inputs">Inputs</h3>
+
+			<div class="card soft">
+				<h3>Default Inputs</h3>
+				<form action="">
+					<input type="text"><br>
+					<input type="number"><br>
+					<input type="password"><br>
+					<input type="url"><br>
+					<input type="email"><br>
+					<input type="datetime-local"><br><br>
+					<input type="date"><br>
+					<input type="search"><br>
+				</form>
+
+				<h3>Form Input</h3>
+				<form action="">
+					<input type="text" placeholder="Text" class="form-input">
+					<input type="number" placeholder="Number" class="form-input">
+					<input type="password" placeholder="Password" class="form-input">
+					<input type="search" placeholder="Search" class="form-input">
+				</form>
+
+				<h3 id="controls">Form Controls + Form Labels</h3>
+				<form id="labels" action="">
+					<div class="form-control">
+						<label class="form-label" for="">Example</label>
+						<input type="text" placeholder="Text" class="form-input">
+					</div>
+					<div class="form-control">
+						<label class="form-label" for="">Example</label>
+						<input type="number" placeholder="Number" class="form-input">
+					</div>
+					<div class="form-control">
+						<label class="form-label" for="">Example</label>
+						<input type="password" placeholder="Password" class="form-input">
+					</div>
+					<div class="form-control display-flex flex-align-center">
+						<div class="flex-none"><label class="form-label" for="">Example</label></div>
+						<div class="flex-stretch"><input type="search" placeholder="Search" class="form-input"></div>
+						<div class="flex-none"><label class="form-label" for="">Example</label></div>
+						<div class="flex-stretch"><input type="search" placeholder="Search" class="form-input"></div>
+					</div>
+				</form>
+
+				<h3 >Form Controls + Form Labels - Placeholder</h3>
+				<form action="">
+					<div class="form-control">
+						<label class="form-label" for="">User Name</label>
+						<input type="text" class="form-input">
+					</div>
+					<div class="form-control">
+						<label class="form-label" for="">Card Number</label>
+						<input type="number" class="form-input">
+					</div>
+					<div class="form-control">
+						<label class="form-label" for="">Password</label>
+						<input type="password"  class="form-input">
+					</div>
+					<div class="form-control">
+						<label class="form-label" for="">Search</label>
+						<input type="search" class="form-input">
+					</div>
+				</form>
+
 			</div>
 
-			
+			<h3 id="buttons">Buttons</h3>
+
+			<div class="card soft">
+				<h3>Default Button</h3>
+				<button>Button</button>
+
+				<h3>Form Button</h3>
+				<div class="form-control">
+					<button type="button" class="form-button">Button</button>
+				</div>
+				<div class="form-control">
+					<input type="button" class="form-button " value="Input">
+				</div>
+				<div class="form-control">
+					<a href="#" class="form-button">Anchor</a>
+				</div>
+
+				<h3>Form Button Shadow</h3>
+				<div class="form-control">
+					<button type="button" class="form-button shadow">Button</button>
+				</div>
+				<div class="form-control">
+					<input type="button" class="form-button shadow" value="Input">
+				</div>
+				<div class="form-control">
+					<a href="#" class="form-button shadow">Anchor</a>
+				</div>
+			</div>
+		</div>	
+
+		<h2 id="hotdogs">Hotdogs</h2>
+
+		<div class="card soft" >
+			<h3>.hotdog on Input</h3>
+			<div class="form-control">
+				<form class="card light">
+					<input type="search" class="hotdog" placeholder="Search">
+				</form>
+			</div>
+			<div class="form-control">
+				<form action="">
+					<input type="search" class="hotdog dark" placeholder="Search">
+				</form>
+			</div>
+			<div class="form-control">
+				<form class="card dark">
+					<input type="search" class="hotdog light" placeholder="Search">
+				</form>
+			</div>
+			<h3>.hotdog on Form</h3>
+			<div class="form-control card light">	
+				<form action="" class="hotdog">
+					<span>&equiv;</span>
+					<input type="search" placeholder="Search">
+				</form>
+			</div>
+			<div class="form-control card light">	
+				<form action="" class="hotdog">
+					<input type="search" placeholder="Search">
+					<span>&equiv;</span>
+				</form>
+			</div>
+			<h3>.hotdog for Update</h3>
+			<div class="card light">
+				<div class="hotdog update">Ooops, looks like we still need your mailing address before we can complete checkout.</div>
+			</div>
+		</div>
+
+		<h2 id="select">Select</h2>
+		<div class="card soft">
+			<div class="card light"><div class="form-select">
+							<select name="" id="">
+								<option value="">1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+								<option value="">4</option>
+							</select>
+						</div></div>
+			<div class="display-flex">
+				<div class="flex-stretch"></div>
+				<div class="flex-none card light">
+					<div class="form-select">
+						<select name="" id="">
+							<option value="">1</option>
+							<option value="">2</option>
+							<option value="">3</option>
+							<option value="">4</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h2 id="checkboxes">Check Boxes</h2>
+		<div class="card soft">
+			<h3>Basic Checkbox</h3>
+			<label>Label<input type="checkbox" id="input-1"></input></label>
+			<label for="input-1">Label</label>
+
+			<h3>Heart Checkbox</h3>
+			<div class="favorite">
+				<input type="checkbox" id="heart-example" class="hidden"></input>
+				<label for="heart-example">&hearts;</label>
+			</div>
+
+			<h3>Toggle</h3>
+			<div class="toggle">
+				<input type="checkbox" id="toggle-1" class="hidden"></input>
+				<label for="toggle-1"></label>
+			</div>
+
+			<div class="display-flex flex-align-center">
+				<div class="flex-stretch">
+					<label for="toggle-2" class="form-label">Display Warning?</label>
+				</div>
+				<div class="flex-none">
+					<div class="toggle" style="font-size: 2em;">
+						<input type="checkbox" id="toggle-2" class="hidden"></input>
+						<label for="toggle-2"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		
+
+
+
+
 	</div>
 
 </body>
