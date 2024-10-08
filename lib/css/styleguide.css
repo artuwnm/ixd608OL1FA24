@@ -88,6 +88,11 @@ a{
 		vertical-align: text-bottom;
 }
 
+.hidden{
+	display: none;
+
+}
+
 
 
 /* COMPONMENT CLASS*/
@@ -360,4 +365,177 @@ p {
 
 .figure figcaption{
 	padding: 1em;
+}
+
+
+/*forms*/
+
+.form-control{
+	margin: 1em 0;
+}
+
+
+.form-input {
+  display: inline-block;
+  background-color: transparent;
+  border-width: 0;
+  padding: 0.5em 1em;
+  font: inherit;
+  -webkit-appearance: none;
+  color: inherit;
+  width: 100%;
+  border-bottom: 1px solid var(--color-neutral-light);
+  outline: 0;
+
+
+}
+
+
+.form-input:focus{
+	border-bottom-color: var(--color-main-light);
+	padding: 0.5em 1em;
+}
+
+
+.form-label{
+	font-size: 0.8em;
+	color: var(--color-neutral-dark);
+	display: block;
+	width: 100%;
+}
+
+
+.form-button {
+  display: inline-block;
+  background-color: var(--color-neutral-light);
+  border-width: 0;
+  font:inherit;
+  -webkit-appearance: none;
+  color: inherit;
+  width: 100%;
+  border-radius: 0.2em;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.5em 1em;
+}
+
+.form-button:hover{
+	text-decoration: none;
+
+}
+
+.form-button:active{
+	background-color: var(--color-white);
+}
+
+
+.form-item{
+  display: inline-block;
+  background-color: transparent;
+  border-width: 0;
+  padding: 0.5em 1em;
+  font: inherit;
+  -webkit-appearance: none;
+  color: inherit;
+  width: 100%;
+  outline: 0;
+}
+
+
+.hotdog{
+background-color: var(--color-neutral-light);
+	border-radius: 2em;
+	padding: 0.5em 1.5em;
+	display: flex;
+  border-width: 0;
+  font: inherit;
+  -webkit-appearance: none;
+  color: inherit;
+  width: 100%;
+  outline: 0;
+margin: 1em 0;
+}
+
+.hotdog.dark{
+background-color: var(--color-neutral-dark);
+color:var(--color-neutral-light)
+}
+
+.hotdog.light{
+	background-color: var(--color-white);
+color:var(--color-black)
+}
+
+
+.hotdog input{
+  display: inline-block;
+  background-color: transparent;
+  border-width: 0;
+  font: inherit;
+  -webkit-appearance: none;
+  color: inherit;
+  width: 100%;
+  outline: none;
+  border: none;
+
+}
+
+.form-select>select{
+display: block;
+  border-width: 0;
+  font: inherit;
+  color: inherit;
+  width: 100%;
+  outline: 0;
+  padding: 0.5em 1.3em;
+  background-color: var(--color-neutral-light);
+	border-radius: 0.3em;
+	cursor: pointer;
+-webkit-appearance: none;
+}
+
+.form-select{
+	position: relative;
+
+}
+.form-select::after{
+	content: '▿';
+	font-family: arial,sans-serif;
+	font-size: 1em;
+	position: absolute;
+	top: 50%;
+	right: 0.2em;
+	transform: translateY(-50%);
+	pointer-events: none;
+	color: var(--color-neutral-medium);
+
+}
+
+
+/*Toggle*/
+.toggle label {
+	font-size: 1.3em;
+	display: inline-block;
+	width: 2em;
+	height: 1em;
+	border: 0.1em solid var(--color-neutral-medium);
+	background-color: var(--color-neutral-light);
+	border-radius: 1em;
+	position: relative;
+}
+
+.toggle label::after{
+	content: '';
+	display: inline-block;
+	width: 0.8em;
+	height: 0.8em;
+	border-radius: 1em;
+	position: absolute;
+	background-color: var(--color-neutral-dark);
+	transition: all 0.3s;
+
+}
+
+.toggle input:checked + label::after{
+	transform: translateX(1em);
 }
