@@ -349,6 +349,8 @@ a:hover {
 	border-radius: 2em;
 	padding: .5em 1em;
 	display: flex;
+    align-items: center;
+    height: 2.5em;
 }
 .hotdog.dark {
 	background-color: var(--color-neutral-dark);
@@ -406,4 +408,4 @@ a:hover {
 }
 .toggle input:checked + label::after {
     transform: translateX(1em);
-    background-color: var(--color-black);
+    background-color: orange;

@@ -20,6 +20,41 @@ body {
 	padding-bottom: 4em;
 }
 
+@media (max-width: 600px) {
+	.product-overlay figcaption {
+		position: relative;
+		display: block;
+		top: initial;
+		left: initial;
+		width: 100%;
+		height: initial;
+		opacity: 1;
+		background-attachment: initial;
+	}
+	.product-overlay .caption-body {
+		transform: none;
+		padding: 0;
+	}
+}
+
+@media(max-width:600px){
+	.container {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	.navbar h1{
+		padding-left: 0.35em;
+	}
+}
+	@media(max-width:500px){
+	.navbar .display-flex {
+		display: block;
+	}
+	.navbar .nav li{
+		line-height: 2em;
+	}
+}
+
 .nav-table ul {
 	list-style-type: none;
 	margin-top: 0;
@@ -90,23 +125,6 @@ body {
 .product-overlay:hover img {
 	transform: scale(1.1, 1.1);
 } 
-
-@media (max-width: 600px) {
-	.product-overlay figcaption {
-		position: relative;
-		display: block;
-		top: initial;
-		left: initial;
-		width: 100%;
-		height: initial;
-		opacity: 1;
-		background-attachment: initial;
-	}
-	.product-overlay .caption-body {
-		transform: none;
-		padding: 0;
-	}
-}
 
 .favorite label {
 	transition: all 0.3s;
