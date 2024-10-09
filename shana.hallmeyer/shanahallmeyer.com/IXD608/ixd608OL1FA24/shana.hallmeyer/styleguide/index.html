@@ -5,9 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CSS Styleguide</title>
 
+	<link rel="stylesheet" type="text/css" href="../css/storetheme.css">
 	<link rel="stylesheet" type="text/css" href="../lib/css/styleguide.css">
 	<link rel="stylesheet" type="text/css" href="../lib/css/gridsystem.css">
-	<link rel="stylesheet" type="text/css" href="../css/storetheme.css">
 	<link rel="stylesheet" href="https://use.typekit.net/cji8pyb.css">
 	<link rel="stylesheet" href="https://use.typekit.net/cji8pyb.css">
 
@@ -36,7 +36,7 @@
 				<nav class="nav">
 					<ul>
 						<li><a href="#typography">Typography</a></li>
-							<ul>
+							<ul class="nav-indent">
 								<li><a href="#headings">Headings</a></li>
 								<li><a href="#paragraphs">Paragraphs</a></li>
 							</ul>
@@ -50,17 +50,10 @@
 						<li><a href="#forms">Forms</a></li>
 							<ul>
 								<li><a href="#inputs">Inputs</a></li>
-								<li><a href="#labels">Labels</a></li>
-								<li><a href="#controls">Controls</a></li>
 								<li><a href="#buttons">Buttons</a></li>
-								<li><a href="#hotdog">Hotdog</a></li>
 								<li><a href="#select">Select</a></li>
 								<li><a href="#checkbox">Check Boxes</a></li>
-									<ul>
-										<li><a href="#basiccheckbox">Basic CheckBox</a></li>
-										<li><a href="#heartcheckbox">Heart CheckBox</a></li>
-										<li><a href="#toggle">Toggle</a></li>
-									</ul>
+								<li><a href="#hotdog">Hotdog</a></li>	
 							</ul>
 
 					</ul>
@@ -90,7 +83,7 @@
 		</div>
 
 
-		<div class="container">
+		<div class="container" id="cards">
 			<h2>Card</h2>
 
 			<div class="grid gap">
@@ -120,7 +113,7 @@
 
 
 
-		<div class="container">
+		<div class="container" id="viewwindow">
 			<h2>View window</h2>
 			<div class="view-window" style="background-image: url('../img/skateboard-parallax.jpeg');"></div>
 		</div>
@@ -194,7 +187,7 @@
 
 
 
-		<div class="container">
+		<div class="container" id="gridsystem">
 			<h2>Grid System</h2>
 		</div>
 		<div class="container card soft">
@@ -250,7 +243,7 @@
 
 
 
-		<div class="container">
+		<div class="container" id="flexsystem">
 			<h2>Flex System</h2>
 		</div>
 		
@@ -377,7 +370,7 @@
 		</script>
 
 
-		<div class="container">
+		<div class="container" id="tables">
 			<h2>Tables</h2>
 
 			<div class="card soft">
@@ -417,7 +410,7 @@
 
 		</div>
 
-		<div class="container">
+		<div class="container" id="figures">
 			<h2 id="figures">Figures</h2>
 		
 			<div class="container card">		
@@ -531,7 +524,7 @@
 
 		<h3>Inputs</h3>
 
-		<div class="card soft">
+		<div class="card soft" id="inputs">
 			<h3>Default Inputs</h3>
 			<form>
 				<input type="text"> <br>
@@ -595,7 +588,7 @@
 			</form>
 		</div>
 
-		<h3>Buttons</h3>
+		<h3 id="buttons">Buttons</h3>
 		<div class="card soft">
 			<h3>Default Buttons</h3>
 			<button>Button</button>
@@ -667,7 +660,7 @@
 
 
 
-		<h3>Hotdog</h3>
+		<h3 id="hotdog">Hotdog</h3>
 		<div class="card soft">
 			<div class="form-control">
 				<form>

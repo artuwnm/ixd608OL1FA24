@@ -160,8 +160,11 @@ body {
 }
 
 
+/* NAVIGATION */
 
-
+.nav ul {
+	padding-left: 10px;
+}
 
 
 
