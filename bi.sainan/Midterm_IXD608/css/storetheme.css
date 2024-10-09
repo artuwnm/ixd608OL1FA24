@@ -36,15 +36,10 @@ body {
 	.navbar h1{
 		padding-left: 0em;
 		line-height: 2em;
+		font-size: 3em;
 	}
-}
-
-@media(max-width:500px){
 	.navbar .display-flex {
 		display: block;
-	}
-	.navbar .nav li{
-		line-height: 2em;
 	}
 }
 
