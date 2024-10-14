@@ -222,14 +222,14 @@ a:hover {
 	background-color: var(--color-card);
 }
 .card.dark {
-	background-color: var(--color-green-dark);
+	background-color: var(--color-beige-dark);
 	color: white;
 }
 .card.medium {
-	background-color: var(--color-green-medium);
+	background-color: var(--color-beige-medium);
 }
 .card.light {
-	background-color: var(--color-green-light);
+	background-color: var(--color-beige-light);
 }
 .card.flat {
 	padding: 0;
@@ -262,7 +262,7 @@ a:hover {
 }
 
 .table.striped tbody tr:nth-child(odd) {
-	background-color: var(--color-green-medium);
+	background-color: var(--color-green-light);
 }
 
 .table.lined.all th:not(:first-child),
@@ -363,17 +363,18 @@ a:hover {
     height: 2.5em;
 }
 .hotdog.dark {
-	background-color: var(--color-beige-light);
+	background-color: var(--color-green-light);
 	color: var(--color-neutral-light);
     border: none;
 }
 .hotdog.light {
 	background-color: var(--color-white);
+    border: none;
 }
 
 .form-select>select {
     padding: .5em 1.2em;
-    background-color: var(--color-green-medium);
+    background-color: var(--color-green-light);
     border-radius:0.3em;
     cursor:pointer;
     margin: .5em 0;

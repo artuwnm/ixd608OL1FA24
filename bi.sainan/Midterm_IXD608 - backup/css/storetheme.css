@@ -8,7 +8,7 @@
 	--color-neutral-dark:#ACACAC;
 
 	--color-green-light:#E9F3F6;
-	--color-green-medium:#D8E3E4;
+	--color-green-medium:#cde2e4;
 	--color-green-dark:#9CB5BA;
 
 	--color-blue-light:#ebf5fa;
@@ -19,9 +19,8 @@
 	--color-orange-medium:#ffbf51;
 	--color-orange-dark:#ffa406;
 
-	--color-beige-extra-light:#F8F5EE;
-	--color-beige-light:#F1ECDE;
-	--color-beige-medium:#F8EDD3;
+	--color-beige-light:#F8F5EE;
+	--color-beige-medium:#F1ECDE;
 	--color-beige-dark:#E4CA9E;
 }
 
@@ -46,7 +45,7 @@ body {
 	.navbar h1{
 		padding-left: 0em;
 		line-height: 2em;
-		font-size: 4em;
+		font-size: 3em;
 	}
 	.navbar .display-flex {
 		display: block;
