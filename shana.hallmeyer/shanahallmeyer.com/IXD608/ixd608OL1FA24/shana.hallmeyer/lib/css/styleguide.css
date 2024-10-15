@@ -461,6 +461,26 @@ position: relative;
 	background-color: var(--color-secondary-dark-red);
 }
 
+.form-button.outline {
+	background-color: var(--color-neutral-dark);
+	color: var(--color-white);
+	border-radius: 0.2em;
+	cursor: pointer;
+	text-align: center;
+	padding: 0.5em 1em;
+}
+
+.form-button.outline:hover {
+	text-decoration: none;
+	background-color: var(--color-white);
+	color: var(--color-black);
+	border: 1px solid var(--color-black);
+}
+
+.form-button.outline:active {
+	background-color: var(--color-secondary-light-blue);
+}
+
 .hotdog {
 	background-color: var(--color-neutral-light);
 	border-radius: 2em;

@@ -160,6 +160,49 @@ body {
 }
 
 
+.size label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 3em;
+	width: 3em;
+	border: 0.1em solid var(--color-neutral-medium);
+	border-radius: 50%;
+}
+
+.size input:checked + label{
+	color: white;
+	background-color: var(--color-black);
+	border: 0em;
+}
+
+
+.color.select {
+	height: 2em;
+	width: 2em;
+	border-radius: 50%;
+	border: 0.1em solid var(--color-white);
+}
+
+.color.select input:checked + label{
+	border: 0.1em solid var(--color-neutral-medium);
+	transform: scale(2, 2);
+}
+
+.blue {
+	background-color: var(--color-secondary-medium-blue);
+}
+
+.yellow {
+	background-color: var(--color-secondary-dark-yellow);
+}
+
+.red {
+	background-color: var(--color-secondary-medium-red);
+}
+
+
 /* NAVIGATION */
 
 .nav ul {
