@@ -16,14 +16,13 @@
 	--color-main-medium:#E5B1B5;
 	--color-main-dark:#4B4B4D;
 
-	--color-black:#000;
 	--color-white:#F7F2F5;
 
 	--header-height:3rem;
 	--spacing:1rem;
 
-	--font-serif: GEORGIA, "Times New Roman", serif;
-	--font-sans: Helvetica, Arial, sans-serif;
+	--font-serif: Menlo, serif;
+	--font-sans: Menlo, sans-serif;
 }
 
 
@@ -32,6 +31,7 @@ body {
 		margin: 0;
 		font-size: 100%;
 		font-family: var(--font-sans);
+		color: var(--color-main-dark);
 		padding-bottom: 10em;
 
 }
@@ -46,16 +46,21 @@ h5,
 h6{
 	font-family: var(--font-serif);
 	color: var(--color-neutral-dark);
+	font-weight: bold;
 }
 
 
 
 a{
 	color: var(--color-neutral-dark);
-	font-weight: bold;
+	font-weight: normal;
+    font-style: italic;
+    font-weight: bold;
 	text-decoration: none;
 
 }
+
+
 
 
 
@@ -101,7 +106,7 @@ a{
 	list-style-type: none;
 	margin-top: 0;
 	margin-bottom: 0;
-	padding-left: 0;
+	padding-left: 20px;
 }
 
 
@@ -231,6 +236,7 @@ a{
 
 .card {
     background-color: var(--color-white);
+    color: var(--color-neutral-dark)
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 1em;
@@ -538,4 +544,14 @@ display: block;
 
 .toggle input:checked + label::after{
 	transform: translateX(1em);
+}
+
+.box {
+    padding: 15px;
+    margin: 10px;
+    background-color: var(--color-neutral-light);
+    border: 1px solid var(--color-neutral-dark);
+    min-width: 100px;
+    min-height: 50px;
+    text-align: center;
 }

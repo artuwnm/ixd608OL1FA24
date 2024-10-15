@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="/wangyujingzhang_aau/aau/ixd608/lib/css/styleguide.css">
 	<link rel="stylesheet" href="/wangyujingzhang_aau/aau/ixd608/css/gridsystem.css">
 	<link rel="stylesheet" href="/wangyujingzhang_aau/aau/ixd608/css/storetheme.css">
+	<link rel="stylesheet" href="/wangyujingzhang_aau/aau/ixd608/css/gridsystem.css">
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
@@ -87,7 +88,7 @@
 
 
  <div class="container" id="paragraphs">
- 		<h3>Paragraphs</h3>
+ 		<h2>Paragraphs</h2>
 
  	<article id="article" class="article card soft">
  		<p>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Quia sint harum a voluptatum iusto, atque nobis, voluptas sapiente sequi nulla! Earum eius dolorem, enim necessitatibus ducimus quis facilis eum, deleniti.</p>
@@ -99,7 +100,7 @@
  
 
 
- <div class="container">
+ <div class="container" id="cards">
  	<h2>Cards</h2>
  	<div class="grid gap">
 
@@ -127,7 +128,7 @@
 
 
 
-<div class="container">
+<div class="container" id="viewwindow">
  	<h2>View Window</h2>
  		<div class="view-window" style="background-image: url('/wangyujingzhang_aau/aau/ixd608/img/testone.jpg')">
 		</div>
@@ -218,15 +219,6 @@
 
 
 
- <div class="container">
- 	<h2>Grid System</h2>
- </div>
-
-
-
- <div class="container">
- 	<h2>Flex System</h2>
- </div>
 
 
  <script>
@@ -304,7 +296,10 @@ const makeTable = (classes = '') => {
 
 
 
- <h2 id="figures">Fighers</h2>
+
+
+ <div class="container" id="figures">
+ <h2>Fighers</h2>
 
  <div class="card">
  <h3>Basic Figure</h3>
@@ -390,6 +385,7 @@ const makeTable = (classes = '') => {
 </div>
 
 
+
 <h3>Product overlay</h3>
 <div class="grid gap">
 
@@ -434,11 +430,13 @@ const makeTable = (classes = '') => {
 
 </div>
 
-<div class="container" id="forms">
-	<h3>Forms</h3>
+</div>
 
-	<h3>Inputs</h3>
-	<div class="card soft" id="inputs">
+<div class="container" id="forms">
+	<h2>Forms</h2>
+
+	<h3  id="inputs">Inputs</h3>
+	<div class="card soft">
 		<h3>Default Inputs</h3>
 		<form>
 			<input type="text"><br>
@@ -458,10 +456,12 @@ const makeTable = (classes = '') => {
 		<input type="password" placeholder="Password" class="form-input">
 		<input type="search" placeholder="Search" class="form-input">
 	</form>
+</div>
 
-	<h3>Form Label</h3>
+	<h3 id="labels">Form Label</h3>
+	<div class="card soft">
 	<form>
-		<label class="form-label" id="labels">Example</label>
+		<label class="form-label">Example</label>
 		<input type="text" placeholder="Text" class="form-input">
 		<label class="form-label">Example</label>
 		<input type="number" placeholder="Number" class="form-input">
@@ -470,10 +470,14 @@ const makeTable = (classes = '') => {
 		<label class="form-label">Example</label>
 		<input type="search" placeholder="Search" class="form-input">
 	</form>
+</div>
 
-	<h3>Form Control</h3>
+
+
+	<h3 id="controls">Form Control</h3>
+	<div class="card soft">
 	<form>
-		<div class="form-control" id="controls">
+		<div class="form-control">
 			<label class="form-label">Example</label>
 			<input type="text" placeholder="Text" class="form-input">
 		</div>
@@ -503,9 +507,14 @@ const makeTable = (classes = '') => {
 
 	</div>
 
-<h3>Buttons</h3>
+</div>
 
-<div class="card soft" id="buttons">
+
+<div class="container" id="buttons">
+
+<h2>Buttons</h2>
+
+<div class="card soft">
 	<h3>Default Button</h3>
 		<button class="default-button">Button</button>
 
@@ -524,9 +533,14 @@ const makeTable = (classes = '') => {
 
 </div>
 
+</div>
+
+
+<div class="container" id="hotdog">
+
 <h2>Hotdog</h2>
 
-<div class="card soft" id="hotdog">
+<div class="card soft">
 	<div class="form-contral">
 		<form>
 			<input type="search" class="hotdog" placeholder="search">
@@ -557,8 +571,13 @@ const makeTable = (classes = '') => {
 	</div>
 
 </div>
+</div>
 
-<h2 id="select">Select</h2>
+
+
+<div class="container" id="select">
+
+<h2>Select</h2>
 <div class="card soft">
 	<div class="form-select">
 	<select>
@@ -585,8 +604,11 @@ const makeTable = (classes = '') => {
 
 	
 </div>
+</div>
 
-<h2 id="checkboxes">Check boxes</h2>
+<div class="container" id="checkboxes">
+
+<h2>Check boxes</h2>
 <div class="card soft">
 	<label>Label <input type="checkbox" id="input-1"></label>
 	<label for="input-1">Label</label>
@@ -616,6 +638,168 @@ const makeTable = (classes = '') => {
 </div>
 
 </div>
+</div>
+
+
+<div class="container" id="gridsystem">
+
+<h2>Grid system</h2>
+
+	<div class="card soft">
+	<h3>grid</h3>
+	<div class="grid">
+		<div class="col-xs-6">column 6</div>
+		<div class="col-xs-6">column 6</div>
+	</div>
+
+	<div class="grid gap xs-small md-medium">
+		<div class="col-xs-4">column 4</div>
+		<div class="col-xs-4">column 4</div>
+		<div class="col-xs-4">column 4</div>
+
+		<div class="col-xs-3">column 3</div>
+		<div class="col-xs-3">column 3</div>
+		<div class="col-xs-3">column 3</div>
+		<div class="col-xs-3">column 3</div>
+
+		<div class="col-xs-3">column 3</div>
+		<div class="col-xs-3">column 3</div>
+		<div class="col-xs-6">column 6</div>
+	</div>
+</div>
+
+
+	<div class="card soft">
+	<h3>responsive grid</h3>
+	<div class="grid">
+		<div class="col-xs-12 col-md-6">column 6</div>
+		<div class="col-xs-12 col-md-6">column 6</div>
+	</div>
+
+	<div class="grid">
+		<div class="col-xs-12 col-md-4 col-xl-3">column 4</div>
+		<div class="col-xs-12 col-md-4 col-xl-">column 4</div>
+		<div class="col-xs-12 col-md-4 col-xl-3">column 4</div>
+
+		<div class="col-xs-3">column 3</div>
+		<div class="col-xs-3">column 3</div>
+		<div class="col-xs-3">column 3</div>
+		<div class="col-xs-3">column 3</div>
+	</div>
+
+	<div class="grid ten gap">
+
+		<div class="col-xs-2">column 2</div>
+		<div class="col-xs-2">column 2</div>
+		<div class="col-xs-2">column 2</div>
+		<div class="col-xs-2">column 2</div>
+		<div class="col-xs-2">column 2</div>
+	</div>
+</div>
+
+
+	<div class="grid gap xs-small md-medium">
+		<div class="col-xs-6 col-md-3">
+			<div class="card soft">
+				<img src="https://placehold.co/500x500" alt="" class="media-image">
+
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<div class="card soft">
+				<img src="https://placehold.co/500x500" alt="" class="media-image">
+
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<div class="card soft">
+				<img src="https://placehold.co/500x500" alt="" class="media-image">
+
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<div class="card soft">
+				<img src="https://placehold.co/500x500" alt="" class="media-image">
+
+			</div>
+		</div>
+
+</div>
+</div>
+
+
+
+
+ <div class="container" id="flexsystem">
+ 	<h2>Flex System</h2>
+ 	<div class="card soft">
+ 	<h3>Display Flex</h3>
+    <div class="flex-container display-flex">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+</div>
+
+<div class="card soft">
+	<h3>Display Inline-Flex</h3>
+    <div class="flex-container display-inline-flex">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+</div>
+
+<div class="card soft">
+	<h3>Display Block</h3>
+    <div class="box display-block">
+        This is a block element.
+    </div>
+    <div class="box display-block">
+        This is a block element.
+    </div>
+</div>
+
+<div class="card soft">
+	<h3>Display Inline-Block</h3>
+    <span class="box display-inline-block">Inline-Block 1</span>
+    <span class="box display-inline-block">Inline-Block 2</span>
+</div>
+
+<div class="card soft">
+	<h3>Flex Stretch</h3>
+    <div class="flex-container display-flex">
+        <div class="box flex-stretch">Stretch Item</div>
+        <div class="box">Fixed Width</div>
+    </div>
+
+</div>
+
+<div class="card soft">
+	<h3>Flex None</h3>
+    <div class="flex-container display-flex">
+        <div class="box flex-none">Fixed none</div>
+        <div class="box flex-stretch">Stretch Item</div>
+    </div>
+</div>
+
+<div class="card soft">
+	<h3>Align Items Center</h3>
+    <div class="flex-container display-flex flex-align-center" style="height: 150px;">
+        <div class="box">Centered Vertically</div>
+    </div>
+
+</div>
+
+<div class="card soft">
+	<h3>Justify Content Center</h3>
+    <div class="flex-container display-flex flex-justify-center">
+        <div class="box">Centered Horizontally</div>
+    </div>
+</div>
+ 
+
+ </div>
 
 
  
