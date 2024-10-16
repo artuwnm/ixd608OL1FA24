@@ -40,7 +40,6 @@
 					<li><a href="#viewwindow">View Window</a></li>
 					<li><a href="#navigations">Navigations</a></li>
 					<li><a href="#gridsystem">Grid System</a></li>
-					<li><a href="#flexsystem">Flex System</a></li>
 					<li><a href="#tables">Tables</a></li>
 					<li><a href="#forms">Forms</a></li>
 					<ul>
@@ -75,7 +74,7 @@
 			<p>Sint est voluptas pariatur blanditiis odio, commodi nulla qui, sunt quasi illo enim labore consequuntur nisi! At nam ducimus eos, explicabo, totam, dolore, fugit dolores reprehenderit veniam architecto aliquam fugiat.</p>
 		</div>
 	</div>
-	<div class="container">
+	<div class="container" id="cards">
 		<h2>Cards</h2>
 		<div class="grid gap">
 			<div class="col-xs-12 col-md-4">
@@ -99,7 +98,7 @@
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container" id="viewwindow">
 		<h2>View Window</h2>
 		<div class="view-window" style="background-image:url('../img/pic1.jpg')">
 	</div>
@@ -158,11 +157,29 @@
 		})
 		</script>
 	</div>
-	<div class="container">
+	<div class="container" id="gridsystem">
 		<h2>Grid System</h2>
-	</div>
-	<div class="container">
-		<h2>Flex System</h2>
+		<div class="grid gap">
+		 	<div class="col-xs-12 col-md-6 card soft">column 6</div>
+		 	<div class="col-xs-12 col-md-6 card soft">column 6</div>
+		</div>
+		<div class="grid gap">
+		 	<div class="col-xs-12 col-md-4 col-xl-3 card hard">column 4</div>
+		 	<div class="col-xs-12 col-md-4 col-xl-6 card hard">column 4</div>
+		 	<div class="col-xs-12 col-md-4 col-xl-3 card hard">column 4</div>
+
+		 	<div class="col-xs-3 card dark soft">column 3</div>
+		 	<div class="col-xs-3 card dark soft">column 3</div>
+		 	<div class="col-xs-3 card dark soft">column 3</div>
+		 	<div class="col-xs-3 card dark soft">column 3</div>
+		</div>
+		<div class="grid ten gap">
+		 	<div class="col-xs-2 card medium soft">column 2</div>
+		 	<div class="col-xs-2 card medium soft">column 2</div>
+		 	<div class="col-xs-2 card medium soft">column 2</div>
+		 	<div class="col-xs-2 card medium soft">column 2</div>
+		 	<div class="col-xs-2 card medium soft">column 2</div>
+		</div>
 	</div>
 	<script>
 	const makeTable = (classes='') => {
@@ -187,7 +204,7 @@
 		`);
 	}
 	</script>
-	<div class="container">
+	<div class="container" id="tables">
 		<h2>Tables</h2>
 		<div class="card soft">
 			<h3>Basic Table</h3>
@@ -347,7 +364,7 @@
 				<input type="search" place holder="Search" class="form-input">
 			</form>
 
-			<h3>Form Control</h3>
+			<h3 id="controls">Form Control</h3>
 			<form>
 				<div class="form-control">
 					<label class="form-label">Example</label>
@@ -454,7 +471,7 @@
 		<h2 id="checkboxes">Check Boxes</h2>
 		<div class="card soft">
 			<h3>Basic Checkbox</h3>
-			<label>Label <input type="checkbox" id="input-1"></label>
+			<label id="labels">Label <input type="checkbox" id="input-1"></label>
 			<label for="input-1">Label</label>
 
 			<h3>Heart Checkbox</h3>
