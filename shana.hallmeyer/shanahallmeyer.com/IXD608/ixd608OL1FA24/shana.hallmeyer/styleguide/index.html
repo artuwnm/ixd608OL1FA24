@@ -144,7 +144,7 @@
 
 			<script>
 				const makeNav = (classes='') => {
-					const links = ['home', 'store', 'about'];
+					const links = ['home', 'store', 'about', 'cart'];
 					let ran = Math.floor(Math.random() * links.length);
 					document.write(`
 					<div>
@@ -728,17 +728,17 @@
 
 			<h3>Color Checkbox</h3>
 			<div class="grid gap display-inline-flex">
-				<div class="color select blue">
-					<input type="checkbox" id="color-blue" class="hidden">
-					<label for="color-blue"></label>
+				<div class="blue-check">
+    				<input type="checkbox" id="color-blue" class="hidden">
+    				<label for="color-blue"></label>
 				</div>
-				<div class="color select yellow">
-					<input type="checkbox" id="color-yellow" class="hidden">
-					<label for="color-yellow"></label>
+				<div class="yellow-check">
+    				<input type="checkbox" id="color-yellow" class="hidden">
+    				<label for="color-yellow"></label>
 				</div>
-				<div class="color select red">
-					<input type="checkbox" id="color-red" class="hidden">
-					<label for="color-red"></label>
+				<div class="red-check">
+    				<input type="checkbox" id="color-red" class="hidden">
+    				<label for="color-red"></label>
 				</div>
 			</div>
 

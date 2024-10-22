@@ -6,7 +6,7 @@
 
 body {
 	background-color: var(--color-offwhite);
-	padding-bottom: 4em;
+
 }
 
 
@@ -177,29 +177,41 @@ body {
 	border: 0em;
 }
 
-
-.color.select {
-	height: 2em;
-	width: 2em;
-	border-radius: 50%;
-	border: 0.1em solid var(--color-white);
+.blue-check label,
+.yellow-check label,
+.red-check label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    background-color: white;
 }
 
-.color.select input:checked + label{
-	border: 0.1em solid var(--color-neutral-medium);
-	transform: scale(2, 2);
+.blue-check label {
+    border: 0.1em solid var(--color-secondary-medium-blue);
 }
 
-.blue {
-	background-color: var(--color-secondary-medium-blue);
+.yellow-check label {
+    border: 0.1em solid var(--color-secondary-dark-yellow);
 }
 
-.yellow {
-	background-color: var(--color-secondary-dark-yellow);
+.red-check label {
+    border: 0.1em solid var(--color-secondary-dark-red);
 }
 
-.red {
-	background-color: var(--color-secondary-medium-red);
+.blue-check input:checked + label {
+    background-color: var(--color-secondary-medium-blue);
+}
+
+.yellow-check input:checked + label {
+    background-color: var(--color-secondary-dark-yellow);
+}
+
+.red-check input:checked + label {
+    background-color: var(--color-secondary-dark-red);
 }
 
 
