@@ -7,7 +7,7 @@
 	--color-neutral-medium:#D9D9D9;
 	--color-neutral-dark:#ACACAC;
 
-	--color-green-light:#E9F3F6;
+	--color-green-light:#EEF4F5;
 	--color-green-medium:#D8E3E4;
 	--color-green-dark:#9CB5BA;
 
@@ -15,8 +15,8 @@
 	--color-blue-medium:#cad7e2;
 	--color-blue-dark:#859aab;
 
-	--color-orange-light:#ffe5b7;
-	--color-orange-medium:#ffbf51;
+	--color-orange-light:#FCF0CE;
+	--color-orange-medium:#FBC972;
 	--color-orange-dark:#ffa406;
 
 	--color-beige-extra-light:#F8F5EE;
@@ -127,7 +127,7 @@ body {
 	background-color: var(--color-offwhite);
 	border-radius: .3em;
 	padding: .8em;
-	transform: translateY(12em);
+	transform: translateY(8em);
 	transition: all .3s;
 	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }

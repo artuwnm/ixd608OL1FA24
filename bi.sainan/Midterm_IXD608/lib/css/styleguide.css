@@ -11,7 +11,7 @@
 	--color-medium: #999;
 	--color-dark: #555;
 
-	--header-height: 6.5rem;
+	--header-height: 6rem;
 	--spacing: 1rem;
 
 	--font-serif: Georgia, "Times New Roman", serif;
@@ -22,11 +22,15 @@
 
 @font-face {
  font-family: Bauhaus;
- src: url('font/BauhausRegular.ttf');
+ src: url('../../font/BauhausRegular.ttf');
 }
 @font-face {
  font-family: Neutra Text;
- src: url('font/Neutraface Text Book.otf');
+ src: url('../../font/Neutraface Text Book.otf');
+}
+@font-face {
+ font-family: Neutra Text Bold;
+ src: url('../../font/Neutraface Text Bold.otf');
 }
 
 body {
@@ -95,12 +99,12 @@ a:hover {
 /* Navbar */
 
 .navbar {
-	background: linear-gradient(to right, #80a6ad, #ffe5b7); 
+	background: linear-gradient(to right, #80a6ad, #FCF0CE); 
 	color: var(--color-white);
 	line-height: var(--header-height);
 }
 .navbar h1 {
-	font-size: 4em;
+	font-size: 5em;
 	margin: ;
 	font-family: var(--font-sans-header);
 	text-decoration: none;
@@ -145,8 +149,9 @@ a:hover {
 	text-decoration: none;
 }
 .nav .active a {
-	background-color: var(--color-beige-medium);
+	background-color: var(--color-beige-light);
 	color: inherit;
+	font: bold 16px Neutra Text Bold;
 }
 
 .nav-stretch li,
@@ -168,6 +173,7 @@ a:hover {
 	background-color: transparent;
 	color: inherit;
 	text-decoration: underline;
+	font: bold 16px Neutra Text Bold;
 }
 .nav-crumbs li:not(:first-child)::before {
 	content: '>';
@@ -182,7 +188,7 @@ a:hover {
 	color: inherit;
 }
 .nav-material a:hover {
-	background-color: var(--color-beige-medium);
+	background-color: var(--color-beige-light);
 	color: inherit;
 }
 .nav-material a::after {
@@ -218,7 +224,7 @@ a:hover {
 }
 .card.hard {
 	border-radius: 0em;
-	border:1px solid var(--color-neutral-dark);
+	border:1.5px solid var(--color-green-dark);
 	background-color: var(--color-card);
 }
 .card.dark {
@@ -306,29 +312,29 @@ a:hover {
 .form-button,
 .form-input,
 .form-item {
-  display: inline-block;
-  background-color: transparent;
-  border-width: 0;
-  font: inherit;
-  -webkit-appearance: none;
-  color: inherit;
-  width: 100%;
-  outline: 0;
+	display: inline-block;
+	background-color: transparent;
+	border-width: 0;
+	font: inherit;
+	-webkit-appearance: none;
+	color: inherit;
+	width: 100%;
+	outline: 0;
 }
 
 .form-input {
-  border-bottom: 1px solid var(--color-neutral-medium);
-  padding: .5em 1em;
+	border-bottom: 1px solid var(--color-neutral-medium);
+	padding: .5em 1em;
 }
 .form-input:focus {
     border-bottom-color: var(--color-green-medium);
 }
 
 .form-label {
-  font-size: 0.8em;
-  color: var(--color-neutral-medium);
-  display: block;
-  width: 100%;
+	font-size: 0.8em;
+	color: var(--color-neutral-medium);
+	display: block;
+	width: 100%;
 }
 
 .form-control {
@@ -336,12 +342,13 @@ a:hover {
 }
 
 .form-button {
-  background-color: var(--color-offwhite);
-  border: 1px solid orange;
-  border-radius: 1em;
-  cursor: pointer;
-  text-align: center;
-  padding: .5em 1em;
+	background-color: var(--color-green-light);
+	border: 1px solid orange;
+	border-radius: 1em;
+	cursor: pointer;
+	text-align: center;
+	padding: .5em 1em;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .form-button:hover {
     text-decoration: none;
@@ -350,7 +357,7 @@ a:hover {
 }
 .form-button:active {
     background-color: var(--color-orange-dark);
-	border: 0px solid white;
+	border: ;
 }
 
 .hotdog {
@@ -363,7 +370,7 @@ a:hover {
     height: 2.5em;
 }
 .hotdog.dark {
-	background-color: var(--color-beige-light);
+	background-color: var(--color-green-light);
 	color: var(--color-neutral-light);
     border: none;
 }
@@ -373,7 +380,7 @@ a:hover {
 
 .form-select>select {
     padding: .5em 1.2em;
-    background-color: var(--color-green-medium);
+    background-color: var(--color-green-light);
     border-radius:0.3em;
     cursor:pointer;
     margin: .5em 0;
