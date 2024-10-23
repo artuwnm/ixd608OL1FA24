@@ -236,9 +236,8 @@ a{
 
 .card {
     background-color: var(--color-white);
-    color: var(--color-neutral-dark)
-    margin-top: 1em;
-    margin-bottom: 1em;
+    color: var(--color-neutral-dark);
+    margin: 1em auto;
     padding: 1em;
 	overflow: hidden;
     position: relative;
@@ -291,7 +290,7 @@ a{
 
 p {
     font-family: var(--font-serif); 
-    font-size: 3em; 
+    font-size: 2em; 
     line-height: 1.5;
     text-align: center; 
     margin-top: 2em;
@@ -303,11 +302,11 @@ p {
     position: fixed;
     bottom: 0;
     right: 0;
-    background-color: var(--color-white); 
+    background-color: var(--color-main-light); 
     color: var(--color-neutral-dark); 
     padding: 0.5em;
     font-family: var(--font-serif); 
-    font-size: 0.2em; 
+    font-size: 0.25em; 
     text-align: center;
     width: 100%; 
     line-height: 1.2; 
@@ -315,6 +314,7 @@ p {
 
 .footer p {
     margin: 0.5em 0; 
+    color: var(--color-neutral-dark);
 }
 
 
