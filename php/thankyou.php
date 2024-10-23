@@ -13,15 +13,8 @@
 
 	<?php include "../parts/viewwindow.php"; ?>
 
-	<div class="container">
-		<div class="card soft">
-			<h2>Product Item</h2>
-			<p>This is item # <?= isset($_GET['id']) ? $_GET['id'] : 'not provided' ?></p>
-			
-		</div>
-	</div>
+	<p>Thank you for your order!</p>
 
-
-<?php include "../parts/footer.php"; ?>
+	 <?php include "../parts/footer.php"; ?>
 </body>
 </html>
