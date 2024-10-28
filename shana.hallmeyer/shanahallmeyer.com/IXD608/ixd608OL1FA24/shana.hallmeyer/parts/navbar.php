@@ -1,4 +1,4 @@
-</header>
+
 
 	<header class="navbar">
 		<div class="container-nav display-flex">

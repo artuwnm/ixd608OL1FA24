@@ -11,7 +11,7 @@
 			</div>
 			<div class="footer-heading footer-3">
 				<h3>Admin</h3>
-				<a href="admin_product_list.php">Product</a>
+				<a href="admin/users.php">User list</a>
 			</div>
 			<div class="footer-email-form">
 				<h3>Join our newsletter</h3>
