@@ -17,9 +17,6 @@
 
 		<h2>Checkout</h2>
 		<div class="card soft">
-			
-			
-
 
 		</div>
 	</div>
