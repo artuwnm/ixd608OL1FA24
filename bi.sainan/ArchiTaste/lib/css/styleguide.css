@@ -648,6 +648,28 @@ input[type="checkbox"] {
     background-color: var(--color-orange-dark);
 
 
+/* Footer */
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    position: relative;
+}
+
+footer {
+	background: linear-gradient(to right, #80a6ad, #E4CA9E); 
+	color: var(--color-white);
+	line-height: 1rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
 
 /* Storetheme */

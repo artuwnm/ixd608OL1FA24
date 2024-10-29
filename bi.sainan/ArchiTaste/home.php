@@ -22,6 +22,8 @@
 </div>
 
 <div class="view-window" style="background-image: url('img/architaste.png');"></div>
+   
+   <?php include "parts/footer.php"; ?>
 
 </body>
 </html>

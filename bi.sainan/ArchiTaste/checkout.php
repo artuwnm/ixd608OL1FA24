@@ -27,25 +27,25 @@
            <div class="card soft">
                 <form>
                     <div class="form-control">
-                        <label class="form-label"></label>
+                        <label class="form-label">Name</label>
                         <input type="text" placeholder="Name" class="form-input">
                     </div>
                     <div class="form-control">
-                        <label class="form-label"></label>
-                        <input type="number" placeholder="Card No." class="form-input">
+                        <label class="form-label">Card No.</label>
+                        <input type="text" placeholder="Card No." class="form-input">
                     </div>
                     <div class="form-control display-flex flex-align-center">
                         <div class="flex-none">
-                            <label class="form-label"></label>
+                            <label class="form-label">Exp.</label>
                         </div>
                         <div class="flex-stretch">
-                            <input type="search" placeholder="Exp." class="form-input flex-stretch">
+                            <input type="text" placeholder="" class="form-input flex-stretch">
                         </div>
                         <div class="flex-none">
-                            <label class="form-label"></label>
+                            <label class="form-label">Code</label>
                         </div>
                         <div class="flex-stretch">
-                            <input type="search" placeholder="Code" class="form-input flex-stretch">
+                            <input type="text" placeholder="" class="form-input flex-stretch">
                         </div>
                     </div>
                 </form>
@@ -94,6 +94,12 @@
    </div>
 
 </div>
+
+    <br>
+    <br>
+    <br>
+    
+   <?php include "parts/footer.php"; ?>
 
 </body>
 </html>

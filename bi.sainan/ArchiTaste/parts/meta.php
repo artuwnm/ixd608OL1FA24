@@ -1,5 +1,6 @@
 
    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <base href="https://sainandesign.com/IXD608/ixd608OL1FA24/bi.sainan/ArchiTaste/">
    

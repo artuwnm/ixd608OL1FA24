@@ -236,5 +236,11 @@
 
 </div>
 
+    <br>
+    <br>
+    <br>
+    
+   <?php include "parts/footer.php"; ?>
+
 </body>
 </html>

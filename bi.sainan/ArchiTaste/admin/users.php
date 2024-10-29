@@ -8,11 +8,13 @@ $users = file_get_json("../data/users.json");
 function showUserPage($user) {
 
 echo <<<HTML
+
+		<br>
 		
 <nav class="nav nav-crumbs">
 	<ul>
-		<li>
-			<a href="admin/users.php">Back</a>
+		<li style="font-size: 1.2em;">
+			<a href="admin/users.php"> < Back</a>
 		</li>
 	</ul>
 </nav>
@@ -25,12 +27,12 @@ echo <<<HTML
 	       <input type="text" placeholder="$user->name" class="form-input">
 	   </div>
 	   <div>
-	       <label class="form-label">Password</label>
-	       <input type="number" placeholder="$user->type" class="form-input">
+	       <label class="form-label">Type</label>
+	       <input type="text" placeholder="$user->type" class="form-input">
 	   </div>
 	   <div>
 	       <label class="form-label">Email Address</label>
-	       <input type="password" placeholder="$user->email" class="form-input">
+	       <input type="email" placeholder="$user->email" class="form-input">
 	   </div>
 	   <div>
 	       <label class="form-label">Classes</label>
@@ -40,6 +42,13 @@ echo <<<HTML
 
 	<br>
 
+</div>
+	      		
+			<br>
+	
+	   <div class="form-control nobullet">
+	       <a href="admin/users.php" class="form-button">Submit</a>
+	   </div>
 </div>
 
 
@@ -53,29 +62,34 @@ HTML;
 
 <head>
 	<meta charset="UTF-8">
+
 	<title>User Admin Page</title>
+
    <?php include "../parts/meta.php"; ?>
+
 </head>
 
 <body>
 
-	<header class="navbar" style="line-height: 3rem;">
-		<div class="container display-flex align-top">
+	<header class="navbar" style="line-height: 8rem;">
+		<div class="container display-flex align-center">
 			<div class="flex-none">
-				<h1 style="font-size: 3em;">User Admin</h1>
+				<h1 style="font-size: 5em;">User Admin</h1>
 			</div>
 			<div class="flex-stretch"></div>
 			<nav class="nav nav-menu flex-none">
 				<ul>
-					<li><a href="admin/users.php">User List</a></li>
+					<li style="font-size: 1.2em"><a href="admin/users.php">User List</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 
-	<div class="container">
-
 		<br>
+		<br>
+		<br>
+
+	<div class="container">
 
 	    <div>
 
@@ -88,7 +102,7 @@ HTML;
 
 	    	 ?>
 
-	      	<h2>User List</h2>
+	      	<h1>User List</h1>
 
 	      	<div class="soft card">
 	      		<nav class="nav nav-block">
@@ -106,17 +120,21 @@ HTML;
 	      		<?php 
 	      		
 	      			    	} ?>
-	      		
-	      			    </div>
-	      		
-	      				<br>
-	      		
-	      		   <div class="form-control nobullet">
-	      		       <a href="admin/users.php" class="form-button">Submit</a>
-	      		   </div>
-	      	</div>
+	    		</div>
+			</div>
+		</div>
 
-
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+    
+<footer>
+	<div class="footer">
+        <p>&copy; 2024 ArchiTaste. All rights reserved.</p>
 	</div>
+</footer>
+
 </body>
 </html>

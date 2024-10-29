@@ -38,16 +38,16 @@
    <div class="card soft">
         <form>
             <div class="form-control">
-                <label class="form-label"></label>
+                <label class="form-label">User Name</label>
                 <input type="text" placeholder="User Name" class="form-input">
             </div>
             <div class="form-control">
-                <label class="form-label"></label>
-                <input type="number" placeholder="Password" class="form-input">
+                <label class="form-label">Email Address</label>
+                <input type="email" placeholder="Email Address" class="form-input">
             </div>
             <div class="form-control">
-                <label class="form-label"></label>
-                <input type="password" placeholder="Email Address" class="form-input">
+                <label class="form-label">Password</label>
+                <input type="password" placeholder="Password" class="form-input">
             </div>
         </form>
    </div>
@@ -68,29 +68,29 @@
    <div class="card soft">
         <form>
             <div class="form-control">
-                <label class="form-label"></label>
+                <label class="form-label">Name</label>
                 <input type="text" placeholder="Name" class="form-input">
             </div>
             <div class="form-control">
-                <label class="form-label"></label>
-                <input type="number" placeholder="Phone" class="form-input">
+                <label class="form-label">Phone</label>
+                <input type="text" placeholder="Phone" class="form-input">
             </div>
             <div class="form-control">
-                <label class="form-label"></label>
-                <input type="password" placeholder="Address" class="form-input">
+                <label class="form-label">Address</label>
+                <input type="text" placeholder="" class="form-input">
             </div>
             <div class="form-control display-flex flex-align-center">
                 <div class="flex-none">
-                    <label class="form-label"></label>
+                    <label class="form-label">Address</label>
                 </div>
                 <div class="flex-stretch">
-                    <input type="search" placeholder="Address" class="form-input flex-stretch">
+                    <input type="text" placeholder="" class="form-input flex-stretch">
                 </div>
                 <div class="flex-none">
-                    <label class="form-label"></label>
+                    <label class="form-label">Zip</label>
                 </div>
                 <div class="flex-stretch">
-                    <input type="search" placeholder="Zip" class="form-input flex-stretch">
+                    <input type="text" placeholder="" class="form-input flex-stretch">
                 </div>
             </div>
         </form>
@@ -104,6 +104,11 @@
 
    </div>
 
+    <br>
+    <br>
+    <br>
+
+   <?php include "parts/footer.php"; ?>
 
 
 </body>
