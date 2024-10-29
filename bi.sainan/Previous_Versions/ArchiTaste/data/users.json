@@ -1,0 +1,27 @@
+[
+	{
+		"name":"User 1",
+		"type":"Student",
+		"email":"user1@academyart.edu"
+	},
+	{
+		"name":"User 2",
+		"type":"Student",
+		"email":"user1@academyart.edu"
+	},
+	{
+		"name":"User 3",
+		"type":"Student",
+		"email":"user2@academyart.edu"
+	},
+	{
+		"name":"User 4",
+		"type":"Student",
+		"email":"user3@academyart.edu"
+	},
+	{
+		"name":"User 5",
+		"type":"Student",
+		"email":"user4@academyart.edu"
+	}
+]
