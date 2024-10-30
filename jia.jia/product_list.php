@@ -9,13 +9,14 @@
 <body>
 	<?php include "parts/navbar.php"; ?>
 
+	<div class="container">
 	<div class="card soft">
 			<div class="form-control">
 				<form>
 					<input type="search" class="hotdog" placeholder="Search">
 				</form>
 			</div>
-	</div>
+	</div>	
 	<div class="card soft">
 		<h2>Living Room</h2>
 		<div class="grid gap">
@@ -147,6 +148,7 @@
 				</figure>
 			</div>
 		</div>
+	</div>
 	</div>
 </body>
 </html>
