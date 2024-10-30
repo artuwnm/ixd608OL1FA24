@@ -17,7 +17,7 @@
 
             <figcaption>
             <div>
-                <a href="/wangyujingzhang_aau/aau/ixd608/php/ptwo.php?id=1">Product 1</a>
+                <a href="/wangyujingzhang_aau/aau/ixd608/php/pone.php?id=1">Product 1</a>
             </div>
             <div>$26.99</div>
             </figcaption>
@@ -26,7 +26,7 @@
 
         <div class="col-xs-12 col-md-4">
                 <figure class="figure product">
-                    <a href="/wangyujingzhang_aau/aau/ixd608/php/product_item.php?id=2">
+                    <a href="/wangyujingzhang_aau/aau/ixd608/php/ptwo.php?id=2">
 
                     <img src="https://dummyimage.com/200x200/000/fff&text=Product 2" alt="Product 2">
 
@@ -34,7 +34,7 @@
 
             <figcaption>
             <div>
-                <a href="/wangyujingzhang_aau/aau/ixd608/php/product_item.php?id=2">Product 2</a>
+                <a href="/wangyujingzhang_aau/aau/ixd608/php/ptwo.php?id=2">Product 2</a>
             </div>
             <div>$26.99</div>
             </figcaption>
