@@ -22,19 +22,19 @@ echo <<<HTML
 	<form>
 		<div class="form-control">
 			<label class="form-label">Name</label>
-			<input type="text" id="name" placeholder=$user->name class="form-input">
+			<input type="text" id="name" value=$user->name class="form-input">
 		</div>
 		<div class="form-control">
 			<label class="form-label">Type</label>
-			<input type="text" id="type" placeholder=$user->type class="form-input">
+			<input type="text" id="type" value=$user->type class="form-input">
 		</div>
 		<div class="form-control">
 			<label class="form-label">Instrument</label>
-			<input type="text" id="instrument" placeholder=$user->instrument class="form-input">
+			<input type="text" id="instrument" value=$user->instrument class="form-input">
 		</div>
 		<div class="form-control">
 			<label class="form-label">Born</label>
-			<input type="text" id="born" placeholder=$user->born class="form-input">
+			<input type="text" id="born" value=$user->born class="form-input">
 		</div>
 	</form>
 </div>
