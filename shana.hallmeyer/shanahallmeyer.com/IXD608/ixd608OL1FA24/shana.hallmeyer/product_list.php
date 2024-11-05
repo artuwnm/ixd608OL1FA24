@@ -17,7 +17,7 @@
 			<form>
 			<input type="search" class="hotdog dark" placeholder="Search">
 			</form>
-		<div>
+		</div>
 	</div>
 
 

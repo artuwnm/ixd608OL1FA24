@@ -3,36 +3,36 @@
 		"name":"Shana Hallmeyer",
 		"type":"Student",
 		"email":"shallmey2@art.edu",
-		"classes":"613,606,608"
+		"classes":[613,606,608]
 	},
 	{
 		"name":"Jane Doe",
 		"type":"Student",
 		"email":"janedoe@art.edu",
-		"classes":"613,606,608"
+		"classes":[613,606,608]
 	},
 	{
 		"name":"Mia Lopez",
 		"type":"Student",
 		"email":"mialopez2@art.edu",
-		"classes":"613,606,608"
+		"classes":[613,606,608]
 	},
 	{
 		"name":"John Smith",
 		"type":"Teacher",
 		"email":"johnsmith@art.edu",
-		"classes":"613,606,608"
+		"classes":[613,606,608]
 	},
 	{
 		"name":"Jezra Williams",
 		"type":"Teacher",
 		"email":"jwilliams@art.edu",
-		"classes":"613,606,608"
+		"classes":[613,606,608]
 	},
 	{
 		"name":"Eli Hallmeyer",
 		"type":"Student",
 		"email":"elihallmeyer@art.edu",
-		"classes":"613,606,608"
+		"classes":[613,606,608]
 	}
 ]
