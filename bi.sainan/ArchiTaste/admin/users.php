@@ -21,34 +21,32 @@ echo <<<HTML
 
 <div class="soft card">
 	<h2>$user->name</h2>
-	<form>
+	<form method="" action="">
 	   <div>
-	       <label class="form-label">User Name</label>
-	       <input type="text" placeholder="$user->name" class="form-input">
+	       <label class="form-label" for="user-name">User Name</label>
+	       <input class="form-input" name="user-name" id="user-name" type="text" value="$user->name">
 	   </div>
 	   <div>
-	       <label class="form-label">Type</label>
-	       <input type="text" placeholder="$user->type" class="form-input">
+	       <label class="form-label" for="user-type">Type</label>
+	       <input class="form-input" name="user-type" id="user-type" type="text" value="$user->type">
 	   </div>
 	   <div>
-	       <label class="form-label">Email Address</label>
-	       <input type="email" placeholder="$user->email" class="form-input">
+	       <label class="form-label" for="user-email">Email Address</label>
+	       <input class="form-input" name="user-email" id="user-email" type="email" value="$user->email">
 	   </div>
 	   <div>
-	       <label class="form-label">Classes</label>
-	       <input type="text" placeholder="$user->cls" class="form-input">
+	       <label class="form-label" for="user-classes">Classes</label>
+	       <input class="form-input" name="user-classes" id="user-classes" type="text" value="$user->cls">
 	   </div>
+
+<br>
+
+	<div class="form-control">
+	    <input class="form-button" type="submit" value="Save">
+	</div>
+
 	</form>
 
-	<br>
-
-</div>
-	      		
-			<br>
-	
-	   <div class="form-control nobullet">
-	       <a href="admin/users.php" class="form-button">Submit</a>
-	   </div>
 </div>
 
 
@@ -71,15 +69,15 @@ HTML;
 
 <body>
 
-	<header class="navbar" style="line-height: 8rem;">
+	<header>
 		<div class="container display-flex align-center">
 			<div class="flex-none">
-				<h1 style="font-size: 5em;">User Admin</h1>
+				<h1 style="font-size: 5em; line-height: 8rem;">User Admin</h1>
 			</div>
 			<div class="flex-stretch"></div>
-			<nav class="nav nav-menu flex-none">
+			<nav class="nav navbar flex-none">
 				<ul>
-					<li style="font-size: 1.2em"><a href="admin/users.php">User List</a></li>
+					<li style="font-size: 1.2em;"><a href="admin/users.php">User List</a></li>
 				</ul>
 			</nav>
 		</div>

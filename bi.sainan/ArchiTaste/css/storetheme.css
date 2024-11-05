@@ -6,15 +6,18 @@
 	--color-card: white;
 }
 
+.center-text {
+    text-align: center;
+}
 
-.navbar {
+header h1 {
 	line-height: 3rem;
 }
 
-.nav-menu a {
+.navbar a {
 	padding: .5em .8em;
 	font-size: 1.05em;
-	border-radius: .2em;
+	border-radius: .3em;
 }
 
 .nav-cart ul {
@@ -62,36 +65,26 @@ input[type="checkbox"] {
     margin: .5em 0;
 }
 
+
 html, body {
     height: 100%;
     margin: 0;
-}
-
-body {
     position: relative;
 }
 
 footer {
 	background: linear-gradient(to right, #80a6ad, #E4CA9E); 
 	color: var(--color-white);
-	line-height: 1rem;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: white;
-    text-align: center;
-    padding: 50px;
 }
 
 .footer{
-	padding: auto;
-	margin: auto;
-	box-sizing: border-box;
-	width: 80%;
-	height: 20vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+    padding: auto;
+	margin: auto;
+	height: 25vh;
+	width: 1000px;
+    text-align: center;
 }

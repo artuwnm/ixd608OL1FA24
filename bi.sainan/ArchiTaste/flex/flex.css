@@ -26,7 +26,7 @@
 .block {display: block;}
 .block-inline {display: inline-block;}
 
-.spread-edge {justify-content: space-between;}
+.spread {justify-content: space-between;}
 .spread-equal {justify-content: space-evenly;}
 .spread-even {justify-content: space-around;}
 
@@ -38,6 +38,7 @@
 .align-top {align-items: flex-start;}
 .align-bottom {align-items: flex-end;}
 
+.vertical {flex-direction: column;}
 .vertical-center {flex-direction: column; align-items: center;}
 .vertical-right {flex-direction: column; align-items: flex-end;}
 

@@ -10,12 +10,12 @@
 		padding-left: 1em;
 		padding-right: 1em;
 	}
-	.navbar h1{
+	header h1{
 		padding-left: 0em;
 		line-height: 2em;
 		font-size: 4em;
 	}
-	.navbar .display-flex {
+	header .display-flex {
 		display: block;
 	}
 }
@@ -106,12 +106,12 @@
 
 .centered {justify-content: center;}
 .right {justify-content: flex-end;}
-.left {justify-content: flex-start;}
 
 .align-center {align-items: center;}
 .align-top {align-items: flex-start;}
 .align-bottom {align-items: flex-end;}
 
+.vertical {flex-direction: column;}
 .vertical-center {flex-direction: column; align-items: center;}
 .vertical-right {flex-direction: column; align-items: flex-end;}
 
@@ -132,6 +132,10 @@
 
 /* Text Style */
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
 body {
 	margin: 0;
 	font-size: 100%;
@@ -183,7 +187,7 @@ a:hover {
     height: auto;
     object-fit: cover;
 }
-.center-text {
+.centered-text {
     text-align: center;
 }
 .underline {
@@ -213,6 +217,7 @@ a:hover {
 
 
 /* Table of Contents */
+
 .nav-table ul {
 	list-style-type: square;
 	margin-top: 0;
@@ -241,23 +246,41 @@ a:hover {
 }
 
 
-/* Navbar */
+/* Header */
 
-.navbar {
+header {
 	background: linear-gradient(to left, #80a6ad, #E4CA9E); 
 	color: var(--color-white);
-	line-height: 5rem;
 }
-.logo h1 {
+header h1 {
+	line-height: 8rem;
 	font-size: 5em;
 	font-family: var(--font-sans-header);
 	text-decoration: none;
 }
-.menu a {
-	padding: .5em .8em;
-	font-size: 1em;
-	border-radius: .2em;
+header h1 a:hover {
+	text-decoration: none;
 }
+
+
+/* Footer */
+
+footer {
+	background: linear-gradient(to right, #80a6ad, #E4CA9E); 
+	color: var(--color-white);
+}
+.footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+    padding: auto;
+	margin: auto;
+	height: 30vh;
+	width: 1000px;
+    text-align: center;
+}
+
 
 /* Nav */
 
@@ -302,10 +325,10 @@ a:hover {
     border: 0px solid white;
 }
 
-.nav-menu a {
-	padding: .5em .8em;
+.navbar a {
+	padding: .5em 1em;
 	font-size: 1em;
-	border-radius: .2em;
+	border-radius: .5em;
 }
 
 .nav-block a{
@@ -647,29 +670,5 @@ input[type="checkbox"] {
     transform: translateX(1em);
     background-color: var(--color-orange-dark);
 
-
-/* Footer */
-
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    position: relative;
-}
-
-footer {
-	background: linear-gradient(to right, #80a6ad, #E4CA9E); 
-	color: var(--color-white);
-	line-height: 1rem;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: white;
-    text-align: center;
-    padding: 50px;
-}
 
 /* Storetheme */

@@ -8,23 +8,10 @@
 </head>
 
 <body>
-		<h2 style="text-align: center;">No Flex</h2>
-
-		<div class="container">
-			<div class="card1">
-				<p>A</p>
-			</div>
-			<div class="card2">
-				<p>B</p>
-			</div>
-			<div class="card3">
-				<p>C</p>
-			</div>
-		</div>
 	
 		<h2 style="text-align: center;">Flex</h2>
 
-		<h3 class="container" style="border: 0;">default</h3>
+		<h3 class="container" style="border: 0;">left (default)</h3>
 
 		<div class="container flex">
 			<div class="card1">
@@ -72,9 +59,9 @@
 		
 		<br>
 		
-		<h3 class="container" style="border: 0;">spread edge</h3>
+		<h3 class="container" style="border: 0;">spread</h3>
 
-		<div class="container flex spread-edge">
+		<div class="container flex spread">
 			<div class="card1">
 				<p>A</p>
 			</div>
@@ -186,7 +173,7 @@
 		
 		<h3 class="container" style="border: 0;">spread and align</h3>
 
-		<div class="container flex spread-edge align-center">
+		<div class="container flex spread align-center">
 			<div class="card1">
 				<p>A</p>
 			</div>
@@ -198,19 +185,19 @@
 			</div>
 		</div>
 	</div>
-
+		
 		<br>
 		
-		<h3 class="container" style="border: 0;">stretch</h3>
+		<h3 class="container" style="border: 0;">vertical</h3>
 
-		<div class="container flex spread-even">
-			<div class="card1 stretch">
+		<div class="container flex vertical">
+			<div class="card1">
 				<p>A</p>
 			</div>
-			<div class="card2 stretch">
+			<div class="card2">
 				<p>B</p>
 			</div>
-			<div class="card3 stretch">
+			<div class="card3">
 				<p>C</p>
 			</div>
 		</div>
@@ -249,10 +236,29 @@
 			</div>
 		</div>
 	</div>
+
+		<br>
 		
+		<h3 class="container" style="border: 0;">stretch</h3>
+
+		<div class="container flex">
+			<div class="card1 stretch">
+				<p>A</p>
+			</div>
+			<div class="card2 stretch">
+				<p>B</p>
+			</div>
+			<div class="card3 stretch">
+				<p>C</p>
+			</div>
+		</div>
+	</div>
+	
+
 		<br>
 	
-		<h2 style="text-align: center;">Block</h2>
+		
+<h2 style="text-align: center;">Block</h2>
 
 <div class="container" style="border: .5px solid grey;">
 	<p>This is a <span class="block" style="color: white; font-size: 2em; font-weight: bold; background-color: lightblue; padding: 10px; text-align: center;"> display:block </span> demo</p>
@@ -262,19 +268,16 @@
 	
 <div class="container" style="border: .5px solid grey;">
 	<p>This is a <span class="block-inline" style="color: white; font-size: 2em; font-weight: bold; background-color: lightcoral;  padding: 10px;"> display:inline-block </span> demo</p>
-</div>
-		
-		<br>
 
-<div class="container" style="border: .5px solid grey;">
-	<div class="block-inline" style="color: white; font-size: 1em; font-weight: bold; padding: 10px 20px; background-color: orange;  margin: 10px">tab 1</div>
-	<div class="block-inline" style="color: white; font-size: 1em; font-weight: bold; padding: 10px 20px; background-color: orange;  margin: 10px">tab 1</div>
-	<div class="block-inline" style="color: white; font-size: 1em; font-weight: bold; padding: 10px 20px; background-color: orange;  margin: 10px">tab 1</div>
+	<div>
+		<div class="block-inline" style="color: white; font-size: 1em; font-weight: bold; padding: 10px 20px; background-color: orange;  margin: 10px">tab 1</div>
+		<div class="block-inline" style="color: white; font-size: 1em; font-weight: bold; padding: 10px 20px; background-color: orange;  margin: 10px">tab 1</div>
+		<div class="block-inline" style="color: white; font-size: 1em; font-weight: bold; padding: 10px 20px; background-color: orange;  margin: 10px">tab 1</div>
+	</div>
 </div>
-		
+	
 		<br>
 		<br>
-
 
 
 </body>

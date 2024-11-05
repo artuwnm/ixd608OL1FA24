@@ -1,16 +1,17 @@
    
- <header class="navbar">
+ <header>
+
 
    <div class="container flex align-center">
 
-      <div class="logo">
-         <h1>ArchiTaste</h1>
+      <div id="logo">
+         <h1><a href="home.php">ArchiTaste</a></h1>
       </div>
 
       <div class="flex-stretch"></div>
 
-      <nav class="menu">
-         <ul class="flex nav nav-menu">
+      <nav id="navbar" class="nav navbar">
+         <ul class="flex">
             <li><a href="home.php">Home</a></li>
             <li><a href="product_list.php">Store</a></li>
             <li><a href="cart.php">Cart</a></li>
@@ -20,13 +21,16 @@
 
    </div>
 
-   <div class="container">
+
+   <div class="container" id="searchbar">
        <form>
            <input type="search" class="hotdog" placeholder="Search">
        </form>
    </div>
 
+
+   <br>
    <br>
 
- </header>     
-  
+
+ </header>
