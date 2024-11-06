@@ -4,35 +4,35 @@
 	"name":"Wangyujing Zhang",
 	"type":"Student",
 	"email":"wanglove825@gmail.com",
-	"classes":[608]
+	"classes":["ixd_608", "ixd_605", "ixd_613"]
 
 },
 {
-	"name":"Wangyujing Zhang1",
+	"name":"Alice",
 	"type":"Student",
-	"email":"wanglove825@gmail.com",
-	"classes":[608]
+	"email":"alice@example.com",
+	"classes":["Math", "Physics", "Chemistry"]
 
 },
 {
-	"name":"Wangyujing Zhang2",
+	"name":"Tom",
 	"type":"Student",
-	"email":"wanglove825@gmail.com",
-	"classes":[608]
+	"email":"tom@example.com",
+	"classes":["Painting", "Art History"]
 
 },
 {
-	"name":"Wangyujing Zhang3",
+	"name":"Charlie",
 	"type":"Student",
-	"email":"wanglove825@gmail.com",
-	"classes":[608]
+	"email":"Charlie@example.com",
+	"classes":["Music", "Drawing"]
 
 },
 {
-	"name":"Wangyujing Zhang4",
+	"name":"Dana",
 	"type":"Student",
-	"email":"wanglove825@gmail.com",
-	"classes":[608]
+	"email":"Dana@example.com",
+	"classes":["Fine art", "Jewelry design"]
 
 }
 
