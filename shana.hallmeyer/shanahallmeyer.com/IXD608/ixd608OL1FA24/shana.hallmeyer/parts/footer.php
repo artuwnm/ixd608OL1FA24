@@ -2,16 +2,19 @@
 	<div class="footer-container">
 		<div class="footer">
 			<div class="footer-heading footer-1">
-				<h3>Home</h3>
+				<h3>Dozer</h3>
 				<a href="index.php">Home</a>
+				<p><a href="about.php">About</a></p>
 			</div>
 			<div class="footer-heading footer-2">
 				<h3>Store</h3>
-				<a href="product_list.php">Store</a>
+				<a href="product_list.php">Shop</a>
+				<p><a href="cart.php">Cart</a></p>
 			</div>
 			<div class="footer-heading footer-3">
 				<h3>Admin</h3>
 				<a href="admin/users.php">User list</a>
+				<p><a href="admin/users.php?id=new">Add new user</a></p>
 			</div>
 			<div class="footer-email-form">
 				<h3>Join our newsletter</h3>

@@ -21,57 +21,51 @@
 	</div>
 
 
-	<div class="container" id="figures">
-	<div class="grid gap">
-		<div class="col-xs-12 col-md-6">
-			<figure class="figure product-overlay">
-			<img src="https://via.placeholder.com/400x400?text=product" alt="">
-			<figcaption>
-			<div class="caption-body">
-			<div><a href="product_item.php?id=1">Product 1</a></div>
-			<div>$3.99</div>
-			</div>
-			</figcaption>
-			</figure>
-		</div>
-		<div class="col-xs-12 col-md-6">
-			<figure class="figure product-overlay">
-			<img src="https://via.placeholder.com/400x400?text=product" alt="">
-			<figcaption>
-			<div class="caption-body">
-			<div><a href="product_item.php?id=2">Product 2</a></div>
-			<div>$3.99</div>
-			</div>
-			</figcaption>
-			</figure>
-		</div>
-		<div class="col-xs-12 col-md-6">
-			<figure class="figure product-overlay">
-			<img src="https://via.placeholder.com/400x400?text=product" alt="">
-			<figcaption>
-			<div class="caption-body">
-			<div><a href="product_item.php?id=3">Product 3</a></div>
-			<div>$3.99</div>
-			</div>
-			</figcaption>
-			</figure>
-		</div>
-		<div class="col-xs-12 col-md-6">
-			<figure class="figure product-overlay">
-			<img src="https://via.placeholder.com/400x400?text=product" alt="">
-			<figcaption>
-			<div class="caption-body">
-			<div><a href="product_item.php?id=4">Product 4</a></div>
-			<div>$3.99</div>
-			</div>
-			</figcaption>
-			</figure>
-		</div>
-	</div>
-	</div>	
+<div class="container">
+	
+	<?php 
+	include_once "lib/php/functions.php";
+	include_once "parts/templates.php";
+
+	$result = makeQuery(
+		makeConn(),
+		"SELECT *
+		FROM `products`
+		ORDER BY `category` ASC
+		LIMIT 12
+		");
+
+	echo "<div class='grid gap'>",array_reduce($result,'productListTemplate'),"</div>";
+
+	?>
+
+</div>	
+
+
 
 
 <?php include "parts/footer.php"; ?>
 
+	
+
+
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_once

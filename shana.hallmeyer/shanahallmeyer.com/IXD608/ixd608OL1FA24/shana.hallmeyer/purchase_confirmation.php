@@ -21,7 +21,7 @@
 	<div class="container ">
 		<div class="grid gap display-flex flex-align-center">
 			<div class="col-xs-12 col-md-6">
-				<div class="form-control"><a href="index.php" class="form-button">Shop some more</a></div>
+				<div class="form-control"><a href="product_list.php" class="form-button">Shop some more</a></div>
 			</div>	
 		</div>
 	</div>

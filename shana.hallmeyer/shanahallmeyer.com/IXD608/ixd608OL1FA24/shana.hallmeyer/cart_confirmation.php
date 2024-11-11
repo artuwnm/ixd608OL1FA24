@@ -1,3 +1,10 @@
+<?php 
+include_once "lib/php/functions.php";
+
+$product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,15 +20,15 @@
 
 	<div class="container">
 		<h2>Cart confirmation</h2>
-		<div class="card soft">
-			<p>Item added to cart # <?= $_GET['id'] ?></p>
+		<div class="card light-blue">
+			<h3><?= $product->name ?> was added to cart.</h3>
 		</div>
 	</div>
 
 <div class="container ">
 	<div class="grid gap display-flex flex-align-center">
 		<div class="col-xs-12 col-md-6">
-			<div class="form-control"><a href="index.php" class="form-button">Shop some more</a></div>
+			<div class="form-control"><a href="product_list.php" class="form-button outline">Shop some more</a></div>
 		</div>	
 		<div class="col-xs-12 col-md-6">	
 			<div class="form-control"><a href="checkout.php?id=1" class="form-button">Checkout</a></div>

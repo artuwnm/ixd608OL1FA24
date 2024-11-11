@@ -223,6 +223,24 @@ body {
 
 
 
+/* IMAGES */
+
+.images-main img {
+	width: 100%;
+	height: 75vh;
+	object-fit: contain;
+
+}
+
+
+.images-thumbs img {
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+	width: 8em;
+	height: 8em;
+	object-fit: contain;
+}
+
 
 
 

@@ -42,7 +42,7 @@
 	</div>
 
 	<div class="container">
-		<div class="form-control"><a href="purchase_confirmation.php?id=1" class="form-button">Submit</a></div>
+		<div class="form-control"><a href="purchase_confirmation.php?id=1" class="form-button">Finish checkout</a></div>
 	</div>	
 
 

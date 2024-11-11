@@ -379,6 +379,13 @@ a:hover {
   flex: 50%;
 }
 
+.card-section~.card-section {
+	border-top: 1px solid var(--color-neutral-light);
+}
+
+.card-section {
+	padding: 1em;
+}
 
 /* VIEWWINDOW COMPONENT */
 
@@ -529,11 +536,11 @@ position: relative;
 
 .form-button:hover {
 	text-decoration: none;
-	background-color: var(--color-secondary-medium-red);
+	background-color: var(--color-secondary-dark-yellow);
 }
 
 .form-button:active {
-	background-color: var(--color-secondary-dark-red);
+	background-color: var(--color-secondary-medium-red);
 }
 
 .form-button.outline {
