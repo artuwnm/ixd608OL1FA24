@@ -15,25 +15,32 @@
 		<?php include "parts/navbar.php"; ?>
 
 		<h2>Product List</h2>
-		<div class="card soft">
-			
+		
 
-			<ul>
-				<!--ul>li*4>a[href="product_item.php"]>{Product $}-->
-				<li><a href="product_item.php?id=1">Product 1</a></li>
-				<li><a href="product_item.php?id=2">Product 2</a></li>
-				<li><a href="product_item.php?id=3">Product 3</a></li>
-				<li><a href="product_item.php?id=4">Product 4</a></li>
-			</ul>
-		</div>
+		<?php
+			
+		include_once "lib/php/functions.php";
+		include_once "parts/templates.php";
+
+		$result = makeQuery(
+			makeConn(),
+			"
+			SELECT * 
+			FROM `products`
+			ORDER BY `category` 
+			LIMIT 12
+			"
+		);
+
+		echo "<div class='productlist grid gap'>",array_reduce($result,'productListTemplate'), "</div>";
+
+		?>
+		
 	</div>
 
 
 
 
-
-
-	<?php include "parts/footer.php"; ?>
-	
 </body>
+<?php include "parts/footer.php"; ?>
 </html>

@@ -54,6 +54,7 @@
 						<li><a href="#labels">Labels</a></li>
 						<li><a href="#controls">Controls</a></li>
 						<li><a href="#buttons">Buttons</a></li>
+						<li><a href="#basic_forms">Some Basic Forms</a></li>
 					</ul>
 					<li><a href="#hotdogs">Hotdogs</a></li>
 					<li><a href="#select">Select</a></li>
@@ -463,28 +464,34 @@
 		<div class="grid gap">
 				<div class="col-xs-12 col-md-4">
 					<figure class="figure product">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">		
-						<figcaption>
-						 	<div> Product Name</div>
+						<div class="flex-stretch">
+							<img src="https://via.placeholder.com/400x400?text=product" alt="">	
+						</div>	
+						<figcaption class="flex-none">
 						 	<div>$3.99</div>
+						 	<div> Product Name</div>
 						</figcaption>
 					</figure>
 				</div>
 				<div class="col-xs-12 col-md-4">
 					<figure class="figure product">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">		
-						<figcaption>
-							<div> Product Name</div>
-						 	<div>$3.99</div> 
+						<div class="flex-stretch">
+							<img src="https://via.placeholder.com/400x400?text=product" alt="">	
+						</div>	
+						<figcaption class="flex-none">
+							<div>$3.99</div>
+							<div> Product Name</div> 
 						</figcaption>
 					</figure>
 				</div>
 				<div class="col-xs-12 col-md-4">
 					<figure class="figure product">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">		
-						<figcaption>
-							<div> Product Name</div>
-						 	<div>$3.99</div> 
+						<div class="flex-stretch">
+							<img src="https://via.placeholder.com/400x400?text=product" alt="">	
+						</div>	
+						<figcaption class="flex-none">
+							<div>$3.99</div>
+							<div> Product Name</div> 
 						</figcaption>
 					</figure>
 				</div>
@@ -627,6 +634,114 @@
 					<a href="#" class="form-button shadow">Anchor</a>
 				</div>
 			</div>
+
+			<h3 id="basic_forms">Some Basic Forms</h3>
+
+			<div class="card soft">
+				<h3>Login Form</h3>
+				<form action="" class="form">
+					<div class="form-control">
+						<label for="login-username" class="form-label">Username</label>
+						<input id="login-username" type="text" placeholder="Username" class="form-input">
+					</div>
+					<div class="form-control">
+						<label for="login-password" class="form-label">Password</label>
+						<input id="login-password" type="text" placeholder="Password" class="form-input">
+					</div>
+					<div class="form-control">
+						<input type="submit" class="form-button" value="Login">
+					</div>
+				</form>
+
+
+				<h3>Login Horizontal</h3>
+			
+				<div class="display-flex">
+					<div class="flex-stretch"></div>
+					<form action="" class="display-flex" >
+						<div class="display-stretch"></div>
+						<div class="form-control display-none">
+							<label for="login-username" class="form-label">Username</label>
+							<input id="login-username" type="text" placeholder="Username" class="form-input">
+						</div>
+						<div class="form-control display-none">
+							<label for="login-password" class="form-label">Password</label>
+							<input id="login-password" type="text" placeholder="Password" class="form-input">
+						</div>
+						<div class="form-control display-none">
+							<input type="submit" class="form-button" value="Login">
+						</div>
+					</form>
+				</div>
+
+				<h3>Address</h3>
+				<form action="" class="form">
+					<div class="form-control">
+						<label for="address-street" class="form-label">Street</label>
+						<input id="address-street" type="text" placeholder="Steet name" class="form-input">
+					</div>
+					<div class="form-control">
+						<div class="grid gap">
+							<div class="col-xs-12 col-md-6">
+								<label for="address-city" class="form-label">City</label>
+								<input id="address-city" type="text" placeholder="City" class="form-input">
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<label for="address-state" class="form-label">State</label>
+								<input id="address-state" type="text" placeholder="State" class="form-input">
+							</div>
+						</div>
+					</div>
+					<div class="form-control">
+						<div class="grid gap">
+							<div class="col-xs-12 col-md-6">
+								<label for="address-zip" class="form-label">Zip Code</label>
+								<input id="address-zip" type="text" placeholder="Zip Code" class="form-input">
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<label for="address-country" class="form-label">Country</label>
+								<input id="address-country" type="text" placeholder="Country" class="form-input">
+							</div>
+						</div>
+					</div>
+					<div class="form-control">
+						<input type="submit" class="form-button" value="Submit">
+					</div>
+				</form>
+
+				<h3>Credit Card</h3>
+				<form action="" class="form">
+					<div class="form-control">
+						<label for="payment-name" class="form-label">Full Name</label>
+						<input id="payment-name" type="text" placeholder="Name" class="form-input">
+					</div>
+					<div class="form-control">
+						<label for="payment-number" class="form-label">Card number</label>
+						<input id="payment-number" type="text" placeholder="####-####-####-####" class="form-input">
+					</div>
+					<div class="form-control">
+						<div class="grid gap">
+							<div class="col-xs-12 col-md-6">
+								<label for="payment-expiration" class="form-label">Expiration</label>
+								<input id="payment-expiration" type="text" placeholder="MM-YY" class="form-input">
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<label for="payment-cvv" class="form-label">CVV</label>
+								<input id="payment-cvv" type="text" placeholder="CVV" class="form-input">
+							</div>
+						</div>
+					</div>
+					<div class="form-control">
+						<div class="form-control">							
+							<label for="payment-zip" class="form-label">Zip Code</label>
+							<input id="payment-zip" type="text" placeholder="Zip Code" class="form-input">
+						</div>
+					</div>
+					<div class="form-control">
+						<input type="submit" class="form-button" value="Submit">
+					</div>
+				</form>
+			</div>
 		</div>	
 
 		<h2 id="hotdogs">Hotdogs</h2>
@@ -737,13 +852,12 @@
 				<li><a href="index.php">home</a></li>
 				<li><a href="product_list.php">shop</a></li>				
 				<li><a href="cart.php">cart</a></li>		
-				<li><a href="checkout">checkout</a></li>
+				<li><a href="checkout.php">checkout</a></li>
 			</ul>
 			<div class="flex-stretch"></div>
 			<div class="flex-none"><p>IDX608 OL1 Fall 2024. Niki Wakefield</p></div>
-		</div>		
-	
-	</footer>
+		</div>
+	</footer>		
 
 </body>
 </html>
