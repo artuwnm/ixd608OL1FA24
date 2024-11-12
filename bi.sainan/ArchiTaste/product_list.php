@@ -22,109 +22,26 @@
     <div class="container">
        <h1>Products</h1>
     
-       <div class="grid gap">
-          <div class="col-xs-12 col-md-4">
-             <figure class="figure product">
-                 <img src="https://www.pngkey.com/png/detail/233-2332677_ega-png.png" alt="">
-                 <figcaption>
-                     <li><a href="product_item.php?id=1">Product Name</a></li>
-                     <div>$00.00</div>
-                 </figcaption>
-             </figure>
-          </div>
-    
-          <div class="col-xs-12 col-md-4">
-             <figure class="figure product">
-                 <img src="https://www.pngkey.com/png/detail/233-2332677_ega-png.png" alt="">
-                 <figcaption>
-                     <li><a href="product_item.php?id=2">Product Name</a></li>
-                     <div>$00.00</div>
-                 </figcaption>
-             </figure>
-          </div>
-    
-          <div class="col-xs-12 col-md-4">
-             <figure class="figure product">
-                 <img src="https://www.pngkey.com/png/detail/233-2332677_ega-png.png" alt="">
-                 <figcaption>
-                     <li><a href="product_item.php?id=3">Product Name</a></li>
-                     <div>$00.00</div>
-                 </figcaption>
-             </figure>
-          </div>
-       </div>
-    </div>
-    
-    <div class="container">
-       <h1> </h1>
-    
-       <div class="grid gap">
-          <div class="col-xs-12 col-md-4">
-             <figure class="figure product">
-                 <img src="https://www.pngkey.com/png/detail/233-2332677_ega-png.png" alt="">
-                 <figcaption>
-                     <li><a href="product_item.php?id=1">Product Name</a></li>
-                     <div>$00.00</div>
-                 </figcaption>
-             </figure>
-          </div>
-    
-          <div class="col-xs-12 col-md-4">
-             <figure class="figure product">
-                 <img src="https://www.pngkey.com/png/detail/233-2332677_ega-png.png" alt="">
-                 <figcaption>
-                     <li><a href="product_item.php?id=1">Product Name</a></li>
-                     <div>$00.00</div>
-                 </figcaption>
-             </figure>
-          </div>
-    
-          <div class="col-xs-12 col-md-4">
-             <figure class="figure product">
-                 <img src="https://www.pngkey.com/png/detail/233-2332677_ega-png.png" alt="">
-                 <figcaption>
-                     <li><a href="product_item.php?id=1">Product Name</a></li>
-                     <div>$00.00</div>
-                 </figcaption>
-             </figure>
-          </div>
-       </div>
-    </div>
-    
-    <div class="container">
-       <h1> </h1>
-    
-       <div class="grid gap">
-          <div class="col-xs-12 col-md-4">
-             <figure class="figure product">
-                 <img src="https://www.pngkey.com/png/detail/233-2332677_ega-png.png" alt="">
-                 <figcaption>
-                     <li><a href="product_item.php?id=1">Product Name</a></li>
-                     <div>$00.00</div>
-                 </figcaption>
-             </figure>
-          </div>
-    
-          <div class="col-xs-12 col-md-4">
-             <figure class="figure product">
-                 <img src="https://www.pngkey.com/png/detail/233-2332677_ega-png.png" alt="">
-                 <figcaption>
-                     <li><a href="product_item.php?id=1">Product Name</a></li>
-                     <div>$00.00</div>
-                 </figcaption>
-             </figure>
-          </div>
-    
-          <div class="col-xs-12 col-md-4">
-             <figure class="figure product">
-                 <img src="https://www.pngkey.com/png/detail/233-2332677_ega-png.png" alt="">
-                 <figcaption>
-                     <li><a href="product_item.php?id=1">Product Name</a></li>
-                     <div>$00.00</div>
-                 </figcaption>
-             </figure>
-          </div>
-       </div>
+
+
+    <?php 
+
+    include_once "lib/php/functions.php";
+    include_once "parts/templates.php";
+
+    $result = makeQuery(
+        makeConn(),
+        "SELECT *
+        FROM `products`
+        ORDER BY `serial#` ASC
+        LIMIT 15
+        "
+    );
+
+    echo "<div class='grid gap productlist'>",array_reduce($result,'productListTemplate'),"</div>";
+
+     ?>
+
     </div>
     
         <br>

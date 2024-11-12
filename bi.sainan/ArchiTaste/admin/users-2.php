@@ -42,11 +42,7 @@ if(isset($_GET['action'])) {
 			file_put_contents($filename, json_encode($users));
 			header("location:{$_SERVER['PHP_SELF']}? id = $id");
 			break;
-			
 		case 'delete':
-			array_splice($users,$_GET['id'], 1);
-			file_put_contents($filename, json_encode($users));
-			header("location:{$_SERVER['PHP_SELF']}");
 			break;
 	}
 }
@@ -59,25 +55,17 @@ function showUserPage($user) {
 	$createorupdate = $id == "new" ? "create" : "update";
 	//$classes = implode(",", $user-classes);
 
-$display = <<<HTML
-<div>
-	<h2>$user->name</h2>
-	<div>
-		<strong>Type</strong>
-		<span>$user->type</span>
-	</div>
-	<div>
-		<strong>Email</strong>
-		<span>$user->email</span>
-	</div>
-	<div>
-		<strong>Classes</strong>
-		<span>$user->cls</span>
-	</div>
-</div>
-HTML;
+echo <<<HTML
 
-$form = <<<HTML
+		<br>
+		
+<nav class="nav nav-crumbs">
+	<ul>
+		<li style="font-size: 1.2em;">
+			<a href="admin/users.php"> < Back</a>
+		</li>
+	</ul>
+</nav>
 
 <div class="soft card">
 	<h2>$addoredit User</h2>
@@ -98,30 +86,18 @@ $form = <<<HTML
 	       <label class="form-label" for="user-classes">Classes</label>
 	       <input class="form-input" name="user-classes" id="user-classes" type="text" value="$user->cls" placeholder="Enter the class number, comma separated">
 	   </div>
+
 <br>
-		<div class="form-control">
-		    <input class="form-button" type="submit" value="Save">
-		</div>		
+
+	<div class="form-control">
+	    <input class="form-button" type="submit" value="Save">
+	</div>
+
 	</form>
+
 </div>
 
-HTML;
 
-$output = $id == "new" ? $form :
-	"<div class='grid gap'>
-		<div class='col-xs-12 col-md-7'>$display</div>
-		<div class='col-xs-12 col-md-5'>$form</div>
-	</div>
-	";
-
-$delete = $id == "new" ? "" : "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete'>Delete</a>";
-	
-echo <<<HTML
-<nav class="display-flex">
-	<div class="flex-stretch"><a href="{$_SERVER['PHP_SELF']}">Back</a></div>
-	<div class="flex-none">$delete</div>
-</nav>
-$output
 HTML;
 }
 

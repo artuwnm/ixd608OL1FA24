@@ -1,49 +1,48 @@
-<?php 
+<?php
 
 include "../lib/php/functions.php";
 
-$filename = "../data/users.json";
-$users = file_get_json($filename);
+$filename= "../data/users.json";
+$users= file_get_json($filename);
 
-
-$empty_user = (object)[
+$empty_user = (object) [
 	"name"=>"",
 	"type"=>"",
 	"email"=>"",
-	"cls"=>""
+	"classes"=>[]
 ];
 
+//print_p([$_GET,$_POST]);
 
-
-// print_p([$_GET,$_POST]);
+// CRUD create, replace, update, delete form data submitted to our json data file
 
 if(isset($_GET['action'])) {
 	switch ($_GET['action']) {
-		case 'update':
+		case "update":
 			$users[$_GET['id']]->name = $_POST['user-name'];
 			$users[$_GET['id']]->type = $_POST['user-type'];
 			$users[$_GET['id']]->email = $_POST['user-email'];
-			$users[$_GET['id']]->cls = $_POST['user-classes'];
+			$users[$_GET['id']]->classes = explode(", ", $_POST['user-classes']);
 
 			file_put_contents($filename, json_encode($users));
-			header("location:{$_SERVER['PHP_SELF']}? id = {$_GET['id']}");
+			header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
 			break;
 		
-		case 'create':
+		case "create":
 			$empty_user->name = $_POST['user-name'];
 			$empty_user->type = $_POST['user-type'];
 			$empty_user->email = $_POST['user-email'];
-			$empty_user->cls = $_POST['user-classes'];
+			$empty_user->classes = explode(", ", $_POST['user-classes']);
 
 			$id = count($users);
 
 			$users[] = $empty_user;
 
 			file_put_contents($filename, json_encode($users));
-			header("location:{$_SERVER['PHP_SELF']}? id = $id");
+			header("location:{$_SERVER['PHP_SELF']}?id=$id");
 			break;
-			
-		case 'delete':
+
+		case "delete":
 			array_splice($users,$_GET['id'], 1);
 			file_put_contents($filename, json_encode($users));
 			header("location:{$_SERVER['PHP_SELF']}");
@@ -54,11 +53,11 @@ if(isset($_GET['action'])) {
 
 function showUserPage($user) {
 
-	$id = $_GET['id'];
-	$addoredit = $id == "new" ? "Add" : "Edit";
-	$createorupdate = $id == "new" ? "create" : "update";
-	//$classes = implode(",", $user-classes);
+$id = $_GET['id'];
+$addoredit = $id == "new" ? "Add" : "Edit";
+$createorupdate = $id == "new" ? "create" : "update";
 
+// heredoc
 $display = <<<HTML
 <div>
 	<h2>$user->name</h2>
@@ -76,35 +75,29 @@ $display = <<<HTML
 	</div>
 </div>
 HTML;
-
 $form = <<<HTML
-
-<div class="soft card">
+<form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">	
 	<h2>$addoredit User</h2>
-	<form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
-	   <div>
-	       <label class="form-label" for="user-name">User Name</label>
-	       <input class="form-input" name="user-name" id="user-name" type="text" value="$user->name" placeholder="Enter Firstname Lastname">
-	   </div>
-	   <div>
-	       <label class="form-label" for="user-type">Type</label>
-	       <input class="form-input" name="user-type" id="user-type" type="text" value="$user->type" placeholder="Enter the type of user">
-	   </div>
-	   <div>
-	       <label class="form-label" for="user-email">Email Address</label>
-	       <input class="form-input" name="user-email" id="user-email" type="email" value="$user->email" placeholder="Enter the user email">
-	   </div>
-	   <div>
-	       <label class="form-label" for="user-classes">Classes</label>
-	       <input class="form-input" name="user-classes" id="user-classes" type="text" value="$user->cls" placeholder="Enter the class number, comma separated">
-	   </div>
-<br>
-		<div class="form-control">
-		    <input class="form-button" type="submit" value="Save">
-		</div>		
-	</form>
-</div>
-
+	<div class="form-control">
+		<label class="form-label" for="user-name">User Name</label>
+		<input type="text" class="form-input" name="user-name" id="user-name" value="$user->name" placeholder=" Enter Firstname Lastname">
+	</div>
+	<div class="form-control">
+		<label class="form-label" for="user-type">Type</label>
+		<input type="text" class="form-input" name="user-type" id="user-type" value="$user->type" placeholder="Enter the type of user">
+	</div>
+	<div class="form-control">
+		<label class="form-label" for="user-email">Email</label>
+		<input type="email" class="form-input" name="user-email" id="user-email" value="$user->email" placeholder="Enter the user email">
+	</div>
+	<div class="form-control">
+		<label class="form-label" for="user-classes">Classes</label>
+		<input type="text" class="form-input" name="user-classes" id="user-classes" value="$user->cls" placeholder="Enter the class number, comma separated">
+	</div>
+	<div class="form-control">
+		<input type="submit" class="form-button" value="Save Changes">
+	</div>
+</form>
 HTML;
 
 $output = $id == "new" ? $form :
@@ -127,6 +120,9 @@ HTML;
 
 ?>
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -147,10 +143,9 @@ HTML;
 				<h1 style="font-size: 5em; line-height: 8rem;">User Admin</h1>
 			</div>
 			<div class="flex-stretch"></div>
-			<nav class="nav navbar">
-				<ul class="flex">
-					<li><a href="<?= $_SERVER['PHP_SELF'] ?>">User List</a></li>
-					<li><a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New User</a></li>
+			<nav class="nav navbar flex-none">
+				<ul>
+					<li style="font-size: 1.2em;"><a href="admin/users.php">User List</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -167,7 +162,7 @@ HTML;
 	    	<?php 
 
 	    	if(isset($_GET['id'])) {
-				showUserPage($_GET['id'] == "new" ? $empty_user : $users[$_GET['id']]);
+	    		showUserPage($users[$_GET['id']]);
 
 	    	} else {
 

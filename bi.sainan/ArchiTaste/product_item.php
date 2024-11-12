@@ -1,3 +1,19 @@
+
+ <?php 
+
+ include_once "lib/php/functions.php";
+
+$product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
+
+$images = explode(",", $product->images);
+
+$image_elements = array_reduce($images,function($r,$o){
+   return $r."<img src='$o'>";
+});
+
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +21,8 @@
    <title>Product Details</title>
 
    <?php include "parts/meta.php"; ?>
+
+   <script src="js/product_thumbs.js"></script>
 
 </head>
 <body>
@@ -19,48 +37,55 @@
 
       
 <div class="container">
-   <h1>Product Name</h1>
-   <div class="grid gap container">
-      <div class="container col-xs-12 col-md-6">
+   <h1><?= $product->name ?></h1>
+   <div class="container flex spread">
+      <div style="width: 500px;">
          <div class="card soft">
-            <figure class="figure">
-                <img src="https://www.knoll.com/media/911/106/11613_c.jpg" alt="">
-                <h4>Item #<?=$_GET['id']?> Barcelona Chair </h4>
+            <figure class="figure image-main">
+                <img src="<?= $product->thumbnail ?>" alt="">
             </figure>
+            <div class="image-thumb"><?= $image_elements ?></div>
          </div>
       </div>
       
-      <div class="container col-xs-12 col-md-6">
-         <h3>Description</h3>
-               <p>Barcelona Chair designed by renowned architect Mies Van der Rohe</p>
+      <div style="width: 500px;">
+         <h2>Description</h2>
+               <p><?= $product->description ?></p>
 
          <br>
 
-         <h3>Choices</h3>
-         <div class="display-flex">
-             <div class="flex-none">
-                 <div class="form-select options">
-                     <select>
-                         <option>Option A</option>
-                         <option>Option B</option>
-                         <option>Option C</option>
-                         <option>Option D</option>
-                     </select>
+         <h2>Price</h2>
+         <h1>&dollar;<?= $product->price ?></h1>
+
+         <br>
+
+         <h2>Amount</h2>
+                 <div class="flex">
+                    <div class="form-select">
+                        <select style="background-color: var(--color-beige-light);">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
                  </div>
-             </div>
-         </div>
 
          <br>
-
-         <h3>Price</h3>
-         <h2>$ 000.00</h2>
-
          <hr>
          <br>
          
-         <div class="form-control nobullet">
-          <li><a href="cart.php" class="form-button">Add to Cart</a></li>
+         <div class="nobullet">
+          <li><a href="addedtocart.php?id=<?= $product->id ?>" class="form-button">Add to Cart</a></li>
          </div>
+
+
 
       </div>
    </div>

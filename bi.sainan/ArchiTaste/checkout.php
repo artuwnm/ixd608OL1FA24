@@ -20,9 +20,9 @@
       
 <div class="container">
 
-    <div class="grid gap container flex-stretch">
+    <div class="grid gap">
 
-       <div class="container col-xs-12 col-md-6">
+       <div class="col-xs-12 col-md-7">
            <h1>Payment Info</h1>
            <div class="card soft">
                 <form>
@@ -52,8 +52,14 @@
            </div>
         </div>
       
-        <div class="container col-xs-12 col-md-6">
-            <h1>Order Summary</h1>
+        
+        <div class="col-xs-12 col-md-1">
+        </div>
+
+
+        <div class="col-xs-12 col-md-4">
+            <h1 class="centertext">Order Summary</h1>
+            <br>
             <script>
            const makeTable = (classes='') => {
                const head = ['ID','Name','QTY','Price'];
@@ -80,7 +86,7 @@
               </div>
            </div>
            <hr>
-           <h3>&nbsp; Order Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ 00.00</h3>
+           <h3>&nbsp; Order Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 00.00</h3>
         </div>
         
     </div>
@@ -89,8 +95,8 @@
    <hr>
    <br>
    
-   <div class="form-control nobullet">
-       <li><a href="checkout.php" class="form-button">Pay</a></li>
+   <div class="nobullet">
+       <li><a href="confirmation.php" class="form-button">Pay</a></li>
    </div>
 
 </div>
