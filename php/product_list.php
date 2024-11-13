@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Natural Essence</title>
+	<title>Product list</title>
 
 	<?php include "../parts/meta.php"; ?>
 

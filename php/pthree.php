@@ -24,7 +24,7 @@
                 <h3>Product 3</h3>
                 <p>Description: This is a detailed description of Product 3.</p>
                 <div class="price">$26.99</div>
-                <form action="cart.php" method="post">
+                <form action="addtocart.php" method="post">
                     <input type="hidden" name="product_id" value="3">
                     <button type="submit">Add to Cart</button>
                 </form>
