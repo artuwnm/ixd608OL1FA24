@@ -9,7 +9,7 @@ $image_elements = array_reduce($images,function($r,$o){
 	return $r."<img src='img/$o'>";
 });
 
-//print_p($product);
+//print_p($_SESSION);
 
 ?>
 
@@ -39,15 +39,17 @@ $image_elements = array_reduce($images,function($r,$o){
 
 			</div>	
 
-			<div class="col-xs-12 col-md-5">
+			<form class="col-xs-12 col-md-5" method="post" action="cart_actions.php?action=add-to-cart">
+
+				<input type="hidden" name="product-id" value="<?= $product->id ?>">
 
 				<h2><?= $product->name ?></h2>
 				<h3>&dollar;<?= $product->price ?></h3>
 				<p><?= $product->description ?></p>
 				
 				<h4>Amount</h4>
-				<div class="form-select" id="product-amount">
-					<select>
+				<div class="form-select">
+					<select id="product-amount" name="product-amount">
 						<option>1</option>
 						<option>2</option>
 						<option>3</option>
@@ -62,39 +64,31 @@ $image_elements = array_reduce($images,function($r,$o){
 				</div>
 
 				<h4>Size</h4>
-				<div class="grid gap display-inline-flex">
-				<div class="size">
-					<input type="checkbox" id="size-60" class="hidden">
-					<label for="size-60">60</label>
-				</div>
-				<div class="size">
-					<input type="checkbox" id="size-58" class="hidden">
-					<label for="size-58">58</label>
-				</div>
-				<div class="size">
-					<input type="checkbox" id="size-56" class="hidden">
-					<label for="size-56">56</label>
-				</div>
+				<div class="form-select">
+					<select id="product-size" name="product-size">
+						<option>8</option>
+						<option>8.25</option>
+						<option>8.37</option>
+						<option>8.5</option>
+						<option>10.4</option>
+						<option>52mm</option>
+						<option>60mm</option>
+					</select>
 				</div>
 
 				<h4>Color</h4>
-				<div class="grid gap display-inline-flex">
-				<div class="blue-check">
-    				<input type="checkbox" id="color-blue" class="hidden">
-    				<label for="color-blue"></label>
-				</div>
-				<div class="yellow-check">
-    				<input type="checkbox" id="color-yellow" class="hidden">
-    				<label for="color-yellow"></label>
-				</div>
-				<div class="red-check">
-    				<input type="checkbox" id="color-red" class="hidden">
-    				<label for="color-red"></label>
-				</div>
+				<div class="form-select">
+					<select id="product-color" name="product-color">
+						<option>Orange</option>
+						<option>Yellow</option>
+						<option>Green</option>
+					</select>
 				</div>
 
-				<div class="form-control"><button class="form-button outline"><a href="cart_confirmation.php?id=<?= $product->id ?>">Add to cart</a></button></div>
-			</div>	
+				<div class="form-control">
+					<input type="submit" class="form-button outline" value="Add to cart">
+				</div>
+			</form>	
 			
 		</div>
 	</div>

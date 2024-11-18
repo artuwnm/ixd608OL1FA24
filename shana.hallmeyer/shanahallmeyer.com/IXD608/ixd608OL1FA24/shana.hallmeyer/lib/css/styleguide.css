@@ -525,6 +525,10 @@ position: relative;
 
 /* BUTTONS */
 
+.form-button.inline {
+	width: initial;
+}
+
 .form-button {
 	background-color: var(--color-neutral-dark);
 	color: var(--color-white);

@@ -221,6 +221,14 @@ body {
 	padding-left: 10px;
 }
 
+span.badge:not(:empty)::after {
+	content: ')';
+}
+
+span.badge:not(:empty)::before {
+	content: '(';
+}
+
 
 
 /* IMAGES */
