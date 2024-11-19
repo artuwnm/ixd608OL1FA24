@@ -25,7 +25,10 @@
 	<ul>
 		<li><a href="index.php">home</a></li>
 		<li><a href="product_list.php">shop</a></li>
-		<li><a href="cart.php">cart</a></li>			
+		<li><a href="cart.php">
+			<span>cart</span>
+			<span class="badge"><?= makeCartBadge(); ?></span>
+		</a></li>			
 		<li><a href="checkout.php">checkout</a></li>
 	</ul>
 </div>

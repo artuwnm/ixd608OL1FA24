@@ -383,6 +383,10 @@ a:hover {
     padding: .5em 1em;
 }
 
+.form-button.inline {
+	width: initial;
+}
+
 .form-button.shadow {
 	box-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.2);
 }
