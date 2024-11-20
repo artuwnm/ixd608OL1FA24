@@ -13,14 +13,13 @@
 
    <br>
 
-   <?php include "parts/nav_order.php"; ?>
+   <?php include "parts/crumb_order.php"; ?>
 
    <hr class="container">
 
       
 <div class="container">
 
-        <br>
         <br>
 
     <div class="flex center align-center centertext" style="height: 30vh;">
@@ -30,8 +29,8 @@
     </div>
 
    
-   <div class="nobullet" style="width: 800px; margin: auto;">
-       <li><a href="product_list.php" class="form-button">Continue Shopping</a></li>
+   <div style="width: 800px; margin: auto;">
+       <a href="product_list.php" class="form-button">Continue Shopping</a>
    </div>
 
 </div>

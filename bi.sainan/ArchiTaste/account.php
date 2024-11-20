@@ -13,7 +13,7 @@
 
    <br>
 
-   <?php include "parts/nav_account.php"; ?>
+   <?php include "parts/crumb_account.php"; ?>
 
    <hr class="container">
 
@@ -23,7 +23,7 @@
 
    <br>
 
-   <div class="form-control nobullet">
+   <div class="form-control">
        <a href="#" class="form-button">View</a>
    </div>
 
@@ -54,7 +54,7 @@
 
    <br>
 
-   <div class="form-control nobullet">
+   <div class="form-control">
        <a href="#" class="form-button">Change</a>
    </div>
 
@@ -63,34 +63,64 @@
    <br>
    <hr class="container">
 
+   <div class="container">
+       <h1>Default Payment Method</h1>
+       <div class="card soft">
+            <form>
+                <div class="form-control">
+                    <label class="form-label">Name</label>
+                    <input type="text" placeholder="Full Name" class="form-input">
+                </div>
+                <div class="form-control">
+                    <label class="form-label">Card No.</label>
+                    <input type="text" placeholder="Card Number" class="form-input">
+                </div>
+                <div class="form-control display-flex flex-align-center">
+                    <div class="flex-none">
+                        <label class="form-label">Exp.</label>
+                    </div>
+                    <div class="flex-stretch">
+                        <input type="datetime" placeholder="Expiration Date" class="form-input flex-stretch">
+                    </div>
+                    <div class="flex-none">
+                        <label class="form-label">Code</label>
+                    </div>
+                    <div class="flex-stretch">
+                        <input type="text" placeholder="CVV Code" class="form-input flex-stretch">
+                    </div>
+                </div>
+            </form>
+       </div>
+   </div>
+
 <div class="container">
    <h1>Billing Info</h1>
    <div class="card soft">
         <form>
             <div class="form-control">
                 <label class="form-label">Name</label>
-                <input type="text" placeholder="Name" class="form-input">
+                <input type="text" placeholder="Full Name" class="form-input">
             </div>
             <div class="form-control">
                 <label class="form-label">Phone</label>
-                <input type="text" placeholder="Phone" class="form-input">
+                <input type="text" placeholder="Phone Number" class="form-input">
             </div>
             <div class="form-control">
                 <label class="form-label">Address</label>
-                <input type="text" placeholder="" class="form-input">
+                <input type="text" placeholder="Address Line 1" class="form-input">
             </div>
             <div class="form-control display-flex flex-align-center">
                 <div class="flex-none">
                     <label class="form-label">Address</label>
                 </div>
                 <div class="flex-stretch">
-                    <input type="text" placeholder="" class="form-input flex-stretch">
+                    <input type="text" placeholder="Address Line 2" class="form-input flex-stretch">
                 </div>
                 <div class="flex-none">
                     <label class="form-label">Zip</label>
                 </div>
                 <div class="flex-stretch">
-                    <input type="text" placeholder="" class="form-input flex-stretch">
+                    <input type="text" placeholder="Zip Code" class="form-input flex-stretch">
                 </div>
             </div>
         </form>
@@ -98,7 +128,7 @@
 
    <br>
 
-   <div class="form-control nobullet">
+   <div class="form-control">
        <a href="#" class="form-button">Edit</a>
    </div>
 

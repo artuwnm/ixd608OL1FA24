@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 	function print_p($v) {
 		echo "<pre>",print_r($v),"</pre>";
@@ -44,3 +44,40 @@
 			return $a;
 
 	}
+
+
+// cart //
+
+ function array_find($array,$fn) {
+ 	foreach($array as $o) if($fn($o)) return $o;
+ 	return false;
+ }
+
+ function getCart() {
+ 	return isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
+ }
+
+ function addToCart($id,$amount,$options) {
+ 	//$_SESSION['cart'] = [];
+ 	//$_SESSION['cart'][] = $p['product-id'];
+	
+ 	$cart = getCart();
+
+ 	$p = array_find($cart,function($o) use($id) {return $o->id==$id;});
+
+ 	if($p) {
+ 		$p->amount += $amount;
+ 	} else {
+	 	$_SESSION['cart'][] = (object)[
+	 		"id"=>$id,
+	 		"amount"=>$amount,
+	 		"options"=>$options
+		];
+	}
+}
+
+function resetCart() { $_SESSION['cart'] = []; }
+
+function cartItemByID($id) {
+	return array_find(getCart(),function($o)use($id){return $o->id==$id;});
+}

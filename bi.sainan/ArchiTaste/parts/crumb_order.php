@@ -2,9 +2,9 @@
 <script>
   const makeNav = (classes = '') => {
      const links = [
-         { name: 'Home', url: 'home.php' },
-         { name: 'Product List', url: 'product_list.php' },
-         { name: 'Product Details', url: 'product_item.php' }
+         { name: 'Store', url: 'product_list.php' },
+         { name: 'Shopping Cart', url: 'cart.php' },
+         { name: 'Checkout', url: 'checkout.php' }
      ];
 
      const currentPage = window.location.pathname.split('/').pop();

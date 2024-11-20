@@ -1,3 +1,10 @@
+<?php 
+
+    include_once "lib/php/functions.php";
+    include_once "parts/templates.php";
+
+     ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +20,7 @@
 
    <br>
 
-   <?php include "parts/nav_product.php"; ?>
+   <?php include "parts/crumb_product.php"; ?>
 
    <hr class="container">
 
@@ -26,14 +33,11 @@
 
     <?php 
 
-    include_once "lib/php/functions.php";
-    include_once "parts/templates.php";
-
     $result = makeQuery(
         makeConn(),
         "SELECT *
         FROM `products`
-        ORDER BY `serial#` ASC
+        ORDER BY `custom#` ASC
         LIMIT 15
         "
     );
@@ -49,8 +53,8 @@
         <hr>
         <br>
     
-        <div class="form-control nobullet">
-        <li><a href="product_list.php" class="form-button">Next Page</a></li>
+        <div class="form-control">
+        <a href="product_list.php" class="form-button">Next Page</a>
         </div>
 </div>
 

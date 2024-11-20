@@ -4,7 +4,7 @@
      const links = [
          { name: 'Home', url: 'home.php' },
          { name: 'Product List', url: 'product_list.php' },
-         { name: 'Product Details', url: 'product_item.php' }
+         { name: 'Product Details', url: "#" }
      ];
 
      const currentPage = window.location.pathname.split('/').pop();

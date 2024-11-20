@@ -5,6 +5,8 @@
 
 $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
+$cart_product = cartItemByID($_GET['id']);
+
  ?>
 
 
@@ -23,7 +25,7 @@ $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id
 
    <br>
 
-   <?php include "parts/nav_order.php"; ?>
+   <?php include "parts/crumb_order.php"; ?>
 
    <hr class="container">
 
@@ -31,23 +33,23 @@ $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id
 <div class="container">
 
         <br>
-        <br>
 
     <div class="flex center align-center centertext" style="height: 30vh;">
 
-        <h1><span style="color: orange;"><?= $product->name ?></span> has been added to cart !</h1>
+        <h3 style="font-size: 1.75em;"><span style="color: orange; font-family: Bauhaus;"><?= $product->name ?></span> has been added to cart!</h3>
+        <p>There are <?= $cart_product->amount ?> of <?= $product->name ?> in your cart</p>
         
     </div>
 
          
     <div class="flex spread">
 
-       <div class="nobullet" style="width: 300px;">
-       <li><a href="product_list.php" class="form-button"><< Continue Shopping</a></li>
+       <div style="width: 450px;">
+       <a href="product_list.php" class="form-button"><< Continue Shopping</a>
        </div>
 
-        <div class="nobullet" style="width: 300px;">
-        <li><a href="cart.php" class="form-button">View Cart >></a></li>
+        <div style="width: 450px;">
+        <a href="cart.php" class="form-button">View Cart >></a>
         </div>
            
     </div>
