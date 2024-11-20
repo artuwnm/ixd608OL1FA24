@@ -1,12 +1,10 @@
+
 <div class="container">
 
     <h2>Product List</h2>
 
         
      <?php
-
-                include_once "../php/functions.php";
-                include_once "templates.php";
 
                 $result = makeQuery(
                     makeConn(),
