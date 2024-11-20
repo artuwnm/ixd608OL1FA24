@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+
+
 function print_p($v) {
 	echo "<pre>",print_r($v),"</pre>";
 }
@@ -28,3 +31,79 @@ function makeQuery($conn,$qry) {
 	}
 	return $a;
 }
+
+/* Cart Functions */
+function array_find($array,$fn) {
+	foreach($array as $o) if($fn($o)) return $o;
+	return false;
+}
+
+function getCart() {
+	return isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
+}
+
+function addToCart($id,$amount,$material) {
+	//$_SESSION['cart'] = [];
+	$cart = getCart();
+
+	$p = array_find($cart,function($o) use($id,$material) {return $o->id==$id && $o->material==$material; });
+
+	if($p) {
+		$p->amount += $amount;
+	} else {
+		$_SESSION['cart'][] = (object)[
+			"id"=>$id,
+			"amount"=>$amount,
+			"material"=>$material
+		];
+	}
+	
+}
+
+function resetCart() { $_SESSION['cart'] = []; }
+
+function cartItemById($id) {
+	//print_p(getCart());
+	return array_find(getCart(),function($o)use($id){return $o->id==$id;});
+}
+
+function cartItemByIdMaterial($id,$material) {
+	//print_p(getCart());
+	//print_p($material);
+	return array_find(getCart(),function($o)use($id,$material){return $o->id==$id && $o->material==$material;});
+}
+
+function makeCartBadge() {
+	$cart = getCart();
+	if(count($cart)==0) {
+		return "";
+	} else {
+		return "(".array_reduce($cart,function($r,$o){return $r+$o->amount;},0).")";
+	}
+}
+
+function getCartItems() {
+	$cart = getCart();
+	//print_p($cart);
+
+	if(empty($cart)) return [];
+
+	$ids = implode(",",array_map(function($o){return $o->id;},$cart));
+	$data = makeQuery(makeConn(),"SELECT * from `products` WHERE `id` IN ($ids)");
+
+	return array_map(function($o) use ($data) {
+		//$p = cartItemById($o->id);
+		//print_p($o);
+		foreach($data as $d) if($d->id==$o->id) break;
+		$p = cartItemByIdMaterial($o->id,$o->material);
+		//if($p) print_p($p);
+		$o->amount = $p->amount;
+		$o->total = $p->amount * $d->price;
+		$o->thumbnail = $d->thumbnail;
+		$o->name = $d->name;
+		//print_p($o);
+		return $o;
+	},$cart);
+}
+
+

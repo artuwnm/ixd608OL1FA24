@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -13,9 +18,14 @@
 
 	<div class="container">
 		<div class="card soft">
+			<div class="grid gap">
+				<div class="col-xs-12 col-md-3">
+					<div class="card soft flat">
+						<?= showMiniSummary(); ?>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-9">
 			<h2>Product Checkout</h2>
-			
-
 			<form class="form">
 				<h3>Address</h3>
 				<div class="form-control">
@@ -79,6 +89,8 @@
 			</form>
 
 			<p></p>
+				</div>
+			</div>
 		</div>
 	</div>
 

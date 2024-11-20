@@ -1,6 +1,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<base href="http://vickyjiajia.com/jdraws/aau/ixd608/jia.jia/">
+<base href="http://vickyjiajia.com/aau/ixd608/jia.jia/">
 
 <link rel="stylesheet" href="lib/css/styleguide.css">
 <link rel="stylesheet" href="lib/css/gridsystem.css">
