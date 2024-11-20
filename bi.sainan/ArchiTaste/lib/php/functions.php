@@ -1,6 +1,6 @@
 <?php
 
-session_start(); 
+session_start();
 
 	function print_p($v) {
 		echo "<pre>",print_r($v),"</pre>";
