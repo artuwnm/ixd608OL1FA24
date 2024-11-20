@@ -121,7 +121,7 @@ function cartMiniList($r,$o){
 //print_p($o);
 //$totalfixed = number_format($o->total,2,'.','');
 return $r.<<<HTML
-<p>$o->name ($o->material) * $o->amount</p>
+<p>$o->name ($o->material) x $o->amount</p>
 HTML;
 }
 
@@ -154,9 +154,6 @@ return <<<HTML
 <div class="card-section display-flex">
 	<div class="flex-stretch"><strong>Total</strong></div>
 	<div class="flex-none">&dollar;$taxedfixed</div>
-</div>
-<div class="card-section">
-	<a href="product_checkout.php" class="form-button">Checkout</a>
 </div>
 HTML;
 }
