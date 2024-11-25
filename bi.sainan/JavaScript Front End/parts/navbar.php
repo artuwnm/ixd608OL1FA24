@@ -30,7 +30,7 @@ include_once "lib/php/functions.php"
 
 
    <div class="container" id="searchbar">
-       <form id="product-search">
+       <form>
            <input type="search" class="hotdog" placeholder="Search">
        </form>
    </div>

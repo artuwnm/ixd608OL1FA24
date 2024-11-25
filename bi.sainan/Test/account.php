@@ -21,8 +21,6 @@
 <div class="container">
    <h1>Order History</h1>
 
-   <br>
-
    <div class="form-control">
        <a href="#" class="form-button">View</a>
    </div>
@@ -65,11 +63,12 @@
 
    <div class="container">
        <h1>Default Payment Method</h1>
+       <h3>Card Info</h3>
        <div class="card soft">
             <form>
                 <div class="form-control">
                     <label class="form-label">Name</label>
-                    <input type="text" placeholder="Full Name" class="form-input">
+                    <input type="text" placeholder="Name of Cardholder" class="form-input">
                 </div>
                 <div class="form-control">
                     <label class="form-label">Card No.</label>
@@ -80,7 +79,7 @@
                         <label class="form-label">Exp.</label>
                     </div>
                     <div class="flex-stretch">
-                        <input type="datetime" placeholder="Expiration Date" class="form-input flex-stretch">
+                        <input type="date" placeholder="Expiration Date" class="form-input flex-stretch">
                     </div>
                     <div class="flex-none">
                         <label class="form-label">Code</label>
@@ -94,16 +93,57 @@
    </div>
 
 <div class="container">
-   <h1>Billing Info</h1>
+   <h3>Billing Info</h3>
+   <div class="card soft">
+        <form>
+            <div class="form-control">
+                <label class="form-label">Phone</label>
+                <input type="text" placeholder="Phone Number" class="form-input">
+            </div>
+            <div class="form-control">
+                <label class="form-label">Email</label>
+                <input type="email" placeholder="Email Address" class="form-input">
+            </div>
+            <div class="form-control">
+                <label class="form-label">Address</label>
+                <input type="text" placeholder="Apt, Street" class="form-input">
+            </div>
+            <div class="form-control display-flex flex-align-center">
+                <div class="flex-none">
+                    <label class="form-label">Address</label>
+                </div>
+                <div class="flex-stretch">
+                    <input type="text" placeholder="City, State" class="form-input flex-stretch">
+                </div>
+                <div class="flex-none">
+                    <label class="form-label">Zip</label>
+                </div>
+                <div class="flex-stretch">
+                    <input type="text" placeholder="Zip Code" class="form-input flex-stretch">
+                </div>
+            </div>
+        </form>
+   </div>
+   <br>
+
+   <div class="form-control">
+       <a href="#" class="form-button">Edit</a>
+   </div>
+
+   <br>
+   <hr class="container">
+
+<div class="container">
+   <h1>Default Recipient</h1>
    <div class="card soft">
         <form>
             <div class="form-control">
                 <label class="form-label">Name</label>
-                <input type="text" placeholder="Full Name" class="form-input">
+                <input type="text" placeholder="Name of Recipient" class="form-input">
             </div>
             <div class="form-control">
                 <label class="form-label">Phone</label>
-                <input type="text" placeholder="Phone Number" class="form-input">
+                <input type="text" placeholder="Contact Number" class="form-input">
             </div>
             <div class="form-control">
                 <label class="form-label">Address</label>
@@ -132,6 +172,7 @@
        <a href="#" class="form-button">Edit</a>
    </div>
 
+   </div>
    </div>
 
     <br>

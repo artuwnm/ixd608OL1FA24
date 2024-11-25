@@ -113,10 +113,10 @@
     </div>
 
    <br>
-   <hr>
+   <hr class="container">
    <br>
    
-   <div>
+   <div class="container">
        <a href="confirmation.php" class="form-button">Pay</a>
    </div>
 

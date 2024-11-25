@@ -31,7 +31,9 @@ $cart_items = getCartItems();
    <hr class="container">
 
       
-<div class="container grid gap">
+<div class="container">
+
+    <div class="grid gap">
 
         <div class="col-xs-12 col-md-7">
 
@@ -51,6 +53,8 @@ $cart_items = getCartItems();
                 <hr>
                 <div><?= cartTotals() ?></div>
         </div>
+
+    </div>
 
     <br>
     <hr class="container">

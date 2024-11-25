@@ -62,8 +62,8 @@ $image_elements = array_reduce($images,function($r,$o){
             <div class="form-select">
                <select id="product-options" name="product-options" style="background-color: var(--color-beige-light);">
                    <option>brown</option>
-                   <option>white</option>
                    <option>black</option>
+                   <option>red</option>
                </select>
             </div>
       

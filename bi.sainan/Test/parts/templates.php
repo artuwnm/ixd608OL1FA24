@@ -32,40 +32,55 @@ function cartListTemplate($r,$o) {
 	return $r.<<<HTML
 
 	<div class="card soft container flex spread">
+
 		<div class="flex card-section align-center flex-stretch">
 		
-			<div class="flex-none thumb" style="padding-right: 1em;">
+			<div class="thumb" style="padding-right: 1em;">
 				<a href="product_item.php?id=$o->id"><img src="$o->thumbnail">
 			</div>
 		
 			<div>
-				<h3 style="margin-bottom: .25em;">
+				<h3 style="margin-bottom: .25em; margin-top: .8em;">
 					<a href="product_item.php?id=$o->id"><strong>$o->name</strong></a>
 				</h3>
 				<hr>
-				<h3 style="margin-top: .25em;">
-					&dollar;$o->price
-				</h3>
+	            <div class="flex" style="margin-top: -.5em;">
+	            	<div class="flex" style="padding-right: 1em;">
+	            	    <div class="form-select">
+	            	        <select id="product-options" name="product-options" style="background-color: var(--color-beige-light);padding: .25em 1.2em .25em .8em;">
+	            	                     <option>brown</option>
+	            	                     <option>black</option>
+	            	                     <option>red</option>
+	            	        </select>
+	            	    </div>
+	            	</div>
+	            							
+					<p style="margin-top: .7em; margin-left: -.5em;">
+						&dollar;$o->price
+					</p>
+	            </div>
 			</div>
 		
-			<div class="flex-stretch"></div>
-		
+			<div class="stretch"></div>
+			</h3>
+
 			<form action="cart_actions.php?action=update-cart-item" method="post" onchange="this.submit()">
 				<input type="hidden" name="id" value="$o->id">
 				<div class="form-select">$selectamount</div>
 			</form>
-		
-			<h2 class="flex-none" style="font-size: 1.2em; padding-left: 1em;">
+	
+			<h2 style="font-size: 1.2em; padding-left: 1em;">
 				&dollar;$o->total</h2>
 		
 		</div>
 		
-			<div style="padding-left: 1em;">
-				<form action="cart_actions.php?action=delete-cart-item" method="post">
-					<input type="hidden" name="id" value="$o->id">
-					<input type="submit" class="delete" value="X" style="font-size: .8em; color: orange; border: 1px solid orange;">
-				</form>
-			</div>
+		<div style="padding-left: 1em;">
+			<form action="cart_actions.php?action=delete-cart-item" method="post">
+				<input type="hidden" name="id" value="$o->id">
+				<input type="submit" class="delete" value="X" style="font-size: .8em; color: orange; border: 1px solid orange;">
+			</form>
+		</div>
+
 	</div>
 
 

@@ -15,7 +15,12 @@
 
     <script src="lib/js/functions.js"></script>
     <script src="js/templates.js"></script>
-    <script src="js/product_list.js"></script>
+
+    <script>
+       query({type:'products_all'}).then(d=>{
+        $(".productlist").html(listItemTemplate(d.result))
+       });
+    </script>
 
 </head>
 <body>
@@ -34,6 +39,21 @@
        <h1>Products</h1>
 
        <div class='grid gap productlist'></div>
+
+    <?php 
+/*
+    $result = makeQuery(
+        makeConn(),
+        "SELECT *
+        FROM `products`
+        ORDER BY `custom#` ASC
+        LIMIT 15
+        "
+    );
+
+    echo "<div class='grid gap productlist'>",array_reduce($result,'productListTemplate'),"</div>";
+*/
+     ?>
 
     </div>
     
