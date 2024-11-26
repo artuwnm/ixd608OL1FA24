@@ -91,6 +91,7 @@ function getCartItems(){
 		$o->amount = $p->amount;
 		$o->total = $p->amount * $o->price;
 		return $o;
+		print_p ($o->total);
 	},$data);
 }
 

@@ -10,7 +10,6 @@ $cart_items = getCartItems();
 
 
 
-
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +34,7 @@ $cart_items = getCartItems();
 			</div>
 			<div class="col-xs-12 col-md-5">
 				<div class="card soft flat">
-					<?= cartTotals() ?>
+					<?=  cartTotals() ?>
 				</div>
 			</div>
 			
