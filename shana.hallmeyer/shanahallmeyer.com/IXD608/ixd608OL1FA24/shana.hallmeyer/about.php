@@ -12,7 +12,7 @@
 
 		<div class="container" id="viewwindow">
 			<h1>About Dozer</h1>
-		<div class="view-window" style="background-image: url('img/skateboard-parallax.jpeg');"></div>
+		<div class="view-window" style="background-image: url('img/skateboard2.jpeg');"></div>
 		</div>
 
 	

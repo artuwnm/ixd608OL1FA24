@@ -107,6 +107,7 @@ body {
 	padding: 1em; 
 	transform: translateY(2em);
 	transition: all 0.3s;
+	line-height: 150%;
 }
 
 .product-overlay:hover .caption-body {
@@ -248,19 +249,5 @@ span.badge:not(:empty)::before {
 	height: 8em;
 	object-fit: contain;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
