@@ -3,22 +3,13 @@
 
     <h2>Product List</h2>
 
-        
-     <?php
+    <div class="form-control">
+        <form class="hotdog light" id="product-search">
+            <input type="search" placeholder="Search Products">
+        </form>
+    </div> 
 
-                $result = makeQuery(
-                    makeConn(),
-                    "
-                    SELECT * 
-                    FROM `Products`
-                    ORDER BY `date_create` DESC
-                    "
-                );
-
-                echo "<div class='grid gap'>",array_reduce($result,'productListTemplate'),"</div>";
-                ?>
-         
-              
+     <div class='productlist grid gap'>
      </div>
                
 
