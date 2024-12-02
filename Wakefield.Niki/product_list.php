@@ -3,7 +3,6 @@
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
-
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +31,7 @@ include_once "parts/templates.php";
 				<input type="search" placeholder="Search Products">
 			</form>
 		</div>
+
 		<div class="form-control">
 			<div class="card soft">
 				<div class="display-flex">

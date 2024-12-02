@@ -20,8 +20,8 @@ switch($data->type) {
 		$output['result'] = makeQuery(makeConn(),"SELECT *
 			FROM `products`
 			WHERE 
-				`name` LIKE '%$data->search%'
-				`description` LIKE '%$data->search%'
+				`name` LIKE '%$data->search%' OR
+				`description` LIKE '%$data->search%' OR
 				`category` LIKE '%$data->search%'
 			ORDER BY `date_create` DESC
 			LIMIT 12");

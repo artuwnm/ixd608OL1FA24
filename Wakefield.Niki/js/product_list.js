@@ -5,6 +5,7 @@ const showResults = d=> {
 		d.result.length?listItemTemplate(d.result):
 		'No Results');
 }
+
 query({type:'products_all'}).then(showResults);
 
 $(()=>{
