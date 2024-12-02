@@ -58,6 +58,7 @@ $classes = implode(",", $user->classes);
 $display = <<<HTML
 
 <div class="container">
+	<div class="card">
 	<div>
 		<h3>$user->name</h3>
 		<div>
@@ -73,6 +74,7 @@ $display = <<<HTML
 			<span>$classes</span>
 		</div>
 	</div>
+	</div>
 </div>
 HTML;
 
@@ -81,9 +83,9 @@ HTML;
 $form = <<<HTML
 
 <div class="container">
-
+	<div class="card">
 		<form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
-			<h3>$addoredit User</h3>
+			<h3>$addoredit user</h3>
 			<div class="form-control">
 				<label class="form-label" for="user-name">Name</label>
 				<input class="form-input" name="user-name" id="user-name" type=text value="$user->name" placeholder="Enter the user name">
@@ -104,6 +106,7 @@ $form = <<<HTML
 				<input class="form-button" type="submit" value="Save changes">
 			</div>	
 		</form>
+	</div>	
 </div>
 HTML;
 
@@ -156,7 +159,6 @@ HTML;
 
 	<div class="container">
 		
-		<div class="card soft">
 			<?php 
 
 			if (isset($_GET['id'])) {
@@ -167,7 +169,7 @@ HTML;
 
 
 			<h2>User list</h2>
-		
+			<div class="card">
 			<nav class="nav">
 				<ul>
 				<?php 
@@ -180,6 +182,7 @@ HTML;
 				 ?>
 			 	</ul>
 			</nav> 
+			</div>
 			
 			<?php } ?>
 

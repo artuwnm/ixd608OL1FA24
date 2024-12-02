@@ -1,5 +1,6 @@
 <?php 
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 ?>
 
 <!DOCTYPE html>
@@ -36,75 +37,20 @@ include_once "lib/php/functions.php";
 			</div>
 		</div>
 
+<div class="container">
+	<h2>New arrivals</h2>
+	<?php 
+	recommendedCategory("Decks");
+	 ?>
+</div>
 
-
-		<div class="container" id="figures">
-				<h2>Lorem ipsum</h2>
-				<div class="grid gap">
-					<div class="col-xs-12 col-md-6">
-						<figure class="figure">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption><a href="product_list.php">Store</a></figcaption>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-6">
-						<figure class="figure">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption><a href="product_list.php">Store</a></figcaption>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-6">
-						<figure class="figure">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption><a href="product_list.php">Store</a></figcaption>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-6">
-						<figure class="figure">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption><a href="product_list.php">Store</a></figcaption>
-						</figure>
-					</div>
-				</div>	
-		</div>			
-
-	
-		<div class="container" id="figures">		
-				<h1>Lorem ipsum</h1>
-				<div class="grid gap">
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption><a href="product_list.php">Store</a></figcaption>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption><a href="product_list.php">Store</a></figcaption>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption><a href="product_list.php">Store</a></figcaption>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-6">
-						<figure class="figure">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption><a href="product_list.php">Store</a></figcaption>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-6">
-						<figure class="figure">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption><a href="product_list.php">Store</a></figcaption>
-						</figure>
-					</div>
-				</div>	
-		</div>		
-
+		
+<div class="container">
+	<h2>Accessories</h2>
+	<?php 
+	recommendedCategory("Wheels");
+	 ?>
+</div>		
 		
 
 

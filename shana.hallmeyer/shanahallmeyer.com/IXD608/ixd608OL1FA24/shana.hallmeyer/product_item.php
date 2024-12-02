@@ -1,5 +1,6 @@
 <?php 
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 
 $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
@@ -93,28 +94,13 @@ $image_elements = array_reduce($images,function($r,$o){
 		</div>
 	</div>
 
-	<div class="container" id="figures">
-		<h2>Lorem ipsum</h2>
-		<div class="grid gap">
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>Product</figcaption>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>Product</figcaption>
-						</figure>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>Product</figcaption>
-						</figure>
-					</div>
-		</div>
+	<div class="container">
+		<div class="col-xs-12 col-md-4">
+			<h2>You might like these</h2>
+			<?php 
+			recommendedSimilar($product->category,$product->id);
+			 ?>
+		</div> 
 	</div>
 	
 
