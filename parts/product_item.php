@@ -1,6 +1,7 @@
 <?php
 
 include_once "../php/functions.php";
+include_once "../parts/templates.php";
 $product = makeQuery(makeConn(),"SELECT * FROM `Products` WHERE `id`=".$_GET['id'])[0];
 
 //print_p($product);
@@ -34,8 +35,10 @@ $product = makeQuery(makeConn(),"SELECT * FROM `Products` WHERE `id`=".$_GET['id
 				<form class="card soft flat" method="post" action="../php/cart_actions.php?action=add-to-cart">
 
 					<input type="hidden" name="product-id" value="<?= $product->id ?>">
+
 					<div class="card-section">
 					<h2 class="product-name"><?= $product->name ?></h2>
+					<div class="product-category"><?= $product->category ?></div>
 					<div class="product-price">&dollar;<?= $product->price ?></div>
 					<div class="product-description"><?= $product->description ?></div>
 				</div>
@@ -83,7 +86,21 @@ $product = makeQuery(makeConn(),"SELECT * FROM `Products` WHERE `id`=".$_GET['id
 		</div>
 		
 	</div>
+
+
 </div>
+
+<div class="recommended-products">
+			<h3>Recommended Products</h3>
+			<?php
+				if (isset($product->category)) {
+					recommendedSimilar($product->category, $product->id); 
+				}
+			?>
+</div>
+
+
+
 
 	
 

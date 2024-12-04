@@ -153,3 +153,8 @@ span.badge:not(:empty)::after {
 span.badge:not(:empty)::before {
 	content:'(';
 }
+
+.image-thumbs {
+  max-width: 200px;
+  height: auto;
+}

@@ -85,3 +85,24 @@ return <<<HTML
                     </div>
 HTML;
 }
+
+
+
+function recommendedProducts($a) {
+$Products = array_reduce($a,'productListTemplate');
+echo <<<HTML
+<div class="grid gap productList">$Products</div>
+HTML;
+}
+
+function recommendedCategory($cat,$limit=3) {
+    $result = makeQuery(makeConn(), "SELECT * FROM `Products` WHERE `category`='$cat' ORDER BY `date_create` DESC limit $limit");
+    recommendedProducts($result);
+}
+
+function recommendedSimilar($cat, $id = 0, $limit = 3) {
+    $result = makeQuery(makeConn(), "SELECT * FROM `Products` WHERE `category` = '$cat' AND `id` <> $id ORDER BY rand() LIMIT $limit");
+    recommendedProducts($result);
+}
+
+
