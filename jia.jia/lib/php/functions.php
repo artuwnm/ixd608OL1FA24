@@ -20,7 +20,14 @@ function makeConn() {
 	$conn->set_charset('utf8');
 	return $conn;
 }
-
+function makePDOConn() {
+	try {
+		$conn = new PDO(...PDOAuth());
+	} catch(PEOException $e) {
+		die($e->getMessage());
+	}
+	return $conn;
+}
 	
 function makeQuery($conn,$qry) {
 	$result = $conn->query($qry);

@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -67,5 +70,17 @@
 			</div>
 		</article>
 	</div>
+
+	<div class="container">
+		<h2>Lastest Living Room</h2>
+		<?php recommendedCategory("living");?>
+		<h2>Lastest Bedroom</h2>
+		<?php recommendedCategory("bedroom");?>
+		<h2>Lastest Dining Room</h2>
+		<?php recommendedCategory("dining");?>
+		<h2>Lastest Kitchen</h2>
+		<?php recommendedCategory("kitchen");?>
+	</div>
+
 </body>
 </html>
