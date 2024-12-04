@@ -13,7 +13,7 @@ function productListTemplate($r,$o) {
 		</figure>
 	</a>
 
-HTML;	
+HTML;
 }
 
 function selectAmount($amount=1, $total=10) {
@@ -40,7 +40,7 @@ function cartListTemplate($r,$o) {
 		
 			<div>
 				<h3 style="margin-bottom: .25em;">
-					<a href="product_item.php?id=$o->id"><strong>$o->name</strong></a>
+					<a href="product_item.php?id=$o->id">$o->name <span style="font-size: .5em">by</span> $o->designer</a>
 				</h3>
 				<hr>
 				<h3 style="margin-top: .25em;">
@@ -70,7 +70,7 @@ function cartListTemplate($r,$o) {
 	</div>
 
 
-HTML;	
+HTML;
 }
 
 
@@ -109,4 +109,24 @@ function cartTotals() {
 </div>
 
 HTML;
+}
+
+
+
+function recommendedProducts ($a) {
+	$products = array_reduce ($a, 'productListTemplate');
+	echo <<<HTML
+	<div class="grid gap productlist">$products</div>
+	HTML;
+}
+
+
+function recommendedCategory($cat, $limit=3) {
+	$result = makeQuery (makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `date_create` DESC LIMIT $limit");
+	recommendedProducts($result);
+}
+
+function recommendedSimilar($cat, $id=0, $limit=3) {
+	$result = makeQuery (makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' AND `id`<>$id ORDER BY rand() LIMIT $limit");
+	recommendedProducts($result);
 }

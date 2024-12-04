@@ -1,0 +1,93 @@
+
+
+:root {
+	--color-black: #555;
+	--color-white: #fff;
+	--color-offwhite: #f4f4f4;
+
+	--color-light: #eee;
+	--color-medium: #999;
+	--color-dark: #555;
+}
+
+
+/* Container */
+.container {
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	border:.5px solid black;
+}
+
+
+/* Layout */
+.flex {display: flex;}
+.flex-inline {display: inline-flex;}
+.block {display: block;}
+.block-inline {display: inline-block;}
+
+.spread {justify-content: space-between;}
+.spread-equal {justify-content: space-evenly;}
+.spread-even {justify-content: space-around;}
+
+.center {justify-content: center;}
+.right {justify-content: flex-end;}
+.left {justify-content: flex-start;}
+
+.align-center {align-items: center;}
+.align-top {align-items: flex-start;}
+.align-bottom {align-items: flex-end;}
+
+.vertical {flex-direction: column;}
+.vertical-center {flex-direction: column; align-items: center;}
+.vertical-right {flex-direction: column; align-items: flex-end;}
+
+.stretch {flex: 1 1 auto;}
+
+
+/* Card */
+
+.card1 {
+    width: 50px;
+    height: 50px;
+	background-color: var(--color-offwhite);
+	border:1px solid grey;
+	margin: 10px;
+	padding: 10px;
+	border-radius: .5em;
+	text-align: center;
+	font-size: 10px;
+
+	overflow: hidden;
+	position: relative;
+}
+
+.card2 {
+    width: 50px;
+    height: 30px;
+	background-color: var(--color-offwhite);
+	border:1px solid grey;
+	margin: 10px;
+	padding: 10px;
+	border-radius: .5em;
+	text-align: center;
+	font-size: 10px;
+
+	overflow: hidden;
+	position: relative;
+}
+
+.card3 {
+    width: 30px;
+    height: 50px;
+	background-color: var(--color-offwhite);
+	border:1px solid grey;
+	margin: 10px;
+	padding: 10px;
+	border-radius: .5em;
+	text-align: center;
+	font-size: 10px;
+
+	overflow: hidden;
+	position: relative;
+}

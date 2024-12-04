@@ -2,6 +2,7 @@
  <?php 
 
  include_once "lib/php/functions.php";
+ include_once "parts/templates.php";
 
 $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
@@ -41,21 +42,27 @@ $image_elements = array_reduce($images,function($r,$o){
 
       <input type="hidden" name="product-id" value="<?= $product->id ?>">
 
-      <h1><?= $product->name ?></h1>
+      <h1 style="margin: 1em 0 .2em 0;"><?= $product->name ?></h1>
       <div class="container flex spread">
          <div style="width: 500px;">
             <div class="card soft">
                <figure class="figure image-main">
                    <img src="<?= $product->thumbnail ?>" alt="">
                </figure>
+               <br>
                <div class="image-thumb"><?= $image_elements ?></div>
             </div>
          </div>
-         
-         <div style="width: 500px;">
+
+         <div style="width: 500px; margin-top: -1em;">
+            <div class="flex spread">
+               <h2 style="padding-top: .4em;">Designer/Brand</h2>
+               <h1><?= $product->designer ?></h1>
+            </div>
+
             <h2>Description</h2>
             <p><?= $product->description ?></p>
-
+         
             <br>
 
             <label for="product-options" class="form-label h2">Options</label>
@@ -95,6 +102,8 @@ $image_elements = array_reduce($images,function($r,$o){
                   </div>
                </div>
             </div>
+         </div>
+      </div>
       
             <br>
             <hr>
@@ -103,10 +112,16 @@ $image_elements = array_reduce($images,function($r,$o){
             <div>
              <input type="submit" class="form-button" value="Add to Cart">
             </div>
-         </div>
-      </div>
    </form>
+
+   <h2>Recommended Products</h2>
+
+   <?php 
       
+      recommendedSimilar($product->category, $product->id)
+
+   ?>
+         
 </div>
 
     <br>

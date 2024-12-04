@@ -1,3 +1,10 @@
+<?php 
+
+    include_once "lib/php/functions.php";
+    include_once "parts/templates.php";
+
+     ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,22 +16,47 @@
 
    <?php include "parts/navbar.php"; ?>
 
-<div class="view-window" style="background-image: url('img/mies.jpg');"></div>
+<div class="view-window" style="background-image: url('img/mies.jpg'); height: 50vh;"></div>
 
-<div class="container">   
-      <h1>Our Story</h1>
-      <div class="article-body">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni blanditiis libero doloribus itaque maxime, animi optio. Libero, blanditiis expedita reprehenderit voluptatem, earum rem facilis omnis quo esse! Inventore libero, laudantium ut magnam culpa nam tenetur animi suscipit sapiente ab, velit!</p>
-         <p>Quod rem accusantium facilis repudiandae dignissimos aliquid amet eos dolorem ratione, placeat, repellendus sit mollitia alias error quibusdam sed culpa, cum. Sed pariatur rerum culpa earum provident iste similique eius accusantium corrupti, illum, expedita quo, consectetur aliquid explicabo quam blanditiis?</p>
-         <p>Consectetur laudantium neque delectus esse numquam accusamus, explicabo illum unde molestias beatae eveniet accusantium quos sed odio excepturi quam quisquam! Exercitationem mollitia, soluta natus ut laboriosam accusamus, quia fugiat alias aperiam pariatur libero consequuntur debitis corrupti, incidunt saepe repellendus eligendi!</p>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni blanditiis libero doloribus itaque maxime, animi optio. Libero, blanditiis expedita reprehenderit voluptatem, earum rem facilis omnis quo esse! Inventore libero, laudantium ut magnam culpa nam tenetur animi suscipit sapiente ab, velit!</p>
-         <p>Quod rem accusantium facilis repudiandae dignissimos aliquid amet eos dolorem ratione, placeat, repellendus sit mollitia alias error quibusdam sed culpa, cum. Sed pariatur rerum culpa earum provident iste similique eius accusantium corrupti, illum, expedita quo, consectetur aliquid explicabo quam blanditiis?</p>
-         <p>Consectetur laudantium neque delectus esse numquam accusamus, explicabo illum unde molestias beatae eveniet accusantium quos sed odio excepturi quam quisquam! Exercitationem mollitia, soluta natus ut laboriosam accusamus, quia fugiat alias aperiam pariatur libero consequuntur debitis corrupti, incidunt saepe repellendus eligendi!</p>
-      </div>
-      <br>
+<div class="container">
+
+   <h1>~New Arrivals~</h1>
+
+   <?php 
+   recommendedCategory("Furniture");?>
+
 </div>
 
+      <br>
+      <br>
+      <br>
+
 <div class="view-window" style="background-image: url('img/architaste.png');"></div>
+
+<div class="container">   
+      <br>
+      <br>
+      <div>
+         <p>
+            <span style="font-size: 2em; line-height: 1em;">ArchiTaste</span> offers a unique shopping experience with a curated selection of 
+            products with taste of architects - Here you can find furniture designed by famous architects,
+            premium 3D models of iconic architecture from the world, stylish decor items, unique gifts and accessories that are as functional as they are inspiring.
+         </p>
+         <p>
+            We cater to architects, designers, and enthusiasts alike,
+            providing everything that reflect architectural elegance.
+            Simplicity and quality is what we advocate for.
+            
+            Whether you're looking to enhance your home, workspace or
+            find the perfect gift for a design lover, our diverse
+            range has something for everyone.
+         </p>
+      </div>
+      <br>
+      <br>
+</div>
+      
+<div class="view-window" style="background-image: url('img/mies.jpg'); height: 50vh;"></div>
    
    <?php include "parts/footer.php"; ?>
 
