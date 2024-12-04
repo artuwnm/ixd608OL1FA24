@@ -1,10 +1,10 @@
-
 :root {
 	--color-offwhite: #f4f4f4;
 
-	--color-main-light: #05a5ee;
-    --color-main-medium: #0909fa;
-    --color-main-dark: #080847;
+	/* Updated Color Palette */
+	--color-primary: #004175; /* Midnight Blue */
+	--color-secondary: #708090; /* Slate Gray */
+	--color-accent: #ccff00; /* Electric Lime */
 }
 
 body {
@@ -12,107 +12,141 @@ body {
 	padding-bottom: 4em;
 }
 
-.favorite label {
-   transition: all 0.3s;
-   display: inline-block;
-   transform: scale(1,1);
-   color: var(--color-neutral-medium);
- }
-
-.favorite input:checked + label {
-   color: red;
-   transform: scale(1.5,1.5);
+section h2 {
+	margin-top: 6em;
+	border-bottom: 1px solid var(--color-secondary);
+	margin-bottom: 1em;
 }
 
-
-.shop-item img {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+[class*='col-'] > .card {
+	margin: 0;
+	height: 100%;
 }
 
-@media (max-width: 800px) {
-	.container {
-		padding-left: 1em;
-		padding-right: 1em;
-	}
-	.navbar h1 {
-		padding-left: 0.5em;
-	}
+.form-select select,
+.form-button {
+	background-color: var(--color-secondary);
+	color: white; /* Ensure text contrasts well */
 }
 
-@media (max-width: 400px) {
-	.navbar .display-flex {
-		display:block;
-	}
-	.navbar .nav li {
-		line-height: 2em;
-	}
-
-.figure.product {
-	border-radius: 0.5em;
-	box-shadow:0 2px 5px rgba(0,0,0,0.1);
-	overflow:hidden;
+.productlist {
+	margin: 1em 0;
+}
+.productlist a:hover {
+	text-decoration: none;
+}
+.productlist .product-price {
+	text-align: right;
 }
 
-.product.overlay {
-	position:relative;
+/* FIGURE */
+.product-figure {
+	margin: 0;
+	height: 100%;
+	display: block;
+}
+.product-figure img {
+	width: 100%;
+	height: 30vh;
+	object-fit: cover;
+	vertical-align: text-bottom;
+}
+.product-figure figcaption {
+	padding: 1em;
+	background-color: white;
+}
+.product-figure.soft {
+	border-radius: 1em;
 	overflow: hidden;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s;
 }
-
-.product.overlay figcaption {
-	position:absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	background-color: rgba(0,0,0,0.5);
+.product-figure.soft:hover {
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+	transform: translateY(-1px);
+}
+.product-figure.overlay {
+	position: relative;
+	overflow: hidden;
+	border-radius: 1em;
+}
+.product-figure.overlay figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: all 0.3s;
 	opacity: 0;
-	transition:all 0.3s;
-	display:flex;
-	align-items: center;
-	justify-content: center;
 }
-
-.product.overlay:hover figcaption {
+.product-figure.overlay:hover figcaption {
 	opacity: 1;
 }
-
-.product.overlay .caption-body {
-	background-color: white;
-	border-radius: 0.5em;
-	padding: 1em;
-	transform: translateY(2em);
-	transition:all 0.3s;
-}
-
-.product.overlay:hover .caption-body {
-	transform: translateY(0);
-}
-
-.product.overlay img {
+.product-figure.overlay img {
+	transition: all 0.3s;
 	transform: scale(1, 1);
-	transition:all 0.3s;
 }
-
-.product.overlay:hover img {
+.product-figure.overlay:hover img {
 	transform: scale(1.4, 1.4);
 }
 
-@media (max-width:600px) {
-	.product.overlay figcaption {
-		position: relative;
-		display:block;
-		top:initial;
-		left:initial;
-		width:100%;
-		height:initial;
-		opacity:1;
-		background-color: initial;
-	}
+.product-main img {
+	width: 100%;
+	height: 40vh;
+	object-fit: cover;
+}
+.product-thumbs img {
+	height: 75px;
+	width: 100px;
+	object-fit: cover;
+}
+.product-title {
+	margin: 0;
+	font-size: 2em;
+	color: var(--color-primary); /* Highlighted with primary color */
+}
+.product-category {
+	font-size: 0.8em;
+	color: var(--color-secondary);
+	margin-bottom: 1rem;
+}
 
-	.product.overlay .caption-body {
-		transform: none;
-		padding: 0;
+.image-square img {
+	width: 5em;
+	height: 5em;
+	object-fit: contain;
+	object-position: center;
+}
+
+.itemlist {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.itemlist-item {
+	margin: 1em;
+	padding: 1em;
+	border: 1px solid var(--color-secondary);
+	border-radius: 0.5em;
+	background-color: var(--color-offwhite); /* Consistent with body background */
+}
+
+.navbar .hotdog {
+	padding: 0;
+	line-height: 2em;
+	width: 10em;
+	position: relative;
+	transform: translateY(0.7em);
+	color: var(--color-primary);
+}
+
+@media (max-width: 1000px) {
+	.navbar .display-flex {
+		display: block;
+	}
+}
+@media (max-width: 600px) {
+	.product-title {
+		font-size: 1.25em;
 	}
 }
