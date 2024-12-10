@@ -21,35 +21,35 @@ $cart_product = cartItemById($_GET['id']);
 </head>
 <body>
 	
-	<div class="container">
+	
 		<?php include "parts/navbar.php"; ?>
-
+	<div class="container">	
 
 		<h2>Added to Cart</h2>
 		<div class="card soft">
 			<h4>You added <?= $product->name ?> to your cart.</h4>
+			<div class="form-control"></div>
 			<p>There is now <?= $cart_product->amount?> of <?= $product->name ?> in your cart</p>
-			<div class="display-flex">
-				<div class=" flex-none nav nav-pills ">
+			<div class="form-control"></div>
+			<div class="display-flex flex-wrap">
+				<div class=" flex-none  ">
 					<ul>
-						<li><a href="product_list.php">Continue Shopping</a></li>
+						<li class="form-button"><a href="product_list.php">Continue Shopping</a></li>
 					</ul>
 				</div>
 				<div class="flex-stretch"></div>
-				<div class="flex-none nav nav-pills">
+				<div class="flex-none">
 					<ul>
-						<li><a href="cart.php">Go to Cart</a></li>
+						<li class="form-button"><a href="cart.php">Go to Cart</a></li>
 					</ul>
 				</div>
-				<!--<div class="flex-none"><a href="product_list.php">Continue Shopping</a></div>
-				<div class="flex-stretch"></div>
-				<div class="flex-none "><a href="cart.php">Go to Cart</a></div>-->
 			</div>
 			
 		</div>
 	</div>
 
-	<?php include "parts/footer.php"; ?>
+	
 
 </body>
+<?php include "parts/footer.php"; ?>
 </html>

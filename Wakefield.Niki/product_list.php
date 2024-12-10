@@ -20,10 +20,9 @@ include_once "parts/templates.php";
 </head>
 <body>
 	
+	<?php include "parts/navbar.php"; ?>
+
 	<div class="container">
-
-		<?php include "parts/navbar.php"; ?>
-
 		<h2>Product List</h2>
 
 		<div class="form-control">
@@ -33,9 +32,9 @@ include_once "parts/templates.php";
 		</div>
 
 		<div class="form-control">
-			<div class="card soft">
-				<div class="display-flex">
-					<div class="flex-stretch display-flex">
+			<div class="card light">
+				<div class="display-flex flex-wrap">
+					<div class="flex-stretch display-flex flex-wrap">
 						<div class="flex-none">
 							<button data-filter="category" data-value="" type="button" class="form-button">All</button>
 						</div>
@@ -61,6 +60,7 @@ include_once "parts/templates.php";
 					</div>
 				</div>
 			</div>
+			<div class="form-control"></div>
 		
 		<div class='productlist grid gap'></div>
 		

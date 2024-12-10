@@ -11,11 +11,9 @@ resetCart();
 
 </head>
 <body>
-	
+	<?php include "parts/navbar.php"; ?>
 	<div class="container">
-		<?php include "parts/navbar.php"; ?>
-
-
+	
 		<h2>Success!</h2>
 		<div class="card soft">
 			<h3>Your purchase is confirmed.</h3>
@@ -25,7 +23,8 @@ resetCart();
 		</div>
 	</div>
 
-	<?php include "parts/footer.php"; ?>
+	
 
 </body>
+<?php include "parts/footer.php"; ?>
 </html>

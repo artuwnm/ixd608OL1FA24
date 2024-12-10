@@ -34,7 +34,7 @@ function cartListTemplate($r,$o){
 $totalfixed = number_format($o->total,2,'.','');
 $selectamount = selectAmount($o->amount,10);
 return $r.<<<HTML
-<div class="display-flex">
+<div class="display-flex flex-wrap">
 	<div class="flex-none images-thumbs">
 		<img src="$o->thumbnail">
 	</div>
@@ -51,7 +51,8 @@ return $r.<<<HTML
 			<input type="hidden" name="id" value="$o->id">
 			<div class="form-select" style="font-size: 0.8em" >
 				$selectamount
-			</div>			
+			</div>	
+			<div class="form-control"></div>		
 		</form>
 	</div>
 </div>
@@ -83,10 +84,6 @@ return <<<HTML
 	<div class="flex-stretch"><strong>Total</strong></div>
 	<div class="flex-none">&dollar;$taxedfixed</div>
 </div>
-<div class="card-section">
-	<a href="checkout.php" class="form-button">Checkout</a>
-</div>
-
 HTML;
 }
 
@@ -96,6 +93,12 @@ function recommendedProducts($a) {
 	echo <<<HTML
 	<div class="grid gap productlist">$products</div>
 	HTML;
+}
+
+
+function recommendedAnything($limit=3) {
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` ORDER BY rand() LIMIT $limit");
+	recommendedProducts($result);
 }
 
 

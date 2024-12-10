@@ -26,9 +26,10 @@ $image_elements = array_reduce($images,function($r,$o){
 </head>
 <body>
 
-	<div class="container">
-		<?php include "parts/navbar.php"; ?>
+	<?php include "parts/navbar.php"; ?>
 
+	<div class="container">
+	
 		<div class="grid gap">
 			<div class="col-xs-12 col-md-7">
 				<div class="card soft">
@@ -48,7 +49,11 @@ $image_elements = array_reduce($images,function($r,$o){
 					
 					<div class="card-section">
 						<h2 class="product-name"><?= $product->name ?></h2>
+						<div class="form-control"></div>
+						<label for="product-category" class="form-label">Category</label>
 						<div class="product-category"><?= $product->category ?></div>
+						<div class="form-control"></div>
+						<label for="product-price" class="form-label">Price</label>
 						<div class="product-price">&dollar;<?= $product->price ?></div>
 					</div>
 					<div class="card-section">
@@ -67,7 +72,12 @@ $image_elements = array_reduce($images,function($r,$o){
 						</div>
 					</div>
 					<div class="card-section">
-						<input type="submit" class="form-button" value="Add to Cart">
+						<input type="submit" class="form-button " value="Add to Cart">
+					</div>
+					<div class="card-section">
+						<div class="form-control"></div>
+						<label for="product-description" class="form-label">Description</label>
+						<div class="product-description"><?= $product->description ?></div>
 					</div>
 				</form>
 			</div>
@@ -81,7 +91,8 @@ $image_elements = array_reduce($images,function($r,$o){
 	</div>
 
 
-	<?php include "parts/footer.php"; ?>
+	
 	
 </body>
+<?php include "parts/footer.php"; ?>
 </html>

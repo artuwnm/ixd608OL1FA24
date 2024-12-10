@@ -14,11 +14,12 @@ include_once "parts/templates.php";
 </head>
 <body>
 
-	<div class="container">
-		<?php include "parts/navbar.php"; ?>
-	</div>
+	<?php include "parts/navbar.php"; ?>
 
-	<div class="container">
+	<div class="view-window contain no-repeat" style="background-image: url('img/WhaleShelf.jpg')"></div>
+	<div class="container">	
+			
+
 		<h2>Latest in Drinking</h2>
 		<?php
 		recommendedCategory("drinking");
@@ -31,7 +32,8 @@ include_once "parts/templates.php";
 
 
 
-	<?php include "parts/footer.php"; ?>
+	
 	
 </body>
+<?php include "parts/footer.php"; ?>
 </html>

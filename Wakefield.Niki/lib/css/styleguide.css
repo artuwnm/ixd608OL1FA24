@@ -76,7 +76,8 @@ a:hover {
 .flex-align-center { align-items: center; }
 .flex-justify-center { justify-content: center; }
 
-.flex-column { flex-direction: column; };
+.flex-column { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
 
 
 
@@ -99,7 +100,7 @@ a:hover {
 .nav ul {
 	list-style-type: none;
 	margin-top: 0;
-	margin-bottom: 0;
+	margin-bottom: 3em;
 	padding-left: 0;
 }
 	.nav a {
@@ -108,14 +109,14 @@ a:hover {
 	}
 
 	.nav a:hover {
-		background-color: var(--color-main-medium);
-		color: var(--color-white);
+		background-color: var(--color-white);
+		color: inherit;
 		text-decoration: none;
 	}
 
-	.nav .active a {
-		background-color: var(--color-main-light);
-		color: inherit;
+	.nav .active a::after {
+		background-color: var(--color-main-medium);
+		color: var(--color-white);
 		text-decoration: none;
 	}
 
@@ -188,9 +189,9 @@ a:hover {
 }
 
 
-.navbar{
-	background-color: var(--color-neutral-dark);
-	color: var(--color-white);
+.navbar {
+	background-color: var(--color-neutral-);
+	color: var(--color-neutral-dark);
 	line-height: var(--header-height);
 }
 
@@ -203,9 +204,7 @@ a:hover {
 	.navbar a {
 		padding: 0 0.5em ;
 	}
-
-
-
+}	
 
 /* CARD */
 
@@ -218,6 +217,7 @@ a:hover {
 	overflow: hidden;
 	position: relative;
 }
+
 	.card.soft {
 		border-radius: 0.5em;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -241,6 +241,11 @@ a:hover {
 		padding: 0;
 	}
 
+	[class*= 'col-']>.card {
+		height: 100%;
+		margin:0;
+	}
+
 	.card-section {
     	padding: 1em;
 	}
@@ -250,9 +255,9 @@ a:hover {
 	}
 
 
-
+/* view window: background image that stays in place while scrolling  */
 .view-window {
-	height:80vh;
+	height:20vh;
 	position: relative;
 	overflow: hidden;
 	background-size: cover;
@@ -368,7 +373,7 @@ a:hover {
 }
 
 .form-label {
-    font-size: 0.8em;
+    font-size: 0.7em;
     color: var(--color-neutral-medium);
     display: block;
     width: 100%;
