@@ -49,9 +49,6 @@ $image_elements = array_reduce($images,function($r,$o){
 						<div class="product-price">&dollar;<?= $product->price ?></div>
 					</div>
 					<div class="card-section">
-						<p><?= $product->description?></p>
-					</div>
-					<div class="card-section">
 						<div class="form-control">
 						<label for="product-amount" class="form-label">Amount</label>
 							<div class="form-select">
@@ -85,6 +82,9 @@ $image_elements = array_reduce($images,function($r,$o){
 					</div>
 				</form>
 			</div>
+		</div>
+		<div class="card flat medium">
+			<p><?= $product->description?></p>
 		</div>
 		<h2>Recommended Products</h2>
 		<?php

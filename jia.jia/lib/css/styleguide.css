@@ -87,6 +87,7 @@ a:hover {
 .flex-column { flex-direction:column; }
 
 
+
 /* Small Classes */
 
 .media-image {
@@ -126,6 +127,7 @@ a:hover {
 	background-color: var(--color-neutral-brown);
 	color: var(--color-white);
 	line-height: var(--header-height);
+	margin-bottom: 1em;
 }
 	.navbar h1 {
 		font-size: 3em;
@@ -135,6 +137,9 @@ a:hover {
 
 	.navbar a {
 		padding: 0 0.5em;
+	}
+	.flush>.navbar{
+		margin-bottom: 0;
 	}
 
 .nav-material ul,
@@ -243,7 +248,10 @@ a:hover {
 	.card-section {
 		padding: 1em;
 	}
-	
+	[class*='col-']>.card {
+		height: 100%;
+		margin:0;
+	}
 
 
 

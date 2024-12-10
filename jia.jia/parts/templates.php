@@ -88,13 +88,17 @@ HTML;
 function showCart($cart_items) {
 	$cart = array_reduce($cart_items,'cartListTemplate');
 	$cartTotal = cartTotals();
+	$recommendation = recommendedAnything(6);
 
 	if (empty($cart_items)) {
 return <<<HTML
-<card class="soft">
-	<h2>You got an empty cart.</h2>
+<div class="card soft">
+	<h2>No items in cart</h2>
 	<p><a href="product_list.php">Continue Shopping</a></p>
-</card>
+</div>
+<h3>Other Recommendations</h3>
+<div class="container">$recommendation</div>
+
 HTML;
 	} else {
 
@@ -119,9 +123,12 @@ HTML;
 
 function cartMiniList($r,$o){
 //print_p($o);
-//$totalfixed = number_format($o->total,2,'.','');
+$totalfixed = number_format($o->total,2,'.','');
 return $r.<<<HTML
-<p>$o->name ($o->material) x $o->amount</p>
+<div class='display-flex'>
+<div class='flex-stretch'>$o->name ($o->material) x $o->amount</div>
+<div class='flex-none'>&dollar;$totalfixed</div>
+</div>
 HTML;
 }
 
@@ -139,8 +146,8 @@ function showMiniSummary() {
 	$taxedfixed = number_format($cartprice*1.09125,2,'.','');
 
 return <<<HTML
+<h2>Items Review</h2>
 <div class="card-section">
-	<div><strong>Summary</strong></div>
 	<div>$cartMiniList</div>
 </div>
 <div class="card-section display-flex">
@@ -160,18 +167,21 @@ HTML;
 
 function recommendedProducts($a) {
 $products = array_reduce($a,'productListTemplate');
-echo <<<HTML
+return <<<HTML
 <div class="grid gap productlist">$products</div>
 HTML;
 }
 
+function recommendedAnything($limit=3) {
+	$result = makeQuery(makeConn(), "SELECT * FROM `products` ORDER BY rand() DESC LIMIT $limit");
+	return recommendedProducts($result);
+}
 function recommendedCategory($cat,$limit=3) {
 	$result = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `date_create` DESC LIMIT $limit");
-	recommendedProducts($result);
+	echo recommendedProducts($result);
 }
-
 function recommendedSimilar($cat,$id=0,$limit=3) {
 	$result = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `category`='$cat' AND `id`<>$id ORDER BY rand() DESC LIMIT $limit");
-	recommendedProducts($result);
+	echo recommendedProducts($result);
 }
 

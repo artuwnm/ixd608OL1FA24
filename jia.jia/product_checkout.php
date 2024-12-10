@@ -17,16 +17,17 @@ include_once "parts/templates.php";
 
 
 	<div class="container">
-		<div class="card soft">
+		
 			<div class="grid gap">
-				<div class="col-xs-12 col-md-3">
+				<div class="col-xs-12 col-md-4">
 					<div class="card soft flat">
 						<?= showMiniSummary(); ?>
 					</div>
 				</div>
-				<div class="col-xs-12 col-md-9">
-			<h2>Product Checkout</h2>
-			<form class="form">
+				<div class="col-xs-12 col-md-8">
+				<div class="card soft">
+				<h2>Product Checkout</h2>
+				<form class="form">
 				<h3>Address</h3>
 				<div class="form-control">
 					<label for="address-street" class="form-label">Street</label>
