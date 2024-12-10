@@ -2,13 +2,13 @@
 
 ## Relevent Links
 
-- https://vickyjiajia.com
-- https://vickyjiajia.com/aau/ixd608/jia.jia
-- https://vickyjiajia.com/aau/ixd608/jia.jia/index.php
-- https://vickyjiajia.com/aau/ixd608/jia.jia/styleguide
-- https://vickyjiajia.com/aau/ixd608/jia.jia/admin/
+- http://vickyjiajia.com
+- http://vickyjiajia.com/aau/ixd608/jia.jia
+- http://vickyjiajia.com/aau/ixd608/jia.jia/index.php
+- http://vickyjiajia.com/aau/ixd608/jia.jia/styleguide
+- http://vickyjiajia.com/aau/ixd608/jia.jia/admin/
 
 ## Extra Links
-- https://vickyjiajia.com/aau/ixd608/jia.jia/admin/users.php
-- https://vickyjiajia.com/aau/ixd608/jia.jia/notes
-- https://vickyjiajia.com/aau/ixd608/jia.jia/notes/reading_data.php
+- http://vickyjiajia.com/aau/ixd608/jia.jia/admin/users.php
+- http://vickyjiajia.com/aau/ixd608/jia.jia/notes
+- http://vickyjiajia.com/aau/ixd608/jia.jia/notes/reading_data.php
