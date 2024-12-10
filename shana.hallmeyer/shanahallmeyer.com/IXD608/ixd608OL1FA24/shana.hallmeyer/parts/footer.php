@@ -13,8 +13,7 @@
 			</div>
 			<div class="footer-heading footer-3">
 				<h3>Admin</h3>
-				<a href="admin/users.php">User list</a>
-				<p><a href="admin/index.php">Product list</a></p>
+				<a href="admin/index.php">Product list</a>
 			</div>
 			<div class="footer-email-form">
 				<h3>Join our newsletter</h3>

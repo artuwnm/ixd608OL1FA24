@@ -84,8 +84,8 @@ a:hover {
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 4em;
-	padding-bottom: 4em;
+	padding-top: 2em;
+	padding-bottom: 2em;
 }
 
 
@@ -98,7 +98,11 @@ a:hover {
 .flex-none. { flex: none; }
 
 .flex-align-center { align-items:center; }
-.felx-justify-center { justify-content:center; }
+.flex-justify-center { justify-content:center; }
+
+.flex-column { flex-direction:column; }
+.flex-wrap { flex-wrap:wrap; } 
+
 
 
 /* SMALL CLASSES */
@@ -236,7 +240,7 @@ a:hover {
 	background-color: var(--color-black);
 	color: var(--color-white);
 	display: flex;
-	justify-content: center;
+	justify-content: left;
 	flex-wrap: wrap;
 	margin: 0 auto;
 }
@@ -251,7 +255,7 @@ a:hover {
 	margin-bottom: 2rem;
 }
 
-.footer-headling a {
+.footer-heading a {
 	color: var(--color-white);
 	text-decoration: none;
 	margin-bottom: 0.5rem;
@@ -333,7 +337,9 @@ a:hover {
 }
 
 .card.light {
-	background-color: var(--color-neutral-light);
+	background-color: var(--color-offwhite);
+	margin: 0;
+	padding-right: 1em;
 }
 
 .card.light-red {
@@ -377,6 +383,11 @@ a:hover {
 
 .column {
   flex: 50%;
+}
+
+[class*='col-']>.card{
+	height: 100%;
+	margin: 0;
 }
 
 .card-section~.card-section {

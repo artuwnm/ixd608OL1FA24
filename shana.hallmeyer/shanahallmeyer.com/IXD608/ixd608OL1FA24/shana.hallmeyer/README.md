@@ -4,7 +4,7 @@ README.md
 ## Relevant links
 https.//shanahallmeyer.com
 
-http://shanahallmeyer.com/IXD608/ixd608OL1FA24/shana.hallmeyer/
+http://shanahallmeyer.com/IXD608/ixd608OL1FA24/shana.hallmeyer/index.php
 
 http://shanahallmeyer.com/IXD608/ixd608OL1FA24/shana.hallmeyer/styleguide/index.html
 

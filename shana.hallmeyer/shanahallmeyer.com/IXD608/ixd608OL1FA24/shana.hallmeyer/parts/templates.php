@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function productListTemplate($r,$o) {
 	return $r.<<<HTML
@@ -79,11 +79,6 @@ function cartTotals() {
 		<div class="flex-stretch"><strong>Total</strong></div>
 		<div class="flex-none">&dollar;$taxedfixed</div>
 	</div>
-					
-</div>
-
-	<div class="form-control"><button class="form-button outline"><a href="checkout.php?id=1">Checkout</a></button></div>
-</div>
 
 HTML;
 }
@@ -98,6 +93,11 @@ function recommendedProducts($a) {
 	HTML;
 }
 
+
+function recommendedAnything($limit=4) {
+$result = makeQuery(makeConn(),"SELECT * FROM `products` ORDER BY rand() DESC LIMIT $limit");
+	recommendedProducts($result);
+}
 
 function recommendedCategory($cat,$limit=4) {
 $result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `date_create` DESC LIMIT $limit");

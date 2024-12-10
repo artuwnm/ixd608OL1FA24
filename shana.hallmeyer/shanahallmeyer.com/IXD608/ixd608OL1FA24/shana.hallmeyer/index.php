@@ -15,27 +15,13 @@ include_once "parts/templates.php";
 	<?php include "parts/navbar.php"; ?>
 
 
-		<div class="container" id="viewwindow">
+		<div class="container">
 			<h1>Dozer</h1>
-		<div class="view-window" style="background-image: url('img/skateboard-parallax.jpeg');"></div>
+			<figure class="figure">
+			<img src="img/skateboard-homepage_800.jpg" alt="">
+			</figure>
 		</div>
 
-	
-
-		<div class="container" id="cards">
-
-			<div class="grid gap">
-				<div class="col-xs-12 col-md-4">
-						<div class="card dark-yellow">Card Dark Yellow</div>
-				</div>
-				<div class="col-xs-12 col-md-4">
-						<div class="card med-blue">Card Medium Blue</div>
-				</div>
-				<div class="col-xs-12 col-md-4">
-						<div class="card dark-red">Card Dark Red</div>
-				</div>
-			</div>
-		</div>
 
 <div class="container">
 	<h2>New arrivals</h2>

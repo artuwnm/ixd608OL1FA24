@@ -30,13 +30,14 @@ $image_elements = array_reduce($images,function($r,$o){
 <div class="container"> 
 		<div class="grid gap">
 			<div class="col-xs-12 col-md-7">
+				<div class="card light">
 				<figure class="images-main">
 					<img src="img/<?= $product->thumbnail ?>">
 				</figure>
 				<figure class="images-thumbs"> 
 					<?= $image_elements ?>
 				</figure>
-			
+				</div>
 
 			</div>	
 
@@ -96,7 +97,7 @@ $image_elements = array_reduce($images,function($r,$o){
 
 	<div class="container">
 		<div class="col-xs-12 col-md-4">
-			<h2>You might like these</h2>
+			<h2>Check these out</h2>
 			<?php 
 			recommendedSimilar($product->category,$product->id);
 			 ?>
