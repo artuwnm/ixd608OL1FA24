@@ -211,12 +211,16 @@ HTML;
 </head>
 <body>
 
+	<input type="checkbox" id="menu" class="hidden">
 	<header class="navbar">
 		<div class="container display-flex">
 			<div class="flex-none">
 				<h1>Product Admin</h1>
 			</div>
 			<div class="flex-stretch"></div>
+			<div class="flex-none menu-button">
+				<label for="menu">&equiv;</label>
+			</div>
 			<nav class="nav nav-flex flex-none">
 				<ul>
 					<li><a href="<?= $_SERVER['PHP_SELF'] ?>">Product List</a></li>
