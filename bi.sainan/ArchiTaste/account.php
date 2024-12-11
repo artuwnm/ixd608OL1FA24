@@ -9,13 +9,11 @@
 </head>
 <body>
 
-   <?php include "parts/navbar.php"; ?>
+   <?php include "parts/header.php"; ?>
 
    <br>
 
    <?php include "parts/crumb_account.php"; ?>
-
-   <hr class="container">
 
 
 <div class="container">
@@ -62,8 +60,8 @@
    <hr class="container">
 
    <div class="container">
-       <h1>Default Payment Info</h1>
-       <h3>Card Info</h3>
+       <h1>Default Payment Method</h1>
+       <h3>Payment Info</h3>
        <div class="card soft">
             <form>
                 <div class="form-control">
@@ -93,7 +91,7 @@
    </div>
 
 <div class="container">
-   <h3>Billing Address</h3>
+   <h3>Billing Info</h3>
    <div class="card soft">
         <form>
             <div class="form-control">

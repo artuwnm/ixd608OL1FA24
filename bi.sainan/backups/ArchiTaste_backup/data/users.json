@@ -1,0 +1,32 @@
+[
+	{
+		"name":"Sainan Bi",
+		"type":"Student",
+		"email":"sbi2@art.edu",
+		"cls":"608"
+	},
+	{
+		"name":"Michael Smith",
+		"type":"Student",
+		"email":"msmith@art.edu",
+		"cls":"608"
+	},
+	{
+		"name":"Jessica Brown",
+		"type":"Student",
+		"email":"jbrown@art.edu",
+		"cls":"608"
+	},
+	{
+		"name":"David Williams",
+		"type":"Student",
+		"email":"dwilliams@art.edu",
+		"cls":"608"
+	},
+	{
+		"name":"Sarah Jones",
+		"type":"Student",
+		"email":"sjones@art.edu",
+		"cls":"608"
+	}
+]

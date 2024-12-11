@@ -4,7 +4,7 @@
  include_once "lib/php/functions.php";
  include_once "parts/templates.php";
 
-$cart = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` IN ()");
+$cart = getCart();
 
 $cart_items = getCartItems();
 
@@ -22,48 +22,77 @@ $cart_items = getCartItems();
 </head>
 <body>
 
-   <?php include "parts/navbar.php"; ?>
+   <?php include "parts/header.php"; ?>
 
    <br>
 
    <?php include "parts/crumb_order.php"; ?>
 
-   <hr class="container">
-
       
 <div class="container">
 
-    <div class="grid gap">
+    <?php 
 
-        <div class="col-xs-12 col-md-7">
+    if(count($cart)) {
+        ?>
+        <div class="grid gap">
 
-<div class="container">
-            <h1>Shopping Cart</h1>
-            <div><?= array_reduce($cart_items,'cartListTemplate') ?></div>
+            <div class="col-xs-12 col-md-7">
+                <div class="container">
+                    <h1>Shopping Cart</h1>
+                    <div><?= array_reduce($cart_items,'cartListTemplate') ?></div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-1">
+                <hr class="vr">
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+                    <h1 class="text-center">Order Summary</h1>
+                    <hr>
+                    <div><?= cartTotals() ?></div>
+            </div>
+
         </div>
 
-</div>
+        <br>
+        <hr class="container">
+        <br>
 
-        <div class="col-xs-12 col-md-1">
-            <hr class="vr">
+       <div class="container">
+           <a href="checkout.php" class="form-button">Checkout</a>
+       </div>
+
+       <?php 
+
+    } else {
+        ?>
+        <br>
+        <br>
+        <div class="text-center">
+            <h3>- Your Cart is Empty -</h3>
         </div>
 
-        <div class="col-xs-12 col-md-4">
-                <h1 class="centertext">Order Summary</h1>
-                <hr>
-                <div><?= cartTotals() ?></div>
+        <br>
+
+       <div class="flex center form-control">
+           <a href="product_list.php" class="button">Start shopping!</a>
+       </div>
+
+        <br>
+        <br>
+
+        <br>
+        <hr class="container">
+
+            <h3>Recommendations</h3>
+            <?php recommendedCategory("All");?>
         </div>
-
-    </div>
-
-    <br>
-    <hr class="container">
-    <br>
-
-   <div class="container">
-       <a href="checkout.php" class="form-button">Checkout</a>
-   </div>
-
+        <?php 
+    }
+    ?>
+            
 </div>
 
     <br>

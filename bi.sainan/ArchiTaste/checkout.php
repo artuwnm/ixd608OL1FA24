@@ -4,6 +4,8 @@
  include_once "lib/php/functions.php";
  include_once "parts/templates.php";
 
+$cart = getCartItems();
+
  ?>
 
 <!DOCTYPE html>
@@ -17,13 +19,11 @@
 </head>
 <body>
 
-   <?php include "parts/navbar.php"; ?>
+   <?php include "parts/header.php"; ?>
 
    <br>
 
    <?php include "parts/crumb_order.php"; ?>
-
-   <hr class="container">
 
       
 <div class="container">
@@ -39,12 +39,12 @@
 
                         <div class="form-control">
                             <label class="form-label">Name</label>
-                            <input type="text" placeholder="Name of Cardholder" class="form-input">
+                            <input type="text" placeholder="Name on Card" class="form-input">
                         </div>
 
                         <div class="form-control">
-                            <label class="form-label">Card No.</label>
-                            <input type="text" placeholder="Card Number" class="form-input">
+                            <label class="form-label">Card Number</label>
+                            <input type="text" placeholder="#### #### #### ####" class="form-input">
                         </div>
 
                         <div class="form-control display-flex flex-align-center">
@@ -70,16 +70,11 @@
            </div>
 
             <div class="container">
-               <h1>Shipping Info</h1>
                <div class="card soft">
                     <form>
                         <div class="form-control">
-                            <label class="form-label">Name</label>
-                            <input type="text" placeholder="Name of Recipient" class="form-input">
-                        </div>
-                        <div class="form-control">
-                            <label class="form-label">Phone</label>
-                            <input type="text" placeholder="Contact Number" class="form-input">
+                            <label class="form-label">Phone Number</label>
+                            <input type="text" placeholder="(xxx) xxx-xxxx" class="form-input">
                         </div>
                         <div class="form-control">
                             <label class="form-label">Address Line 1</label>
@@ -112,9 +107,20 @@
 
 
         <div class="col-xs-12 col-md-4">
-            <h1 class="centertext">Order Summary</h1>
+            <h1 class="text-center">Order Review</h1>
                 <hr>
-                <div><?= cartTotals() ?></div>
+                <?php
+                echo array_reduce($cart,function($r,$o){ 
+                    $totalfixed = number_format($o->total,2,'.','');
+                        return $r.
+                        "<div class='flex card-section-checkout' style='padding: 1em 0';>
+                            <div class='stretch'>$o->name</div>
+                            <div class='flex-none card-section'>&dollar;$totalfixed</div>
+                        </div>";
+                    }) 
+                ?>
+                <hr>
+                <?= cartTotals(); ?>
         </div>
         
     </div>

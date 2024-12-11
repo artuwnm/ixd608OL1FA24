@@ -8,7 +8,7 @@ function productListTemplate($r,$o) {
 		<div class="flex-stretch"><img src="$o->thumbnail" alt=""></div>
 			<figcaption style="padding: 0; padding-left: 1em;" class="flex-none">
 				<h2 style="margin-bottom: 0; color: #5F9EA0;">&dollar;$o->price</h2>
-				<h3 style="margin-top: .5em;">$o->name</h3>
+				<h3 style="margin-top: .5em;">$o->name <span style="font-size: .5em">by</span> $o->designer</h3>
 			</figcaption>
 		</figure>
 	</a>
@@ -30,9 +30,16 @@ function cartListTemplate($r,$o) {
 	$selectamount = selectAmount($o->amount,10);
 	return $r.<<<HTML
 
-	<div class="card soft container flex spread">
+	<div class="card soft container flex" style="padding: .5em 1em; margin: 1em;">
+
+	<div class="mobile-only" style="margin-top: 0;">
+		<form action="cart_actions.php?action=delete-cart-item" method="post">
+			<input type="hidden" name="id" value="$o->id">
+			<input type="submit" class="deletebutton" value="X" style="font-size: .8em; color: orange; border: 1px solid orange;">
+		</form>
+	</div>
 		
-		<div class="flex card-section align-center flex-stretch">
+		<div class="flex align-center flex-stretch">
 		
 			<div class="flex-none thumb" style="padding-right: 1em;">
 				<a href="product_item.php?id=$o->id"><img src="$o->thumbnail">
@@ -40,7 +47,7 @@ function cartListTemplate($r,$o) {
 		
 			<div>
 				<h3 style="margin-bottom: .25em;">
-					<a href="product_item.php?id=$o->id">$o->name <span style="font-size: .5em">by</span> $o->designer</a>
+					<a href="product_item.php?id=$o->id">$o->name</a>
 				</h3>
 				<hr>
 				<h3 style="margin-top: .25em;">
@@ -60,10 +67,10 @@ function cartListTemplate($r,$o) {
 		
 		</div>
 		
-		<div style="padding-left: 1em;">
+		<div style="padding-left: 1em;" class="desktop-only">
 			<form action="cart_actions.php?action=delete-cart-item" method="post">
 				<input type="hidden" name="id" value="$o->id">
-				<input type="submit" class="delete" value="X" style="font-size: .8em; color: orange; border: 1px solid orange;">
+				<input type="submit" class="deletebutton" value="X" style="font-size: .8em; color: orange; border: 1px solid orange;">
 			</form>
 		</div>
 		
@@ -121,8 +128,23 @@ function recommendedProducts ($a) {
 }
 
 
-function recommendedCategory($cat, $limit=3) {
+function recommendedId($cat, $limit=3) {
+	$result = makeQuery (makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `id_custom` ASC LIMIT $limit");
+	recommendedProducts($result);
+}
+
+function recommendedPrice($cat, $limit=3) {
+	$result = makeQuery (makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `price` ASC LIMIT $limit");
+	recommendedProducts($result);
+}
+
+function recommendedDate($cat, $limit=3) {
 	$result = makeQuery (makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `date_create` DESC LIMIT $limit");
+	recommendedProducts($result);
+}
+
+function recommendedCategory($cat, $limit=3) {
+	$result = makeQuery (makeConn(),"SELECT * FROM `products` ORDER BY `date_create` DESC LIMIT $limit");
 	recommendedProducts($result);
 }
 

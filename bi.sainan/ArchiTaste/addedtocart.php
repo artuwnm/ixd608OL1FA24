@@ -21,7 +21,7 @@ $cart_product = cartItemByID($_GET['id']);
 </head>
 <body>
 
-   <?php include "parts/navbar.php"; ?>
+   <?php include "parts/header.php"; ?>
 
     <br>
     <br>
@@ -31,10 +31,8 @@ $cart_product = cartItemByID($_GET['id']);
         <br>
         <br>
         <br>
-        <br>
-        <br>
 
-    <div class="centertext" style="height: 200px;">
+    <div class="text-center" style="height: 150px;">
 
         <h3 style="font-size: 1.75em;"><span style="color: orange; font-family: Bauhaus;"><?= $product->name ?></span> has been added to cart!</h3>
         <h3 style="margin-top: -1em;">There are now <span style="color: orange; font-size: 1.5em;"><?= $cart_product->amount ?></span> of <?= $product->name ?> in your cart</h3>
@@ -42,13 +40,13 @@ $cart_product = cartItemByID($_GET['id']);
     </div>
 
          
-    <div class="flex spread">
+    <div class="flex spread-equal">
 
-       <div style="width: 450px;">
+       <div style="width: 400px;">
        <a href="product_list.php" class="form-button"><< Continue Shopping</a>
        </div>
 
-        <div style="width: 450px;">
+        <div style="width: 400px;">
         <a href="cart.php" class="form-button">View Cart >></a>
         </div>
            
