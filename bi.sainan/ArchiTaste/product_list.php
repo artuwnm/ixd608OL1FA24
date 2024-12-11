@@ -35,7 +35,7 @@
 
    <br>
 
-       <div class="flex">
+       <div class="flex wrap">
            
            <div class="flex form-control">
                <div><button data-filter="category" data-value="" type="button" class="filter" style="width: 5em;">All</button></div>

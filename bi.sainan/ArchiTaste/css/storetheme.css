@@ -26,14 +26,6 @@
     }
 }
 
-@media(max-width:600px){
-	.container {
-		padding-left: 1em;
-		padding-right: 1em;
-        flex-wrap: wrap;
-	}
-}
-
 
 html, body {
     height: 100%;
@@ -260,65 +252,6 @@ span.badge:not(:empty)::after {
 	content: '';
 }
 
-@media(max-width:600px){
-	.container {
-		padding-left: 1em;
-		padding-right: 1em;
-        flex-wrap: wrap;
-	}
-
-    header {
-        width: 100%;
-        text-align: center;
-	}
-	header h1{
-		font-size: 4em !important;
-		text-align: center;
-		margin: .3em;
-	}
-	header .flex {
-		display: flex;
-		justify-content: center;
-	}
-	.navbar {
-		padding-bottom: 1em;
-	}
-
-	.card.soft {
-		flex-wrap: wrap;
-	}
-	.flex {
-		flex-wrap: wrap;
-	}
-	.display-flex {
-		flex-wrap: wrap;
-	}
-
-	.product-overlay figcaption {
-		position: relative;
-		display: block;
-		top: initial;
-		left: initial;
-		width: 100%;
-		height: initial;
-		opacity: 1;
-		background-attachment: initial;
-	}
-	.product-overlay .caption-body {
-		transform: none;
-		padding: 0;
-	}
-	.desktop-only {
-		display: none;
-	}
-}
-
-.mobile-only {
-	display: none;
-}
-
-
-
 /* Nav Styles */
 
 .nav-button {
@@ -407,3 +340,88 @@ span.badge:not(:empty)::after {
 	transform: scaleX(1);
 	transform-origin: bottom left;
 }
+
+.mobile-only {
+	display: none;
+}
+
+
+@media (max-width: 600px) {
+	.product-overlay figcaption {
+		position: relative;
+		display: block;
+		top: initial;
+		left: initial;
+		width: 100%;
+		height: initial;
+		opacity: 1;
+		background-attachment: initial;
+	}
+	.product-overlay .caption-body {
+		transform: none;
+		padding: 0;
+	}
+	.desktop-only {
+		display: none;
+	}
+}
+
+@media(min-width: 400px) {
+	.menu-button label {
+		display: none;
+	}
+}
+
+@media(max-width:800px){
+	.container {
+		padding-left: 1em;
+		padding-right: 1em;
+        flex-wrap: wrap;
+	}
+    header {
+        width: 100%;
+        text-align: center;
+	}
+	header h1{
+		font-size: 4em !important;
+		text-align: center;
+		margin: .3em;
+	}
+	.navbar {
+		display: flex;
+		justify-content: center;
+	}
+	.navbar ul {
+		padding-bottom: 1em;
+	}
+	.card.soft {
+		flex-wrap: wrap;
+	}
+	.flex {
+		flex-wrap: wrap;
+	}
+	.display-flex {
+		flex-wrap: wrap;
+	}
+}
+
+@media(max-width: 400px){
+    header .flex {
+        flex-wrap: wrap;
+    }
+    .navbar {
+        width: 100%;
+        display: none;
+    }
+    .navbar ul {
+        display: block;
+    }
+    .menu-button label {
+        display: block;
+        padding: 0 1em;
+    }
+    #menu:checked + .navbar {
+        display: block;
+    }
+}
+
