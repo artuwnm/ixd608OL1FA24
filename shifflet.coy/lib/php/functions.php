@@ -14,7 +14,7 @@ function file_get_json($filename) {
 include_once "auth.php";
 
 function makeConn() {
-    @$conn = new mysqli(...MYSQLIAuth());
+    $conn = new mysqli(...MYSQLIAuth());
     if ($conn->connect_errno) die($conn->connect_error);
     $conn->set_charset('utf8');
     return $conn;
@@ -29,7 +29,7 @@ function makePDOConn() {
     return $conn;
 }
 
-function makeQuery($conn, $qry) {
+function makeQuery($conn,$qry) {
     $result = $conn->query($qry);
     if ($conn->errno) die($conn->error);
     $a = [];
@@ -56,20 +56,16 @@ function addToCart($id, $amount) {
     $p = array_find($cart, function ($o) use ($id) { return $o->id == $id; });
 
     if ($p) {
-        $p->amount += $amount;
-    } else {
-        $price = makeQuery(makeConn(), "SELECT `price` FROM `products` WHERE `id` = $id")[0]->price;
-        $_SESSION['cart'][] = (object)[
-            "id" => $id,
-            "amount" => $amount,
-            "price" => $price
+            $p->amount += $amount;
+    } else {  
+            $_SESSION['cart'][] = (object)[
+                 "id" => $id,
+                 "amount" => $amount,
         ];
     }
 }
 
-function resetCart() {
-    $_SESSION['cart'] = [];
-}
+function resetCart() { $_SESSION['cart'] = []; }
 
 function cartItemById($id) {
     return array_find(getCart(), function ($o) use ($id) { return $o->id == $id; });

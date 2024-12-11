@@ -26,7 +26,7 @@ $o = getRows(makeConn(),"SELECT * FROM `products` WHERE `id`={$_GET['id']}")[0];
 				<h2>Cart Confirmation</h2>
 				
 				<div>
-					Thank you for adding <?= $p->amount ?> of the <?= $o->title ?> to the cart.
+					Thank you for adding <?= $p->amount ?> of the <?= $o->name ?> to the cart.
 				</div>
 			</div>
 
@@ -43,6 +43,7 @@ $o = getRows(makeConn(),"SELECT * FROM `products` WHERE `id`={$_GET['id']}")[0];
 			</div>
 		</div>
 	</div>
+	 <?php include "parts/footer.php"; ?>
 	
 </body>
 </html>

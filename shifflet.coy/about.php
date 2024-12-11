@@ -14,5 +14,6 @@
             <p>Learn more about our company and values.</p>
         </div>
     </div>
+     <?php include "parts/footer.php"; ?>
 </body>
 </html>

@@ -5,7 +5,7 @@ return $r.<<<HTML
 <a class="col-xs-12 col-md-4" href="product_item.php?id=$o->id">
     <figure class="figure product display-column">
         <div class="flex-stretch images-main">
-        <img src="img/$o->thumbnail" alt="Plant"></div>
+        <img src="img/$o->thumbnail" alt="Tech"></div>
             <figcaption class="flex-non">
             <div>&dollar;$o->price</div>
             <div>$o->name</div>

@@ -1,11 +1,13 @@
 <header class="navbar">
     <div class="container display-flex">
         <div class="flex-none">
-            <h1>TRECH</h1>
+            <a href="index.php">
+                <img src="img/logo.jpg" alt="Trech Logo" style="height:50px;">
+            </a>
         </div>
         <div class="flex-stretch"></div>
         <nav class="nav nav-flex flex-none">
-            <ul>
+            <ul> 
                 <li><a href="index.php">Home</a></li>
                 <li><a href="product_list.php">Shop</a></li>
                 <li><a href="product_cart.php">Cart</a></li>

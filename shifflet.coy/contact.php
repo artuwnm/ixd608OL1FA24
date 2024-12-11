@@ -14,5 +14,6 @@
             <p>Reach out to us with any questions or concerns.</p>
         </div>
     </div>
+     <?php include "parts/footer.php"; ?>
 </body>
 </html>
