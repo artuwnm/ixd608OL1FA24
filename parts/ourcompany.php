@@ -3,13 +3,15 @@
 	<article id="article1" class="article card soft">
 		<div class="display-flex flex-align-center">
 			<div class="flex-stretch">
-			<h2>Our company</h2>
+			<h2 style="text-align: center;">Our company</h2>
 			</div>
 		</div>
 		<div class="article-body">
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nesciunt voluptates ipsam molestiae delectus labore libero soluta assumenda suscipit. Voluptates magni quia, sunt nulla optio vitae praesentium consequuntur amet inventore esse commodi maxime ipsam, nisi vero impedit deleniti numquam culpa!</p>
+			<p>Natural Essence bring the essence of nature to your home, crafted with care and love. Based in San Francisco, our candles are made from the finest natural ingredients, ensuring a clean and eco-friendly burn with every use. We pride ourselves on offering a product that is as simple and beautiful as nature itself, using only the purest waxes and fragrances.</p>
 
-			<p>Facilis atque aliquid cupiditate tempore accusamus unde facere, odit voluptates sequi voluptas modi ab nesciunt veniam vero quam quas labore eos deleniti enim voluptate! Optio natus incidunt, quibusdam ducimus veritatis qui maiores sit laborum quidem dolore iure obcaecati asperiores praesentium?Enim fuga quidem a quia voluptas quos officia quaerat cupiditate aut nisi, itaque repellat eveniet molestias eaque, modi blanditiis dolore, voluptatibus fugiat alias! Laboriosam dolor porro ad possimus nostrum voluptates laudantium corrupti fugit omnis, perspiciatis exercitationem, maiores vitae, voluptas quo.</p>
+			<p>Our minimalist packaging reflects our commitment to sustainability, offering elegance without excess. Each candle is hand-poured with precision and love, giving you a product that not only fills your space with warm, calming scents but also aligns with a conscious, sustainable lifestyle.</p>
+
+			<p>Discover the simplicity and tranquility of a candle made with heart and intention, and let us bring a touch of nature into your home.</p>
 		</div>
 	</article>	
 </div>

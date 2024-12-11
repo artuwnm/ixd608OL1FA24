@@ -4,12 +4,16 @@ include_once "../php/functions.php";
 
 ?>
 
+<input type="checkbox" id="menu" class="hidden">
 <header class="navbar">
 		<div class="container display-flex">
 			<div class="flex-none">
 				<h1>Natural Essence</h1>
 			</div>
 			<div class="flex-stretch"></div>
+			<div class="flex-none menu-button">
+				<label for="menu">&equiv;</label>
+			</div>
 			<nav class="nav nav-flex flex-none">
 				<ul>
 					<li><a href="../php/home.php">Home</a></li>

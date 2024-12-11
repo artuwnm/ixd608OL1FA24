@@ -47,6 +47,7 @@ h6{
 	font-family: var(--font-serif);
 	color: var(--color-neutral-dark);
 	font-weight: bold;
+	
 }
 
 
@@ -84,6 +85,7 @@ a{
 .flex-align-center { align-items: center; }
 .flex-justify-center { justify-content: center;}
 .flex-column { flex-direction:column; }
+.flex-wrap{ flex-wrap:wrap; }
 
 
 
@@ -273,15 +275,21 @@ a{
   padding: 1em;
 }
 
+[class*='col-']>.card {
+  height: 100%;
+  margin: 0;
+}
+
 
 
 .view-window {
-	height: 40vh;
+	height: 30vh;
 	position: relative;
 	overflow: hidden;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+	margin-bottom: 1em;
 }
 
 .article p {

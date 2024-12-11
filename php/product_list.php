@@ -37,7 +37,7 @@ include_once "../parts/templates.php";
 
     <div class="form-control">
     <div class="card soft">
-        <div class="display-flex">
+        <div class="display-flex flex-wrap">
             <div class="flex-stretch display-flex">
                 <div class="flex-none">
                     <button data-filter="category" data-value="" type="button" class="form-button">All</button>
@@ -64,7 +64,7 @@ include_once "../parts/templates.php";
 </div> <!-- form-control -->
 
 
-     <div class='productlist grid gap'>
+     <div class='productlist grid gap' style="margin-bottom: 1.5em;">
      </div>
 
 

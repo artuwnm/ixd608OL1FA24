@@ -27,12 +27,15 @@ include_once "../php/functions.php";
 
 	
 
-	<div class="container">
-		<div class="card soft">
-			<p>This is home</p>
-			
-		</div>
-	</div>
+<div class="container">
+    <div class="form-control">
+        <a href="product_list.php">
+            <button type="button" class="form-button" style="padding: 2em; font-size: 20px;">Shop All</button>
+        </a>
+    </div>
+</div>
+
+
 
 
 <?php include "../parts/footer.php"; ?>

@@ -22,12 +22,13 @@ include_once "../php/functions.php";
 
 	<?php include "../parts/ourcompany.php"; ?>
 
-		<div class="container">
-		<div class="card soft">
-			<p>This is about</p>
-			
-		</div>
-	</div>
+<div class="container">
+    <div class="form-control">
+        <a href="product_list.php">
+            <button type="button" class="form-button" style="padding: 2em; font-size: 20px;">Shop Our Candles</button>
+        </a>
+    </div>
+</div>
 
 <?php include "../parts/footer.php"; ?>
 </body>
