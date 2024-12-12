@@ -36,18 +36,18 @@ include_once "parts/templates.php";
 
 	<div class="form-control">
 	<div class="display-flex flex-wrap">	
-		<div class="flex-stretch display-flex grid gap">
+		<div class="flex-stretch display-flex" style="margin-bottom: 1em;">
 			<div class="flex-none">
-				<button data-filter="category" data-value="" type="button" class="form-button filter" style="margin-bottom: 1em;">All</button>
+				<button data-filter="category" data-value="" type="button" class="form-button filter">All</button>
 			</div>
 			<div class="flex-none">
-				<button data-filter="category" data-value="Decks" type="button"	 class="form-button filter" style="margin-bottom: 1em;">Decks</button>
+				<button data-filter="category" data-value="Decks" type="button"	 class="form-button filter" style="margin-left: 10px;">Decks</button>
 			</div>
 			<div class="flex-none">
-				<button data-filter="category" data-value="Wheels" type="button" class="form-button filter" style="margin-bottom: 1em;">Wheels</button>
+				<button data-filter="category" data-value="Wheels" type="button" class="form-button filter" style="margin-left: 20px;">Wheels</button>
 			</div>
 			<div class="flex-none">
-				<button data-filter="category" data-value="Trucks" type="button" class="form-button filter" style="margin-bottom: 1em;">Trucks</button>
+				<button data-filter="category" data-value="Trucks" type="button" class="form-button filter" style="margin-left: 30px;">Trucks</button>
 			</div>
 		</div>	
 			<div class="flex-none">

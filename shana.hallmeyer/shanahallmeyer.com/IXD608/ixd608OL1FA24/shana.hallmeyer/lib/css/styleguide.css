@@ -549,7 +549,7 @@ a:hover {
 	border-radius: 0.2em;
 	cursor: pointer;
 	text-align: center;
-	padding: 0.5em 1em;
+	padding: 0.5em 0.8em;
 }
 
 .form-button {
@@ -607,6 +607,10 @@ a:hover {
 .hotdog.light {
 	background-color: var(--color-white);
 	color: var(--color-black);
+}
+
+.button-filter {
+
 }
 
 
