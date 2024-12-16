@@ -1,0 +1,39 @@
+[
+	
+{
+	"name":"Wangyujing Zhang",
+	"type":"Student",
+	"email":"wanglove825@gmail.com",
+	"classes":["ixd_608", "ixd_605", "ixd_613"]
+
+},
+{
+	"name":"Alice",
+	"type":"Student",
+	"email":"alice@example.com",
+	"classes":["Math", "Physics", "Chemistry"]
+
+},
+{
+	"name":"Tom",
+	"type":"Student",
+	"email":"tom@example.com",
+	"classes":["Painting", "Art History"]
+
+},
+{
+	"name":"Charlie",
+	"type":"Student",
+	"email":"Charlie@example.com",
+	"classes":["Music", "Drawing"]
+
+},
+{
+	"name":"Dana",
+	"type":"Student",
+	"email":"Dana@example.com",
+	"classes":["Fine art", "Jewelry design"]
+
+}
+
+]
