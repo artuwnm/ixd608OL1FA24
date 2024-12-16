@@ -64,7 +64,7 @@ include_once "../parts/templates.php";
 </div> <!-- form-control -->
 
 
-     <div class='productlist grid gap' style="margin-bottom: 1.5em;">
+     <div class='productlist grid gap' style="margin-bottom: 4em;">
      </div>
 
 

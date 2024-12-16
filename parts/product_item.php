@@ -90,7 +90,7 @@ $product = makeQuery(makeConn(),"SELECT * FROM `Products` WHERE `id`=".$_GET['id
 
 </div>
 
-<div class="recommended-products">
+<div class="recommended-products" style="margin-bottom: 4em;">
 			<h3>Recommended Products</h3>
 			<?php
 				if (isset($product->category)) {

@@ -17,7 +17,8 @@ $cart = getCartItems();
 
 
 <div class="container">
-	<div class="grid gap" style="margin-top: 1em">
+	<div class="grid gap" style="margin-bottom: 4em; margin-top: 1em;"
+>
 			<div class="col-xs-12 col-md-5">
 		<div class="card soft">
 			<h2>Item Review</h2>

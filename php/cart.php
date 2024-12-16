@@ -32,7 +32,7 @@ $cart = getCart();
 
 		if(count($cart)){
 		?>
-		<div class="grid gap">
+		<div class="grid gap" style="margin-bottom: 4em;">
 			<div class="col-xs-12 col-md-7">
 				<div class="card soft">
 					<?= array_reduce($cart_items,'cartListTemplate') ?>
@@ -55,13 +55,14 @@ $cart = getCart();
 		<div class="card soft">
 			<p>No items in cart</p>
 		</div>
-		<h3>Other Recommendations</h3>
-		<?php recommendedAnything(6); ?>
-		<?php
-
-	}
-	?>
-	</div>
+		<div class="container" style="margin-bottom: 4em;">
+            <h3>Other Recommendations</h3>
+            <?php recommendedAnything(6); ?>
+        </div>
+    <?php
+    }
+    ?>
+</div>
 
 <?php include "../parts/footer.php"; ?>
 </body>

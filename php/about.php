@@ -22,7 +22,7 @@ include_once "../php/functions.php";
 
 	<?php include "../parts/ourcompany.php"; ?>
 
-<div class="container">
+<div class="container" style="margin-bottom: 4em;">
     <div class="form-control">
         <a href="product_list.php">
             <button type="button" class="form-button" style="padding: 2em; font-size: 20px;">Shop Our Candles</button>
