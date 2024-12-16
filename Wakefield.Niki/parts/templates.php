@@ -72,7 +72,7 @@ function cartTotals() {
 	$taxedfixed = number_format($cartprice*1.0725,2,'.','');
 
 return <<<HTML
-<div class="card-section display-flex">
+<div class="card-section display-flex flex-wrap">
 	<div class="flex-stretch"><strong>Subtotal</strong></div>
 	<div class="flex-none">&dollar;$pricefixed</div>
 </div>

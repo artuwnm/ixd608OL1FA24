@@ -97,7 +97,7 @@ a {
 
 .menu-button label {display:none ;}
 
- @media (max-width:400px) {
+ @media (max-width:480px) {
  	.navbar .display-flex{
  		flex-wrap: wrap;
  	}
