@@ -1,0 +1,385 @@
+
+
+:root{
+	--color-offwhite: #fffbf2;
+	
+	--color-main-light: #f5f1e9;
+    --color-main-medium: #5a7106;
+    --color-main-dark: #37420f;
+
+    --color-neutral-light: #dadada;
+	--color-neutral-medium: #403f3f;
+    --color-neutral-dark: #000000;
+
+
+	--font-serif: logic-monospace, mono ;
+	--font-sans: owners-text, Arial, sans-serif;
+    
+}
+
+
+
+body{ 
+	background-color: var(--color-main-light);
+	font-family: var(--font-serif);
+	padding-bottom: 4em;
+ }
+
+
+/*  Favorite */
+
+.favorite label {
+	transition: all 0.3s;
+	display: inline-block;
+	transform: scale(1,1);
+	color: var(--color-neutral-medium);
+}
+
+
+.favorite input:checked + label {
+	color: red;
+	transform:scale(1.5,1.5);
+}
+
+
+
+h1 {
+	font-family: owners-xwide, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 3em;
+	text-align: center;
+}
+
+h2 {
+	font-family: owners-narrow, sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 2em;
+	color: var(--color-main-medium);
+}
+
+h3 {
+	font-family: owners, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size:1.25em;
+}
+
+h4,
+h5,
+h6 {
+	font-family: var(--font-sans);
+}
+
+
+a {
+	font-family: var(--font-serif);
+	font-weight: 450;
+	font-style: normal;
+}
+
+
+/* for phones, keeps the navbar lookn good */
+
+ @media (max-width:800px) {
+ 	.container {
+ 		padding-left: 1em;
+ 		padding-right: 1em;
+ 	}
+
+ 	.navbar h1 {
+ 		padding-left: .5em;
+ 	}
+}
+
+.navbar .nav{ display:none;}
+
+.menu-button label {display:none ;}
+
+ @media (max-width:480px) {
+ 	.navbar .display-flex{
+ 		flex-wrap: wrap;
+ 	}
+
+ 	.navbar .nav{
+ 		width: 100%;
+ 		display:none;
+ 	}
+
+ 	.navbar .nav-flex ul{
+ 		display:block;
+ 	}
+ 	.navbar .nav li{
+ 		line-height: 2em;
+ 	}
+
+ 	.menu-button label {
+ 		display: block;
+ 		padding: 0 1em;
+ 	}
+
+ 	#menu:checked+.navbar .nav {
+ 		display:block;
+ 	}
+
+ 	#low-nav {
+ 		display:none;
+ 	}
+
+ }
+
+
+
+/* Navigations */
+
+.nav-material a:hover{
+	background-color: var(--color-main-medium);
+	color: var(--color-offwhite);
+}
+
+.navbar h1{
+	font-family: owners-xwide, sans-serif
+}
+
+
+
+/* Cards */
+
+.card.dark,
+.card.medium {
+	border-radius: .5em;
+	color: var(--color-main-light);
+}
+
+.card.medium{
+	background-color: var(--color-main-medium);
+}
+
+.card.light,
+.card.light.outline{
+	background-color: var(--color-main-light);
+	border-radius: 0.5em;
+}
+.card.light.outline {
+	border: 2px solid var(--color-main-medium);
+}
+
+.view-window {
+	height: 45vh;
+}
+
+
+
+/*  Tables */
+
+.table th {
+	color: var(--color-neutral-medium);
+}
+
+.table.striped tbody tr:nth-child(odd) {
+	background-color: var(--color-main-light);
+}
+
+
+
+/*Grid and flexbox examples*/
+
+.green,
+.box {
+	background-color: var(--color-main-medium);
+	border-radius: .5em;
+	color: var(--color-offwhite);
+	padding: .5em;
+}
+
+.box {
+	margin: 1em;
+}
+
+
+
+/* Product Figure */
+
+.figure.product {
+	border-radius: 0.5em;
+ 	box-shadow:0 2px 5px rgba(0, 0, 0, 0.1);
+ 	overflow: hidden;
+ 	height: 100%;
+ 	transition: all 0.3s;
+}
+
+.product.figure img {
+	height: 100%;
+	object-fit: contain;
+}
+
+.productlist a {
+	text-decoration: none;
+	font-weight: initial;
+}
+
+.product.figure:hover {
+	box-shadow:0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-overlay{
+	position: relative;
+	overflow: hidden;
+}
+
+.product-overlay figcaption {
+	position:absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transition: all 0.3s;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+
+
+.product-overlay:hover figcaption{
+	opacity: 1;
+}
+
+.product-overlay .caption-body {
+	background-color: white;
+	border-radius: 0.5em;
+	padding: 1em;
+	transform:translateY(2em);
+	transition: all 0.3s;
+}
+
+
+.product-overlay:hover .caption-body {
+	transform:translateY(0);
+}
+
+
+.product-overlay img {
+	transform:scale(1,1);
+	transition: all 0.3s;
+}
+
+
+.product-overlay:hover img {
+	transform:scale(1.4,1.4);
+}
+
+
+
+/* media query to turn off hover for mobile for product-overlay figures */
+
+@media (max-width: 600px) {
+	.product-overlay figcaption {
+		position: relative;
+		display: block;
+		top: initial;
+		left: initial;
+		width: 100%;
+		height: initial;
+		opacity: 1;
+		background-color: initial;
+	}
+
+	.product-overlay .caption-body {
+		transform: none;
+		padding: 0;
+	}
+}
+
+/*  Buttons and hotdogs */
+
+.form-button {
+    font-family: 'owners-text', var(--font-sans);
+    font-weight:300;
+    color: var(--color-white);
+    background-color: var(--color-main-medium);
+    border-radius: 2em;
+}
+
+.form-button:hover,
+.hotdog {
+	background-color: var(--color-white);
+	border: solid 2px var(--color-main-medium);
+	color: var(--color-black);
+}
+
+.form-button:active {
+	background-color: var(--color-main-black);
+	color: var(--color-white);
+}
+
+.form-select>select {
+	background-color: var(--color-white);
+	border:solid 1px var(--color-neutral-light);
+	border-radius: 10px;
+}
+
+.hotdog.update {
+	color: #d80909;
+}
+
+/* Footer */
+
+footer {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	padding-top:4em;
+	padding-bottom:4em;
+	margin-top:4em;
+}
+
+
+.images-home img {
+	object-fit: contain;
+	width: 100%;
+}
+
+.images-main img {
+	width: 100%;
+	height: 80vh;
+	object-fit: contain;
+}
+
+.images-thumbs img {
+	width: 9em;
+	height: 7em;
+	object-fit: contain;
+	margin-bottom: 1em;
+}
+
+.images-xs-thumbs img {
+	height: 4em;
+	object-fit:contain;
+	margin-bottom: 1em;
+}
+
+
+
+span.badge:not(:empty)::after {
+	content: ')';
+}
+
+span.badge:not(:empty)::before {
+	content: '(';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

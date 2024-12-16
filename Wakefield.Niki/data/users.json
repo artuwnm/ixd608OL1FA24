@@ -1,0 +1,38 @@
+[
+	{
+		"name": "Niki Wakefield",
+		"type": "Student",
+		"email": "nwakefie@art.edu",
+		"classes": [605,608,613]
+	},
+	{
+		"name": "Frank Bobfield",
+		"type": "Teacher",
+		"email": "onenwakefie@art.edu",
+		"classes": [606,609,612]
+	},
+	{
+		"name": "J Oner",
+		"type": "Artist",
+		"email": "ntwo@art.edu",
+		"classes": [607,609,614]
+	},
+	{
+		"name": "Bob Ross",
+		"type": "Painter",
+		"email": "threefour@art.edu",
+		"classes": [608,610,615]
+	},
+	{
+		"name": "Dylan Tyler",
+		"type": "Actor",
+		"email": "fivesix@art.edu",
+		"classes": [609,611,616]
+	},
+	{
+		"name": "Ross Geller",
+		"type": "Professor",
+		"email": "blahblahx@art.edu",
+		"classes": [609,612]
+	}
+]
