@@ -36,29 +36,26 @@ $image_elements = array_reduce($images,function($r,$o){
 
       
 <div class="container">
+
    <form method="post" action="cart_actions.php?action=add-to-cart">
 
       <input type="hidden" name="product-id" value="<?= $product->id ?>">
 
-      <h1 style="margin: 1em 0 .2em 0;"><?= $product->name ?></h1>
+      <h1><?= $product->name ?> <span style="font-size: .5em;">by</span> <?= $product->designer ?></h1>
+
       <div class="container flex spread">
-         <div style="width: 500px;">
-            <div class="card soft">
-               <figure class="figure image-main">
-                   <img src="<?= $product->thumbnail ?>" alt="">
-               </figure>
-               <br>
-               <div class="image-thumb"><?= $image_elements ?></div>
-            </div>
+
+         <div class="card soft" style="width: 500px; margin: 0;">
+            <figure class="figure image-main">
+                <img src="<?= $product->thumbnail ?>" alt="">
+            </figure>
+            <br>
+            <div class="image-thumb"><?= $image_elements ?></div>
          </div>
 
-         <div style="width: 500px; margin-top: -1em;">
-            <div class="flex spread">
-               <h2 style="padding-top: .4em;">Designer/Brand</h2>
-               <h1><?= $product->designer ?></h1>
-            </div>
+         <div style="width: 500px;">
 
-            <h2>Description</h2>
+            <h2 style="margin-top: 0;">Description</h2>
             <p><?= $product->description ?></p>
          
             <br>
@@ -77,7 +74,7 @@ $image_elements = array_reduce($images,function($r,$o){
             <div class="flex spread">
                <div>
                   <h2>Price</h2>
-                  <h1>&dollar;<?= $product->price ?></h1>
+                  <h1 style="font-weight: normal;">&dollar;<?= $product->price ?></h1>
                </div>
                      
                <div>
@@ -100,24 +97,23 @@ $image_elements = array_reduce($images,function($r,$o){
                   </div>
                </div>
             </div>
-         </div>
-      </div>
-      
-            <br>
-            <hr>
-            <br>
             
-            <div>
+            <hr><br>
+            
+            <div style="margin-bottom: 0;">
              <input type="submit" class="form-button" value="Add to Cart">
             </div>
+
+         </div>
+         
+      </div>
+      
    </form>
       
-            <br>
-            <br>
-            <br>
+            <br><br><br><hr>
             
 
-   <h1>Recommended</h1>
+   <h3>Recommended For You</h3>
 
    <?php 
       

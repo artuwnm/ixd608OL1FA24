@@ -38,7 +38,7 @@
 
 </div>
 
-      <br>
+      <br id="about">
       <br>
       <br>
       <br>

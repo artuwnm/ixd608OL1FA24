@@ -71,13 +71,13 @@ $cart_items = getCartItems();
         <br>
         <br>
         <div class="text-center">
-            <h3>- Your Cart is Empty -</h3>
+            <h2>- Your Cart is Empty -</h2>
         </div>
 
         <br>
 
        <div class="flex center form-control">
-           <a href="product_list.php" class="button">Start shopping!</a>
+           <a href="product_list.php" class="button">Go Shopping!</a>
        </div>
 
         <br>
@@ -86,12 +86,12 @@ $cart_items = getCartItems();
         <br>
         <hr class="container">
 
-            <h3>Recommendations</h3>
-            <?php recommendedCategory("All");?>
-        </div>
+        <h3>Recommended For You</h3>
+        <?php recommendedCategory("All");?>
+            
         <?php 
-    }
-    ?>
+        }
+        ?>
             
 </div>
 

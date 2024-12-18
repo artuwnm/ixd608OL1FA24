@@ -32,17 +32,17 @@ function cartListTemplate($r,$o) {
 
 	<div class="card soft container flex" style="padding: .5em 1em; margin: 1em;">
 
-	<div class="mobile-only" style="margin-top: 0;">
+	<div style="margin-top: 0;" class="mobile">
 		<form action="cart_actions.php?action=delete-cart-item" method="post">
 			<input type="hidden" name="id" value="$o->id">
-			<input type="submit" class="deletebutton" value="X" style="font-size: .8em; color: orange; border: 1px solid orange;">
+			<input type="submit" class="delete-button" value="X" style="font-size: .8em; color: orange; border: 1px solid orange;">
 		</form>
 	</div>
 		
 		<div class="flex align-center flex-stretch">
 		
 			<div class="flex-none thumb" style="padding-right: 1em;">
-				<a href="product_item.php?id=$o->id"><img src="$o->thumbnail">
+				<a href="product_item.php?id=$o->id"><img src="$o->thumbnail"></a>
 			</div>
 		
 			<div>
@@ -67,10 +67,10 @@ function cartListTemplate($r,$o) {
 		
 		</div>
 		
-		<div style="padding-left: 1em;" class="desktop-only">
+		<div style="padding-left: 1em;" class="desktop">
 			<form action="cart_actions.php?action=delete-cart-item" method="post">
 				<input type="hidden" name="id" value="$o->id">
-				<input type="submit" class="deletebutton" value="X" style="font-size: .8em; color: orange; border: 1px solid orange;">
+				<input type="submit" class="delete-button" value="X" style="font-size: .8em; color: orange; border: 1px solid orange;">
 			</form>
 		</div>
 		
@@ -143,12 +143,12 @@ function recommendedDate($cat, $limit=3) {
 	recommendedProducts($result);
 }
 
-function recommendedCategory($cat, $limit=3) {
-	$result = makeQuery (makeConn(),"SELECT * FROM `products` ORDER BY `date_create` DESC LIMIT $limit");
+function recommendedCategory($cat, $limit=6) {
+	$result = makeQuery (makeConn(),"SELECT * FROM `products` ORDER BY rand() ASC LIMIT $limit");
 	recommendedProducts($result);
 }
 
-function recommendedSimilar($cat, $id=0, $limit=3) {
+function recommendedSimilar($cat, $id=0, $limit=6) {
 	$result = makeQuery (makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' AND `id`<>$id ORDER BY rand() LIMIT $limit");
 	recommendedProducts($result);
 }

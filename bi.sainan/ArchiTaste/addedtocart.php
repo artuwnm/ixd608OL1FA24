@@ -2,6 +2,7 @@
  <?php 
 
  include_once "lib/php/functions.php";
+ include_once "parts/templates.php";
 
 $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
@@ -24,7 +25,8 @@ $cart_product = cartItemByID($_GET['id']);
    <?php include "parts/header.php"; ?>
 
     <br>
-    <br>
+
+   <?php include "parts/crumb_order.php"; ?>
       
 <div class="container">
 
@@ -38,9 +40,8 @@ $cart_product = cartItemByID($_GET['id']);
         <h3 style="margin-top: -1em;">There are now <span style="color: orange; font-size: 1.5em;"><?= $cart_product->amount ?></span> of <?= $product->name ?> in your cart</h3>
         
     </div>
-
          
-    <div class="flex spread-equal">
+    <div class="flex spread-equal" style="margin: 0 1em;">
 
        <div style="width: 400px;">
        <a href="product_list.php" class="form-button"><< Continue Shopping</a>
@@ -51,6 +52,15 @@ $cart_product = cartItemByID($_GET['id']);
         </div>
            
     </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr class="container">
+
+        <h3>Recommendations</h3>
+        <?php recommendedCategory("All");?>
 
 </div>
 

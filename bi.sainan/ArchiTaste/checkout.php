@@ -33,12 +33,20 @@ $cart = getCartItems();
        <div class="col-xs-12 col-md-7">
 
            <div class="container">
-               <h1>Payment Info</h1>
+               <h1>Payment Method</h1>
+
+               <div class="container flex spread align-center thumb">
+                   <img src="https://freepngimg.com/thumb/credit_card/25464-1-credit-card-visa-and-master-card.png" alt="" />
+                   <div>or</div>
+                   <a href="https://www.paypal.com/"><img src="https://logos-download.com/wp-content/uploads/2016/03/PayPal_Logo_2007-2048x560.png" alt="" /></a>
+                </div>
+
                <div class="card soft">
+
                     <form>
 
                         <div class="form-control">
-                            <label class="form-label">Name</label>
+                            <label class="form-label">Cardholder Name</label>
                             <input type="text" placeholder="Name on Card" class="form-input">
                         </div>
 
@@ -99,7 +107,6 @@ $cart = getCartItems();
             </div>
 
         </div>
-      
         
         <div class="col-xs-12 col-md-1">
             <hr class="vr">
@@ -113,10 +120,10 @@ $cart = getCartItems();
                 echo array_reduce($cart,function($r,$o){ 
                     $totalfixed = number_format($o->total,2,'.','');
                         return $r.
-                        "<div class='flex card-section-checkout' style='padding: 1em 0';>
+                        "<ul><li><div class='flex card-section-checkout' style='padding: .5em 0';>
                             <div class='stretch'>$o->name</div>
                             <div class='flex-none card-section'>&dollar;$totalfixed</div>
-                        </div>";
+                        </div></li></ul>";
                     }) 
                 ?>
                 <hr>

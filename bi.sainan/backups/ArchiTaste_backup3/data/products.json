@@ -1,0 +1,37 @@
+[
+	{
+		"name":"Barcelona Chair",
+		"status":"In Stock",
+		"type":"Furniture",
+		"descr":"Designed by Mies Van der Rohe",
+		"price":"$000.00"
+	},
+	{
+		"name":"Eames Lounge Chair",
+		"status":"In Stock",
+		"type":"Student",
+		"descr":"Designed by Charles and Ray Eames",
+		"price":"$000.00"
+	},
+	{
+		"name":"Tulip Table",
+		"status":"In Stock",
+		"type":"Student",
+		"descr":"Designed by Eero Saarinen",
+		"price":"$000.00"
+	},
+	{
+		"name":"Arco Floor Lamp",
+		"status":"In Stock",
+		"type":"Student",
+		"descr":"Designed by Achille Castiglioni",
+		"price":"$000.00"
+	},
+	{
+		"name":"Serge Mouille's Lamps",
+		"status":"In Stock",
+		"type":"Student",
+		"descrs":"Iconic mid-century modern designs",
+		"price":"$000.00"
+	}
+]

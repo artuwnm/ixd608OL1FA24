@@ -1,5 +1,6 @@
 <?php 
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 resetCart();
 ?>
 
@@ -17,25 +18,29 @@ resetCart();
    <?php include "parts/header.php"; ?>
 
     <br>
-    <br>
 
+   <?php include "parts/crumb_order.php"; ?>
       
 <div class="container">
 
-        <br>
-
-    <div class="flex center align-center text-center" style="height: 250px;">
+    <div class="flex center align-center text-center" style="height: 200px;">
 
         <h1>Thank you for your purchase!</h1>
         
     </div>
-
-    <br>
-    <br>
    
-   <div style="width: 800px; margin: auto;">
-       <a href="product_list.php" class="form-button">Continue Shopping</a>
+   <div class="flex center form-control">
+       <a href="product_list.php" class="button">Continue Shopping</a>
    </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr class="container">
+
+        <h3>Recommended For You</h3>
+        <?php recommendedCategory("All");?>
 
 </div>
 

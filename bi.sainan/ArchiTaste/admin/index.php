@@ -266,9 +266,9 @@ HTML;
 <body>
 
 	<header>
-		<div class="container display-flex align-center">
+		<div class="container display-flex align-center" style="line-height: 4em;">
 			<div class="flex-none">
-				<h1>Product Admin</h1>
+				<h1 style="font-size: 4.5em;">Product Admin</h1>
 			</div>
 			<div class="flex-stretch"></div>
 			<nav class="nav">

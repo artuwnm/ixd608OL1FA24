@@ -10,13 +10,13 @@ include_once "lib/php/functions.php"
 
    <div class="container flex align-center">
 
-      <div>
+      <div class="logo">
          <h1><a href="home.php">ArchiTaste</a></h1>
       </div>
 
       <div class="flex-stretch"></div>
 
-      <div class="menu-button">
+      <div class="menu-button" >
          <label for="menu">&equiv;</label>
       </div>
 

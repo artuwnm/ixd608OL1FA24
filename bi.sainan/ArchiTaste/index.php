@@ -23,36 +23,29 @@
       <br>
       <br>
 
-   <h2 class="text-center">- Architects Selection -</h2>
+   <h1 class="text-center" style="font-size: 1.8em; font-weight: normal;">- Premiere Selection -</h1>
 
    <?php 
-   recommendedCategory("Furniture");?>
+   recommendedId("Furniture");?>
 
       <br>
       <br>
 
-   <h2 class="text-center">- New Arrivals -</h2>
+   <h1 class="text-center" style="font-size: 1.8em; font-weight: normal;">- New Arrivals -</h1>
 
    <?php 
-   recommendedCategory("Model");?>
-
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+   recommendedPrice("Furniture");?>
 
 </div>
-<div class="view-window" style="background-image: url('img/mies.jpg'); height: 50vh;"></div>
+
+      <br id="about">
+      <br>
+      <br>
+      <br>
 
 <div class="container">   
 
-      <br>
-      <br>
-      <br>
-
-   <h2 class="text-center">- About Us -</h2>
+   <h2 class="text-center">ABOUT US</h2>
 
       <div>
          <p>
@@ -79,6 +72,7 @@
       <br>
       <br>
 
+<div class="view-window" style="background-image: url('img/mies.jpg'); height: 50vh;"></div>
 <div class="view-window" style="background-image: url('img/architaste.png'); height: 50vh;"></div>
    
    <?php include "parts/footer.php"; ?>
