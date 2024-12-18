@@ -73,3 +73,4 @@ $image_elements = array_reduce($images, function ($r, $o) {
     <?php include "parts/footer.php" ?>
 </body>
 </html>
+

@@ -65,6 +65,7 @@ function addToCart($id, $amount) {
     }
 }
 
+
 function resetCart() { $_SESSION['cart'] = []; }
 
 function cartItemById($id) {

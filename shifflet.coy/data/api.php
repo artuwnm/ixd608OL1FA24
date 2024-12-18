@@ -24,6 +24,7 @@ if (!isset($data->type)) {
             ");
             break;
 
+
         case "product_from_id":
             $output['result'] = makeQuery(makeConn(), "SELECT 
                 *

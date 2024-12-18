@@ -115,6 +115,7 @@ function showProductPage($o) {
 </div>
 HTML;
 
+
 	$form = <<<HTML
 <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
 	<h2>$addoredit Product</h2>

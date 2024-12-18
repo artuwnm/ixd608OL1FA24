@@ -15,6 +15,7 @@ $(()=>{
 		query({type:'product_search',search:search}).then(showResults);
 	})
 
+
 	$("[data-filter").on("click",function(e){
 		let column = $(this).data("filter");
 		let value = $(this).data("value");

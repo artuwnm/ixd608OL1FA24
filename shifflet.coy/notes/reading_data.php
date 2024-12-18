@@ -34,6 +34,7 @@ $users_array = file_get_json("../data/users.json");
 
             ?>
         </div>
+        
 
         <div class="card soft">
             <h2>Users</h2>
