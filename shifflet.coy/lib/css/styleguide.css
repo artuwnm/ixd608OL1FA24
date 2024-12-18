@@ -1,0 +1,495 @@
+/* CSS RESET */
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #004175; /* Midnight Blue */
+    --color-secondary: #708090; /* Slate Gray */
+    --color-accent: #CCFF00; /* Electric Lime */
+    --color-offwhite: #f4f4f4;
+    --color-white: #ffffff;
+    --color-black: #000000;
+}
+
+--header-height: 3rem;
+--spacing: 1rem;
+
+--font-serif: Georgia, "Times New Roman", serif;
+--font-sans: avenir, Arial, sans-serif;
+
+body {
+    margin: 0;
+    font-size: 100%;
+    font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+}
+
+a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--color-accent);
+}
+
+.largetext {
+    text-align: center;
+    font-size: 2em;
+}
+
+/* LAYOUT CLASSES */
+
+.container {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cartcontainer {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.itemcontainer {
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.view-window {
+    height: 10vh; /* Or any fixed height, e.g., 300px */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.display-flex {
+    display: flex;
+}
+
+.display-inline-flex {
+    display: inline-flex;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.flex-stretch {
+    flex: 1 1 auto;
+}
+
+.flex-none {
+    flex: none;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* Small classes */
+
+.media-image {
+    max-width: 100%;
+    vertical-align: text-bottom;
+}
+
+.hidden {
+    display: none;
+}
+
+/* COMPONENT CLASSES */
+
+.nav ul {
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.nav a {
+    display: block;
+    padding: 0.2em 0.5em;
+}
+
+.nav a:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.nav .active a {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.nav-material ul, .nav-crumbs ul, .nav-pills ul, .nav-stretch ul, .nav-flex ul {
+    display: flex;
+}
+
+
+.nav-material li, .nav-stretch li {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.nav-pills a {
+    border-radius: 2em;
+    padding: 0.5em 1em;
+}
+
+.nav-crumbs a {
+    display: inline-block;
+}
+
+.nav-crumbs .active a, .nav-crumbs a:hover {
+    background-color: var(--color-secondary);
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-crumbs li:not(:first-child)::before {
+    content: '/';
+}
+
+.nav-material a {
+    padding: 0.5em 1em;
+    position: relative;
+}
+
+.nav-material a:hover {
+    background-color: var(--color-offwhite);
+    color: inherit;
+}
+
+.nav-material a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--color-secondary);
+    transition: all 0.3s;
+}
+
+.nav-material .active a {
+    background-color: transparent;
+    color: inherit;
+}
+
+.nav-material .active a::after {
+    height: 4px;
+}
+
+.navbar {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    line-height: var(--header-height);
+}
+
+.navbar h4 {
+    font-size: 0.5em;
+    margin: 0;
+    color: var(--color-white);
+}
+
+.navbar a {
+    padding: 0 0.5em;
+}
+
+/* CARD */
+
+.card {
+    background-color: var(--color-offwhite);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+    overflow: hidden;
+    position: relative;
+}
+
+.card.soft {
+    border-radius: 0.5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-white);
+}
+
+.card.hard {
+    border-radius: 0.5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.card.dark {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.card.medium {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.card.flat {
+    background-color: var(--color-offwhite);
+    padding: 0;
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--color-primary); /* Matches the navbar background */
+    color: var(--color-white); /* Ensure text is readable */
+    padding: 2em 1em; /* Add padding for spacing */
+    text-align: center; /* Center align the text and elements */
+}
+
+.footer-section img {
+    max-width: 150px; /* Adjust logo size */
+    margin-bottom: 1em; /* Add spacing below the logo */
+}
+
+.footer-section p {
+    margin: 0.5em 0; /* Add spacing between paragraphs */
+}
+
+.subscribe-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em; /* Add spacing between elements */
+    justify-content: center; /* Center align the form */
+}
+
+.subscribe-input {
+    padding: 0.5em;
+    flex: 1 1 200px; /* Responsive width for input */
+    border: 1px solid var(--color-secondary); /* Add a border for the input */
+    border-radius: 5px;
+}
+
+.subscribe-button {
+    background-color: var(--color-accent); /* Accent color for the button */
+    color: var(--color-primary); /* Ensure contrast for the button text */
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.google-map iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 10px; /* Add rounded corners to the map */
+}
+
+
+/* Figure */
+
+.figure {
+    margin: 0;
+    background-color: var(--color-white);
+}
+
+.figure img {
+    width: 100%;
+    vertical-align: text-bottom;
+}
+
+.figure figcaption {
+    padding: 1em;
+    font-family: var(--font-serif);
+}
+
+/* Colors */
+
+.color-1 {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.color-2 {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.color-3 {
+    background-color: var(--color-accent);
+    color: var(--color-black);
+}
+
+.color-4 {
+    background-color: var(--color-accent); /* Electric Lime */
+    color: var(--color-white);
+}
+
+.color-5 {
+    background-color: var(--color-secondary); /* Slate Gray */
+    color: var(--color-white);
+}
+
+.color-6 {
+    background-color: var(--color-primary); /* Midnight Blue */
+    color: var(--color-white);
+}
+
+/* forms */
+
+.form-control {
+    margin: 1em 0;
+}
+
+
+.form-item {
+    display: inline-block;
+    background-color: transparent;
+    border-width: 0;
+    font: inherit;
+    -webkit-appearance: none;
+    color: inherit;
+    width: 100%;
+    outline: 0;
+}
+
+.form-input {
+    border-bottom: 1px solid var(--color-secondary);
+    padding: 0.5em 1em;
+}
+
+.form-input:focus {
+    border-bottom-color: var(--color-accent); /* Electric Lime */
+}
+
+.form-label {
+    font-size: 0.8em;
+    color: var(--color-primary); /* Midnight Blue */
+    display: block;
+    width: 100%;
+}
+
+.form-button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-button.inline {
+    width: initial;
+}
+
+.form-button:hover {
+    text-decoration: none;
+    background-color: var(--color-secondary); /* Slate Gray */
+}
+
+.form-button:active {
+    background-color: var(--color-accent); /* Electric Lime */
+}
+
+.hotdog {
+    background-color: var(--color-secondary); /* Slate Gray */
+    border-radius: 2em;
+    padding: 0.5em 1.5em;
+    display: flex;
+    color: var(--color-white);
+}
+
+.hotdog.dark {
+    background-color: var(--color-primary); /* Midnight Blue */
+    color: var(--color-white);
+}
+
+.hotdog.light {
+    background-color: var(--color-accent); /* Electric Lime */
+    color: var(--color-black);
+    border-radius: 2em;
+}
+
+.form-select > select {
+    padding: 0.5em 1.3em;
+    background-color: var(--color-secondary); /* Slate Gray */
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.form-select {
+    position: relative;
+}
+
+.form-select::after {
+    content: '\25BC';
+    font-family: sans-serif;
+    font-size: 0.6em;
+    position: absolute;
+    top: 50%;
+    right: 0.7em;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--color-primary); /* Midnight Blue */
+}
+
+/* Toggle */
+
+.toggle label {
+    font-size: 1em;
+    display: inline-block;
+    width: 1.7em;
+    height: 0.7em;
+    border: 1.9px solid var(--color-primary); /* Midnight Blue */
+    border-radius: 1em;
+    position: relative;
+}
+
+.toggle label::after {
+    content: '';
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 1em;
+    position: absolute;
+    background-color: var(--color-accent); /* Electric Lime */
+    transition: all 0.3s;
+}
+
+.toggle input:checked + label::after {
+    transform: translateX(1em);
+}
+
+.card-section~.card-section {
+    border-top: 1px solid var(--color-primary); /* Midnight Blue */
+}
+
+.card-section {
+    padding: 1em;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Overview - SkillSync AI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fc;
+      color: #333;
+    }
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #2d5be3;
+    }
+    .chart {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+      animation: scaleIn 1s ease-out;
+    }
+    @keyframes scaleIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .progress-ring {
+      width: 150px;
+      height: 150px;
+      border: 10px solid #2d5be3;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #2d5be3;
+    }
+    .suggestions {
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .suggestion-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    .suggestion-title {
+      font-size: 1.1em;
+      color: #2d5be3;
+      font-weight: bold;
+    }
+    button {
+      background-color: #2d5be3;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Your Progress</h1>
+      <p>Track your learning journey and next steps.</p>
+    </header>
+
+    <!-- Progress Rings -->
+    <div class="chart">
+      <div class="progress-ring">75%</div>
+    </div>
+
+    <!-- AI Suggestions -->
+    <section class="suggestions">
+      <h2>AI Recommendations</h2>
+
+      <div class="suggestion-card">
+        <p class="suggestion-title">Next Step: Complete Python Basics</p>
+        <p>Finish the remaining 2 modules to strengthen your Python skills.</p>
+        <button>Start Now</button>
+      </div>
+
+      <div class="suggestion-card">
+        <p class="suggestion-title">Revise: Data Analysis Fundamentals</p>
+        <p>Review your recent performance and retake key practice questions.</p>
+        <button>Learn More</button>
+      </div>
+
+      <div class="suggestion-card">
+        <p class="suggestion-title">Test: JavaScript Intermediate</p>
+        <p>Take the skill test to measure your progress.</p>
+        <button>Begin Test</button>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
