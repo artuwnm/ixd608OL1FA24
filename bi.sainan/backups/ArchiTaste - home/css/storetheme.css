@@ -1,0 +1,245 @@
+
+:root {
+	--header-height: 3rem;
+	--spacing: 1rem;
+
+	--color-card: white;
+}
+
+.container {
+	max-width: 1200px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.h2 {
+	font-family: Bauhaus;
+	font-size: 1.5em; 
+	font-weight: bold;
+	color: black;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    position: relative;
+}
+
+header h1 {
+	font-size: 5em;
+	font-family: var(--font-sans-header);
+	text-decoration: none;
+}
+
+footer {
+	background: linear-gradient(to right, #80a6ad, #E4CA9E); 
+	color: var(--color-white);
+}
+
+.footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 25vh;
+	width: 1000px;
+    text-align: center;
+    margin: auto;
+}
+
+.hotdog {
+    border: 1.5px solid orange;
+}
+
+.filter {
+	border: 1px solid orange;
+	border-radius: .2em;
+	cursor: pointer;
+	text-align: center;
+	padding: .5em 1em;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	background-color: var(--color-beige-light); 
+    margin: 0 .5em;
+    width: 10em;
+}
+.filter:hover {
+    text-decoration: none;
+    background-color: var(--color-orange-dark);
+    color: white;
+}
+.filter:active {
+	background-color: var(--color-orange-medium);
+    color: white;
+}
+.filter:focus {
+	background-color: var(--color-orange-medium);
+    color: white;
+}
+
+.sort {
+    margin-right: .5em;
+    margin-left: .5em;
+}
+.sort>select {
+	background-color: var(--color-green-medium); 
+	border-radius: 1em;
+    padding: .4em 2.5em;
+}
+
+.navbar ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+.navbar li {
+   margin-right: 1em;
+}
+.navbar a {
+   text-decoration: none;
+   padding-bottom: 5px;
+   position: relative;
+   padding-left: .5em;
+   padding-right: .5em;
+}
+.navbar a::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 3px;
+   background-color: orange;
+   transform: scaleX(0);
+   transform-origin: bottom right;
+   transition: transform 0.5s ease;
+}
+.navbar a:hover::after {
+   transform: scaleX(1);
+   transform-origin: bottom left;
+}
+
+.nav-underline a{
+	padding: .5em .5em;
+	position: relative;
+	margin: 0 .5em;
+}
+.nav-underline .active a {
+	background-color: transparent;
+	color: inherit;
+}
+.nav-underline a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background-color: var(--color-orange-dark);
+	transition: all .5s;
+}
+.nav-underline a:hover::after {
+	height: 3px;
+}
+
+.nav-cart ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.cartpadding {
+	padding: 0 2em 0 1em;
+	position: relative;
+}
+
+.thumb img {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+}
+
+.image-main img {
+	width: 100%;
+	height: 325px;
+	object-fit: contain;
+}
+.image-thumb img {
+	width: 8em;
+	height: 6em;
+	object-fit: contain;
+}
+
+.card.flat.soft {
+	padding: 0 2em 0 0;
+	border-radius: .5em;
+	background-color: var(--color-card);
+}
+
+.container.spread {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+    margin: 10px;
+}
+
+.options>select {
+    background-color: var(--color-beige-light);
+    padding: .5em 1.5em;
+}
+
+.productlist a {
+	text-decoration: none;
+	font-weight: initial;
+}
+
+.form-button {
+	font-size: 1.2em;
+}
+
+.figure.product img {
+	height: 100%;
+	object-fit: contain;
+}
+.figure.product:hover {
+	box-shadow: 0 2px 15px rgba(0, 0, 0, .3);
+	transform: scale(1.05);
+}
+
+.card-section~.card-section {
+	border-top: .5px solid lightgray;
+}
+.card-section {
+	padding: 0;
+}
+
+.card-section-admin~.card-section-admin {
+	border-top: .5px solid lightgray;
+}
+.card-section-admin {
+	padding: 1em;
+}
+
+.delete {
+	background-color: var(--color-orange-light);
+	border: none;
+	border-radius: 0;
+	cursor: pointer;
+	text-align: center;
+}
+.delete:hover {
+    background-color: var(--color-orange-medium);
+    color: white;
+}
+
+span.badge:not(:empty)::before {
+	content: '| ';
+}
+span.badge:not(:empty)::after {
+	content: '';
+}

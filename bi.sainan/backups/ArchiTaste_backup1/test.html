@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Test</title>
+   
+   <link rel="stylesheet" href="lib/css/styleguide.css">
+   <link rel="stylesheet" href="css/storetheme.css">
+   <link rel="stylesheet" href="lib/css/gridsystem.css">
+
+   <style>
+      .nav-button {
+         border-radius: 0;
+         text-align: center;
+         padding: .5em 1em;
+         margin: 0;
+         }
+      .nav-button:hover {
+         background-color: var(--color-orange-medium);
+         text-decoration: none;
+         }
+      .nav-button:focus {
+         background-color: var(--color-orange-medium);
+         text-decoration: none;
+         }
+
+      .nav-bar ul {
+         list-style: none;
+         margin: 0;
+         padding: 0;
+         display: flex;
+      }
+      .nav-bar li {
+         margin-right: 20px;
+      }
+      .nav-bar a {
+         text-decoration: none;
+         padding-bottom: 5px;
+         position: relative;
+         transition: color 0.3s ease;
+         padding-left: .5em;
+         padding-right: .5em;
+      }
+      .nav-bar a::after {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: 3px;
+         background-color: orange;
+         transform: scaleX(0);
+         transform-origin: bottom left;
+         transition: transform 0.3s ease;
+      }
+      .nav-bar a:hover::after {
+         transform: scaleX(1);
+         transform-origin: bottom left;
+      }
+      .nav-bar a:focus::after {
+         transform: scaleX(1);
+         transform-origin: bottom left;
+      }
+
+      .cat {
+         border: 1px solid orange;
+         border-radius: .2em;
+         cursor: pointer;
+         text-align: center;
+         padding: .5em 1em;
+         box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+         background-color: var(--color-beige-light); 
+         margin: 0 .5em;
+         width: 10em;
+      }
+      .cat:hover {
+          text-decoration: none;
+          background-color: var(--color-orange-dark);
+          color: white;
+      }
+      .cat:focus {
+         background-color: var(--color-orange-medium);
+          color: white;
+      }
+      .filter:active {
+         background-color: var(--color-orange-medium);
+          color: white;
+      }
+
+      .order {
+          margin-left: 1em;
+      }
+      .order>select {
+         background-color: var(--color-green-medium); 
+         border-radius: 1em;
+         padding: .4em 2.5em;
+      }
+
+      .button {
+         width: 50%;
+         background-color: var(--color-orange-medium);
+         border: 1px solid orange;
+         border-radius: 1em;
+         cursor: pointer;
+         text-align: center;
+         padding: .5em 1em;
+         margin: 0 1em;
+         box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .thumb img {
+         width: 8em;
+         height: 6em;
+         object-fit: contain;
+      }
+   </style>
+
+</head>
+
+<body>
+
+ <header>
+
+    <br>
+
+   <div class="container flex align-center">
+
+      <div class="stretch"></div>
+
+      <nav class="nav-bar">
+         <ul class="flex">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">
+               <span>Cart</span>
+               <span class="badge"><?= markeCartBadge(); ?></span>
+            </a></li>
+            <li><a href="#">Account</a></li>
+         </ul>
+      </nav>
+
+   </div>
+
+    <br>
+
+ </header>
+
+    <br>
+
+   <header>
+      <div class="container flex align-center">
+            <div class="stretch"></div>
+            <a href="#" class="nav-button">Home</a>
+            <a href="#" class="nav-button">Store</a>
+            <a href="#" class="nav-button">Cart</a>
+            <a href="#" class="nav-button">Account</a>
+      </div>
+   </header>
+
+    <br>
+
+<div class="container card flat flex">
+   <a href="#" class="nav-button card stretch">Home</a>
+   <a href="#" class="nav-button card stretch">Store</a>
+   <a href="#" class="nav-button card stretch">Cart</a>
+</div>
+
+<div class="container flex spread text-center">
+   <div class="card soft" style="width: 500px;">CARD</div>
+   <div class="card soft" style="width: 500px;">CARD</div>
+</div>
+
+<div class="container card soft thumb">
+   <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.lmEgylZJMJDEDdEj66V3zAHaHa?rs=1&pid=ImgDetMain" alt="Description for Image 1" />
+</div>
+
+    <br>
+
+<div class="container card flex">
+   <div class="flex form-control">
+      <div><button type="button" class="cat stretch">Furniture</button></div>
+      <div><button type="button" class="cat stretch">Lighting</button></div>
+      <div><button type="button" class="cat stretch">Model</button></div>
+   </div>
+              
+     <div class="stretch"></div>
+     
+     <div class="form-select order">
+       <select>
+           <option>Price</option>
+           <option>Lowest</option>
+           <option>Highest</option>
+       </select>
+      </div>
+   
+     <div class="form-select order">
+       <select>
+           <option>Arrival</option>
+           <option>Newest</option>
+           <option>Oldest</option>
+       </select>
+      </div>
+   </div>
+</div>
+
+   <div class="container card flex form-control">
+      <div class="cat stretch">Furniture</button></div>
+      <div class="cat stretch">Lighting</button></div>
+      <div class="cat stretch">Model</button></div>
+   </div>
+
+    <br>
+
+<div class="flex center form-control">
+    <a href="#" class="button">View</a>
+</div>
+
+    <br>
+
+<div class="container" id="tables">
+   <div class="container card soft">
+      <table class="table striped">
+         <thead>
+            <tr>
+               <th>ID</th>
+               <th>Name</th>
+               <th>QTY</th>
+               <th>Price</th>
+               <th>Amount</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            <tr>
+               <td>1</td>
+               <td>Item #1</td>
+               <td>2</td>
+               <td>3.00</td>
+               <td>6.00</td>
+            </tr>
+            <tr>
+               <td>2</td>
+               <td>Item #2</td>
+               <td>2</td>
+               <td>3.00</td>
+               <td>6.00</td>
+            </tr>
+            <tr>
+               <td>3</td>
+               <td>Item #3</td>
+               <td>2</td>
+               <td>3.00</td>
+               <td>6.00</td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>
+
+<ul class="nobullet bold">Menu
+    <li><a href="#home" class="normal">Home</a></li>
+    <li><a href="#services" class="normal">Services</a></li>
+    <li><a href="#about" class="normal">About</a></li>
+    <li><a href="#contact" class="normal">Contact</a></li>
+</ul>
+
+<footer>
+    <ul>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-of-service">Terms of Service</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,495 @@
+:root {
+	--header-height: 3rem;
+	--spacing: 1rem;
+	--color-card: white;
+}
+
+.container {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-narrow {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1599px) and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+	    width: 100%;
+	    margin: 0 auto;
+    }
+	header .logo {
+	}
+	.logo h1 {
+		line-height: normal;
+		font-size: 4.5em;
+	    margin-top: .5em;
+	    margin-bottom: .5em;
+	}
+	footer .footer{
+		padding: 3em 0;
+	}
+}
+
+header h1 {
+	line-height: normal;
+	font-size: 5.5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.logo {
+}
+
+.footer{
+	padding: 4em 0;
+}
+
+html, body {
+    position: relative;
+}
+
+a {
+	font-weight: bold;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+.navbar ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+.navbar li {
+   margin: 0;
+}
+.navbar a {
+   text-decoration: none;
+   padding-bottom: 5px;
+   position: relative;
+   padding-left: .5em;
+   padding-right: .5em;
+   margin-left: 1em;
+}
+.navbar a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background-color: var(--color-orange-dark);
+	transition: all .5s;
+}
+.navbar a:hover::after {
+	height: 3px;
+}
+
+
+.center-all {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.h2 {
+	font-family: Bauhaus;
+	font-size: 1.5em; 
+	font-weight: bold;
+	color: black;
+}
+
+.view-window {
+	height: 50vh;
+}
+
+.centertext {
+    text-align: center;
+}
+
+.hotdog {
+    border: 1.5px solid orange;
+}
+
+.filter {
+	border: 1px solid var(--color-green-dark);
+	border-radius: .2em;
+	cursor: pointer;
+	text-align: center;
+	padding: .5em 1em;
+	background-color: var(--color-green-light); 
+    margin: 0 .5em 0 0;
+    width: 10em;
+}
+.filter:hover {
+    text-decoration: none;
+    background-color: var(--color-orange-dark);
+	border: 1px solid var(--color-orange-dark);
+    color: white;
+}
+.filter:active {
+	background-color: var(--color-orange-medium);
+	border: 1px solid var(--color-orange-medium);
+    color: white;
+}
+.filter:focus {
+	background-color: var(--color-orange-medium);
+	border: 1px solid var(--color-orange-medium);
+    color: white;
+}
+
+.sort {
+    margin: 0 .5em;
+}
+.sort>select {
+	background-color: var(--color-neutral-light); 
+	border-radius: 1em;
+    padding: .4em 2.5em;
+}
+
+.thumb img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+.image-main img {
+	width: 100%;
+	height: 325px;
+	object-fit: contain;
+}
+.image-thumb img {
+	width: 8em;
+	height: 6em;
+	object-fit: contain;
+}
+
+.card.flat.soft {
+	padding: 0 2em 0 0;
+	border-radius: .5em;
+	background-color: var(--color-card);
+}
+.card.transparent {
+	background-color: transparent;
+}
+
+.container.spread {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+    margin: 10px;
+}
+
+.options>select {
+    background-color: var(--color-beige-light);
+    padding: .5em 1.5em;
+}
+
+.productlist a {
+	text-decoration: none;
+	font-weight: initial;
+}
+
+.form-button {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.button {
+	width: 500px;
+	background-color: var(--color-orange-medium);
+	border: 1px solid orange;
+	border-radius: 1em;
+	cursor: pointer;
+	text-align: center;
+	padding: .5em 1em;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	font-size: 1.2em;
+}
+.button:hover {
+    text-decoration: none;
+    background-color: var(--color-orange-dark);
+    color: white;
+}
+.button:active {
+	background-color: var(--color-orange-medium);
+    color: white;
+}
+
+.figure.product img {
+	height: 100%;
+	object-fit: contain;
+}
+.figure.product:hover {
+	box-shadow: 0 2px 15px rgba(0, 0, 0, .3);
+	transform: scale(1.05);
+}
+
+.card-section~.card-section {
+	border-top: .5px solid lightgray;
+}
+.card-section {
+	padding: 0;
+}
+
+.card-section-admin~.card-section-admin {
+	border-top: .5px solid lightgray;
+}
+.card-section-admin {
+	padding: 1em;
+}
+
+.card-section-checkout~.card-section-checkout {
+	border-top: .5px solid lightgray;
+}
+.card-section-checkout {
+	padding: 0;
+}
+
+[class*='col-']>.card {
+	height: 100%;
+	margin: 0;
+}
+
+[class*='spread']>.card {
+	height: 100%;
+	margin: 0;
+}
+
+.delete-button {
+	background-color: var(--color-orange-light);
+	border: none;
+	border-radius: 0;
+	cursor: pointer;
+	text-align: center;
+}
+.delete-button:hover {
+    background-color: var(--color-orange-medium);
+    color: white;
+}
+
+span.badge:not(:empty)::before {
+	content: '| ';
+}
+span.badge:not(:empty)::after {
+	content: '';
+}
+
+/* Nav Styles */
+
+.nav-button {
+	display: flex;
+}
+.nav-button a {
+	border-radius: 0;
+	text-align: center;
+	padding: .5em 1em;
+	margin: 0;
+}
+.nav-button a:hover {
+	background-color: var(--color-orange-medium);
+	text-decoration: none;
+}
+.nav-button a:focus {
+	background-color: var(--color-orange-medium);
+	text-decoration: none;
+}
+
+.nav-underline {
+	display: flex;
+}
+.nav-underline a {
+	text-decoration: none;
+	padding-bottom: 5px;
+	position: relative;
+	transition: color 0.3s ease;
+	padding: .5em .5em;
+	margin: .5em;
+	text-align: center;
+}
+.nav-underline a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background-color: var(--color-orange-dark);
+	transition: all .5s;
+}
+.nav-underline a:hover::after {
+	height: 3px;
+}
+.nav-underline a:focus::after {
+	height: 3px;
+}
+
+.nav-slide {
+	display: flex;
+}
+.nav-slide a {
+	text-decoration: none;
+	padding-bottom: 5px;
+	position: relative;
+	transition: color 0.3s ease;
+	padding: .5em .5em;
+	margin: .5em;
+}
+.nav-slide a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background-color: orange;
+	transform: scaleX(0);
+	transform-origin: bottom left;
+	transition: transform 0.3s ease;
+}
+.nav-slide a:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+.nav-slide a:focus::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+.relative {
+    position: relative;
+    top: ;
+    right: ;
+    bottom: ;
+    left: ;
+}
+.absolute {
+    position: absolute;
+    top: ;
+    right: ;
+    bottom: ;
+    left: ;
+}
+
+
+@media(min-width: 800px) {
+	.mobile {
+		display: none;
+	}
+	.desktop {
+	}
+}
+
+@media(max-width: 800px) {
+	.desktop {
+		display: none;
+	}
+	.mobile {
+	}
+}
+
+@media (max-width: 1200px) and (min-width: 0px) {
+    .container {
+	    width: 100%;
+	    margin: 0 auto;
+		padding-left: 1em;
+		padding-right: 1em;
+    }
+}
+
+@media(max-width:800px){
+	.container {
+		padding-left: 1em;
+		padding-right: 1em;
+    	margin: 0 auto;
+        flex-wrap: wrap;
+	}
+    header {
+        width: 100%;
+        text-align: center;
+	}
+	header h1{
+		font-size: 4em !important;
+		text-align: center;
+	}
+	.navbar {
+		display: flex;
+		justify-content: center;
+	}
+	.navbar ul {
+		padding-bottom: 1em;
+	}
+	.card.soft {
+		flex-wrap: wrap;
+	}
+	.flex {
+		flex-wrap: wrap;
+	}
+	.display-flex {
+		flex-wrap: wrap;
+	}
+	.button {
+	}
+	.form-button { 
+  		margin-bottom: 10px;
+	}
+	.filter {
+		margin-bottom: 10px;
+	}
+}
+
+@media(min-width: 400px) {
+	.menu-button label {
+		display: none;
+	}
+}
+
+@media(max-width: 400px){
+    header .flex {
+        flex-wrap: wrap;
+    }
+    .navbar {
+        width: 100%;
+        display: none;
+    }
+    .navbar ul {
+        display: block;
+        text-align: left;
+        line-height: 1.5em;
+    }
+    .menu-button label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #menu:checked + header .navbar {
+	  display: block;
+	}
+
+@media (max-width: 600px) {
+	.product-overlay figcaption {
+		position: relative;
+		display: block;
+		top: initial;
+		left: initial;
+		width: 100%;
+		height: initial;
+		opacity: 1;
+		background-attachment: initial;
+	}
+	.product-overlay .caption-body {
+		transform: none;
+		padding: 0;
+	}
+}
